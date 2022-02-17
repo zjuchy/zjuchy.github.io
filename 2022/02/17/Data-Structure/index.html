@@ -1,0 +1,716 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Data_Structure | ZJUCHY の blog</title><meta name="author" content="Haoyang Chen"><meta name="copyright" content="Haoyang Chen"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Asymptotic NotationTime &amp; space complexities顺序结构：直接相加循环中：复杂度&#x3D;一次循环的复杂度x循环次数嵌套循环中：循环规模的乘积x一次循环的复杂度if&#x2F;else语句：选其中复杂度最高的     ![image-20211113200516281](&#x2F;Users&#x2F;zjuchy&#x2F;Library&amp;#x">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Data_Structure">
+<meta property="og:url" content="https://zjuchy.github.io/2022/02/17/Data-Structure/index.html">
+<meta property="og:site_name" content="ZJUCHY の blog">
+<meta property="og:description" content="Asymptotic NotationTime &amp; space complexities顺序结构：直接相加循环中：复杂度&#x3D;一次循环的复杂度x循环次数嵌套循环中：循环规模的乘积x一次循环的复杂度if&#x2F;else语句：选其中复杂度最高的     ![image-20211113200516281](&#x2F;Users&#x2F;zjuchy&#x2F;Library&amp;#x">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s2.loli.net/2022/02/02/oJiXKmjqWT5Qk9n.jpg">
+<meta property="article:published_time" content="2022-02-17T03:13:35.000Z">
+<meta property="article:modified_time" content="2022-02-17T03:14:09.018Z">
+<meta property="article:author" content="Haoyang Chen">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2022/02/02/oJiXKmjqWT5Qk9n.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://zjuchy.github.io/2022/02/17/Data-Structure/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Data_Structure',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-02-17 11:14:09'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.0.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">Loading...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/head.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">7</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">5</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://s2.loli.net/2022/02/02/oJiXKmjqWT5Qk9n.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">ZJUCHY の blog</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Data_Structure</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2022-02-17T03:13:35.000Z" title="Created 2022-02-17 11:13:35">2022-02-17</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2022-02-17T03:14:09.018Z" title="Updated 2022-02-17 11:14:09">2022-02-17</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Data_Structure"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h3 id="Asymptotic-Notation"><a href="#Asymptotic-Notation" class="headerlink" title="Asymptotic Notation"></a>Asymptotic Notation</h3><h4 id="Time-amp-space-complexities"><a href="#Time-amp-space-complexities" class="headerlink" title="Time &amp; space complexities"></a>Time &amp; space complexities</h4><p>顺序结构：直接相加<br>循环中：复杂度&#x3D;一次循环的复杂度x循环次数<br>嵌套循环中：循环规模的乘积x一次循环的复杂度<br>if&#x2F;else语句：选其中复杂度最高的    </p>
+<p>![image-20211113200516281](&#x2F;Users&#x2F;zjuchy&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20211113200516281.png)</p>
+<p>O上界，$\Omega$ 下界， $\theta$ 相等</p>
+<p>斐波那契数列：T N&#x3D;T N-1 + T N-2</p>
+<p>空间复杂度O(N), 时间复杂度：O(2^N)</p>
+<blockquote>
+<p>注意这里有$(logN)^2$ Is O(N) is True. 因为这里它O是指上界，这里$O(N^2)$也是可以的</p>
+<p>$logN&#x3D;2log(\sqrt{N} )&lt;2\sqrt{N}$</p>
+<p>$（logN）^2&lt;4N&#x3D;O(N)$</p>
+</blockquote>
+<h4 id="最大子列和"><a href="#最大子列和" class="headerlink" title="最大子列和"></a>最大子列和</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="keyword">int</span> tmp=<span class="number">0</span>;</span><br><span class="line">  <span class="keyword">int</span> max_num=<span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;N;j++)&#123;</span><br><span class="line">    tmp+=arr[j];</span><br><span class="line">    <span class="keyword">if</span>(tmp&gt;max)&#123;</span><br><span class="line">      max_num=tmp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(tmp&lt;<span class="number">0</span>)&#123;</span><br><span class="line">			tmp=<span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> max_num;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Linked-List"><a href="#Linked-List" class="headerlink" title="Linked List"></a>Linked List</h3><h4 id="Array"><a href="#Array" class="headerlink" title="Array"></a>Array</h4><table>
+<thead>
+<tr>
+<th>操作</th>
+<th>时间复杂度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>查找第K个</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>插入</td>
+<td>O(N)</td>
+</tr>
+<tr>
+<td>删除</td>
+<td>O(N)</td>
+</tr>
+</tbody></table>
+<h4 id="Linked-List-1"><a href="#Linked-List-1" class="headerlink" title="Linked List"></a>Linked List</h4><p>千万注意题目里的是否是List或者Array！</p>
+<table>
+<thead>
+<tr>
+<th>操作</th>
+<th>时间复杂度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>插入</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>查找第K个</td>
+<td>O(N)</td>
+</tr>
+<tr>
+<td>删除</td>
+<td>O(1)</td>
+</tr>
+</tbody></table>
+<h4 id="Linked-List-Sort"><a href="#Linked-List-Sort" class="headerlink" title="Linked List Sort"></a>Linked List Sort</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">List <span class="title">BubbleSort</span><span class="params">(List L)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(L-&gt;Next == <span class="literal">NULL</span> || L-&gt;Next-&gt;Next == <span class="literal">NULL</span>)	</span><br><span class="line">		<span class="keyword">return</span> L;</span><br><span class="line">	List p = L;</span><br><span class="line">	<span class="keyword">while</span>(p-&gt;Next-&gt;Next != <span class="literal">NULL</span>) &#123;</span><br><span class="line">		<span class="keyword">if</span>(p-&gt;Next-&gt;key &gt; p-&gt;Next-&gt;Next-&gt;Key) &#123;</span><br><span class="line">      <span class="comment">//swap next and next-&gt;next</span></span><br><span class="line">			List q = p-&gt;Next;</span><br><span class="line">			p-&gt;Next = q-&gt;Next;</span><br><span class="line">			q-&gt;Next = p-&gt;Next-&gt;Next;</span><br><span class="line">			p-&gt;Next-&gt;Next = q;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Node</span>* <span class="title">Nodeptr</span>;</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Node</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> element;</span><br><span class="line">	Nodeptr next;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Node</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> element;</span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">Node</span>* <span class="title">next</span>;</span><span class="comment">//注意c语言一定要struct Node *,不可以Node *</span></span><br><span class="line">&#125;;<span class="comment">//c++可以直接Node *c</span></span><br><span class="line"></span><br><span class="line">Nodeptr head = (Nodeptr)<span class="built_in">malloc</span>(<span class="built_in"><span class="keyword">sizeof</span></span>(struct Node));<span class="comment">//heap</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Doubly-Linked-Circular-Lists"><a href="#Doubly-Linked-Circular-Lists" class="headerlink" title="Doubly Linked Circular Lists"></a>Doubly Linked Circular Lists</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span>  <span class="class"><span class="keyword">struct</span>  <span class="title">node</span>  *<span class="title">node_ptr</span> ;</span></span><br><span class="line"><span class="keyword">typedef</span>  <span class="class"><span class="keyword">struct</span>  <span class="title">node</span>  &#123;</span></span><br><span class="line">       node_ptr  llink;</span><br><span class="line">       element    item;</span><br><span class="line">       node_ptr  rlink;</span><br><span class="line">&#125; ;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Cursor-Implementation"><a href="#Cursor-Implementation" class="headerlink" title="Cursor Implementation"></a>Cursor Implementation</h4><p><strong>数组实现列表</strong></p>
+<p>一个数组元素起码包含2个数据，element 和 next</p>
+<p>element是本身的数据，next是下一个结点的index</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> element;</span><br><span class="line">	<span class="keyword">int</span> next</span><br><span class="line">&#125;node[max];</span><br></pre></td></tr></table></figure>
+
+<p>node[i].next是该元素下一个元素的索引值</p>
+<p>node[i].element是该元素的数据</p>
+<p>如果在索引是k的结点后面插入一个结点，新结点的索引是n</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">p = node[k].next<span class="comment">//记录下该结点后面一个结点的索引</span></span><br><span class="line">node[k].next = n<span class="comment">//把k后面一个结点变为n</span></span><br><span class="line">node[n].next = p <span class="comment">//原来k的后面一个结点放在n后面</span></span><br></pre></td></tr></table></figure>
+
+
+<p>由于缺少内存管理，array很快就会满。</p>
+<h3 id="Stack"><a href="#Stack" class="headerlink" title="Stack"></a>Stack</h3><p>记得第一个可能是空head</p>
+<p>FILO</p>
+<p>直接数组实现！</p>
+<h3 id="Queue"><a href="#Queue" class="headerlink" title="Queue"></a>Queue</h3><p>FIFO</p>
+<p>一开始rear指向front前一个元素，表示队列是空的。</p>
+<p>插入第一个元素，rear和front指向第一个元素。</p>
+<p>以后每插入一个元素，rear往后移动 rear++</p>
+<p>注意进入的顺序，从rear（后面）进队列，从front(前方)出队列 front++</p>
+<p>dequeue出队</p>
+<p>enqueue入队</p>
+<h4 id="Circular-Queue"><a href="#Circular-Queue" class="headerlink" title="Circular Queue"></a>Circular Queue</h4><p>注意判断full的条件 <code>front == (rear + 1) % MAXSIZE</code> 表示full了</p>
+<p><code>rear=(++rear)%size</code></p>
+<p>栈的形状是环形，首尾相邻</p>
+<p>初始时，rear仍然指向front的前方</p>
+<p>注意当入栈达到栈的最大数量，下一个将从0开始入栈</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXSIZE 10</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">queue</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">        <span class="built_in">queue</span>();</span><br><span class="line">        <span class="function"><span class="keyword">bool</span> <span class="title">IsFull</span><span class="params">()</span></span>;</span><br><span class="line">        <span class="function"><span class="keyword">bool</span> <span class="title">IsEmpty</span><span class="params">()</span></span>;</span><br><span class="line">        <span class="function"><span class="keyword">bool</span> <span class="title">EnQueue</span><span class="params">(<span class="keyword">int</span>)</span></span>;</span><br><span class="line">        <span class="function"><span class="keyword">bool</span> <span class="title">DeQueue</span><span class="params">(<span class="keyword">int</span>&amp;)</span></span>;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">        <span class="keyword">int</span> buf[MAXSIZE];</span><br><span class="line">        <span class="keyword">int</span> rear;</span><br><span class="line">        <span class="keyword">int</span> front;</span><br><span class="line">&#125;;</span><br><span class="line">queue::<span class="built_in">queue</span>()</span><br><span class="line">&#123;</span><br><span class="line">        <span class="keyword">this</span>-&gt;rear=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">this</span>-&gt;front=<span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">queue::IsEmpty</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="keyword">this</span>-&gt;rear==<span class="keyword">this</span>-&gt;front)</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">queue::IsFull</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>((<span class="keyword">this</span>-&gt;rear+<span class="number">1</span>)%MAXSIZE==<span class="keyword">this</span>-&gt;front)</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">queue::EnQueue</span><span class="params">(<span class="keyword">int</span> data)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">IsFull</span>())</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">this</span>-&gt;buf[<span class="keyword">this</span>-&gt;rear]=data;</span><br><span class="line">        <span class="keyword">this</span>-&gt;rear=(<span class="keyword">this</span>-&gt;rear+<span class="number">1</span>)%MAXSIZE;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">queue::DeQueue</span><span class="params">(<span class="keyword">int</span>&amp; data)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">IsEmpty</span>())</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        data=<span class="keyword">this</span>-&gt;buf[<span class="keyword">this</span>-&gt;front];</span><br><span class="line">        <span class="keyword">this</span>-&gt;front=(<span class="keyword">this</span>-&gt;front+<span class="number">1</span>)%MAXSIZE;<span class="comment">////////////////////////////////////////////////////</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">        queue q;</span><br><span class="line">        <span class="keyword">int</span> i=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(i&lt;<span class="number">20</span>)</span><br><span class="line">        &#123;</span><br><span class="line">                <span class="keyword">if</span>(q.<span class="built_in">EnQueue</span>(i))</span><br><span class="line">                        cout&lt;&lt;<span class="string">&quot;success &quot;</span>&lt;&lt;i&lt;&lt;endl;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                        cout&lt;&lt;<span class="string">&quot;fail &quot;</span>&lt;&lt;i&lt;&lt;endl;</span><br><span class="line">                i++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(q.<span class="built_in">DeQueue</span>(i))</span><br><span class="line">                cout&lt;&lt;i&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">        cout&lt;&lt;endl;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Heap"><a href="#Heap" class="headerlink" title="Heap"></a>Heap</h3><img src="/Users/zjuchy/Library/Application Support/typora-user-images/image-20211113225720115.png" alt="image-20211113225720115" style="zoom:50%;" />
+
+<p>heap is 完全二叉树+大顶堆或者小顶堆</p>
+<p>N个元素放列表里找第k个 复杂度O(nlogn)</p>
+<p>建堆 O(n) ，在原有的数组的基础上，再delete O(k(logn))</p>
+<blockquote>
+<p>假如有N个节点，那么高度为H&#x3D;log2(N)  +  1，最后一层每个父节点最多只需要下调1次，倒数第二层最多只需要下调2次，顶点最多需要下调H次，而最后一层父节点共有2^(H-1)个,倒数第二层公有2^(H-2),顶点只有1(2^0)个，所以总共的时间复杂度为s &#x3D; 1 * 2^(H-1) + 2 * 2^(H-2) + … + (H-1) * 2^1 + H * 2^0</p>
+<p>将H代入后s&#x3D; 2N - 2 - log2(N)，近似的时间复杂度就是O(N)。</p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> leftchild(i) (2 * (i) + 1)</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">PercDown</span><span class="params">(ElementType A[], <span class="keyword">int</span> i, <span class="keyword">int</span> N)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> child;</span><br><span class="line">    ElementType Tmp;</span><br><span class="line">    <span class="keyword">for</span> (Tmp = A[i]; <span class="built_in">leftchild</span>(i) &lt; N; i = child)</span><br><span class="line">    &#123;</span><br><span class="line">        child = <span class="built_in">leftchild</span>(i);</span><br><span class="line">        <span class="keyword">if</span> (A[child] &lt; A[child + <span class="number">1</span>] &amp;&amp; child != N - <span class="number">1</span>)</span><br><span class="line">            child++;</span><br><span class="line">        <span class="keyword">if</span> (Tmp &lt; A[child])</span><br><span class="line">            A[i] = A[child];</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    A[i] = Tmp;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Heapsort</span><span class="params">(ElementType A[], <span class="keyword">int</span> N)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">for</span> (i = N / <span class="number">2</span>; i &gt;= <span class="number">0</span>; i--) <span class="comment">/* BuildHeap */</span></span><br><span class="line">        <span class="built_in">PercDown</span>(A, i, N);</span><br><span class="line">    <span class="keyword">for</span> (i = N - <span class="number">1</span>; i &gt; <span class="number">0</span>; i--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">Swap</span>(&amp;A[<span class="number">0</span>], &amp;A[i]);</span><br><span class="line">        <span class="built_in">PercDown</span>(A, <span class="number">0</span>, i);<span class="comment">//更正一次</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>千万注意，这里的是一次性给出数组，还是一个一个<strong>insert</strong>数字！看仔细！</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> i=n/<span class="number">2</span>;i&gt;=<span class="number">0</span>;i--)</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">int</span> tmp=A[i];</span><br><span class="line">    <span class="keyword">int</span> child1=<span class="built_in">child</span>(i);</span><br><span class="line">    <span class="keyword">int</span> j=i;</span><br><span class="line">    <span class="keyword">for</span>(;<span class="built_in">child</span>(j)&lt;n;j=child1)&#123;</span><br><span class="line">      <span class="keyword">if</span>(A[child1]&lt;A[child1+<span class="number">1</span>]&amp;&amp;child1!=n<span class="number">-1</span>)</span><br><span class="line">        child1++;</span><br><span class="line">      <span class="keyword">if</span>(tmp&lt;A[child1])</span><br><span class="line">        A[j]=A[child1];</span><br><span class="line">      <span class="keyword">else</span> <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    A[i]=tmp;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>B树，B+树</p>
+<h3 id="tree"><a href="#tree" class="headerlink" title="tree"></a>tree</h3><p>n nodes with n-1 edge</p>
+<p>siblings ：children of the same parent</p>
+<p>length of path ：number of edges on the path.</p>
+<p>depth of ni length of the unique path from the root to ni.</p>
+<p>Depth(root) &#x3D; 0.</p>
+<p>树的高度和深度是相同的。</p>
+<p>Depth: 从根节点到当前结点的路径长度，根节点的深度为0.</p>
+<p>Height:从叶子结点到当前结点的路径长度，叶子结点的高度为0.空节点的高度为-1</p>
+<p>深度为K的二叉树最多拥有 $2^{k+1}-1$个节点</p>
+<h4 id="Expression-Trees-syntax-trees"><a href="#Expression-Trees-syntax-trees" class="headerlink" title="Expression Trees (syntax trees)"></a>Expression Trees (syntax trees)</h4><h4 id="Threaded-Binary-Trees"><a href="#Threaded-Binary-Trees" class="headerlink" title="Threaded Binary Trees"></a>Threaded Binary Trees</h4><p>![image-20220102190022201](&#x2F;Users&#x2F;zjuchy&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220102190022201.png)</p>
+<h3 id="Dynamic-Equivalence-Problem"><a href="#Dynamic-Equivalence-Problem" class="headerlink" title="Dynamic Equivalence Problem"></a>Dynamic Equivalence Problem</h3><p><strong>查并集问题</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//int pre[1000]; （数组长度依题意而定）。这个数组记录了每个人的上级是谁。这些人从0或1开始编号（依题意而定）。比如说pre[16]=6就表示16号的上级是6号。如果一个人的上级就是他自己，那说明他就是教主了，查找到此结束。也有孤家寡人自成一派的，比如欧阳锋，那么他的上级就是他自己。</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> x)</span>					<span class="comment">//查找x的教主</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">while</span>(pre[x] != x)			<span class="comment">//如果x的上级不是自己（则说明找到的人不是教主）</span></span><br><span class="line">		x = pre[x];				<span class="comment">//x继续找他的上级，直到找到教主为止</span></span><br><span class="line">	<span class="keyword">return</span> x;					<span class="comment">//教主驾到~~~</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">join</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span>                     <span class="comment">//我想让虚竹和周芷若做朋友</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> fx=<span class="built_in">find</span>(x), fy=<span class="built_in">find</span>(y);            <span class="comment">//虚竹的老大是玄慈，芷若MM的老大是灭绝</span></span><br><span class="line">    <span class="keyword">if</span>(fx != fy)                           <span class="comment">//玄慈和灭绝显然不是同一个人</span></span><br><span class="line">        pre[fx]=fy;                        <span class="comment">//方丈只好委委屈屈地当了师太的手下啦</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>压缩路径</strong></p>
+<p>合并的时候直接加到根上，貌似find到时候也得加到根上去。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> x)</span>     				<span class="comment">//查找结点 x的根结点 </span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(pre[x] == x) <span class="keyword">return</span> x;		<span class="comment">//递归出口：x的上级为 x本身，即 x为根结点        </span></span><br><span class="line">    <span class="keyword">return</span> pre[x] = <span class="built_in">find</span>(pre[x]);	<span class="comment">//此代码相当于先找到根结点 rootx，然后pre[x]=rootx </span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>加权标记法:union-by-size</strong></p>
+<p>Union(N,N-1):N-1挂在N的下面，树高的作为底，合并树比较低的那个：**– Always change the smaller tree**</p>
+<blockquote>
+<p><strong>S [ Root ] &#x3D;</strong> <strong>– size;</strong> <strong>&#x2F;* initialized to be –1 *&#x2F;</strong> 表示这棵树有多少结点</p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">smartunion</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    x=<span class="built_in">find</span>(x);							<span class="comment">//寻找 x的代表元</span></span><br><span class="line">    y=<span class="built_in">find</span>(y);							<span class="comment">//寻找 y的代表元</span></span><br><span class="line">    <span class="keyword">if</span>(x==y) <span class="keyword">return</span> ;					<span class="comment">//如果 x和 y的代表元一致，说明他们共属同一集合，则不需要合并，直接返回；否则，执行下面的逻辑</span></span><br><span class="line">    <span class="keyword">if</span>(rank[x]&gt;rank[y]) pre[y]=x;		<span class="comment">//如果 x的高度大于 y，则令 y的上级为 x</span></span><br><span class="line">    <span class="keyword">else</span>								<span class="comment">//否则</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(rank[x]==rank[y]) rank[y]++;	<span class="comment">//如果 x的高度和 y的高度相同，则令 y的高度加1</span></span><br><span class="line">        pre[x]=y;						<span class="comment">//让 x的上级为 y</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span>  N=<span class="number">1005</span>					<span class="comment">//指定并查集所能包含元素的个数（由题意决定）</span></span><br><span class="line"><span class="keyword">int</span> pre[N];     					<span class="comment">//存储每个结点的前驱结点 </span></span><br><span class="line"><span class="keyword">int</span> rank[N];    					<span class="comment">//树的高度 </span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">(<span class="keyword">int</span> n)</span>     				<span class="comment">//初始化函数，对录入的 n个结点进行初始化 </span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)&#123;</span><br><span class="line">        pre[i] = i;     			<span class="comment">//每个结点的上级都是自己 </span></span><br><span class="line">        rank[i] = <span class="number">1</span>;    			<span class="comment">//每个结点构成的树的高度为 1 </span></span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> x)</span>     	 		    <span class="comment">//查找结点 x的根结点 </span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(pre[x] == x) <span class="keyword">return</span> x;  		<span class="comment">//递归出口：x的上级为 x本身，则 x为根结点 </span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">find</span>(pre[x]); 			<span class="comment">//递归查找 </span></span><br><span class="line">&#125; </span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> x)</span>     				<span class="comment">//改进查找算法：完成路径压缩，将 x的上级直接变为根结点，那么树的高度就会大大降低 </span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(pre[x] == x) <span class="keyword">return</span> x;		<span class="comment">//递归出口：x的上级为 x本身，即 x为根结点 </span></span><br><span class="line">    <span class="keyword">return</span> pre[x] = <span class="built_in">find</span>(pre[x]);   <span class="comment">//此代码相当于先找到根结点 rootx，然后 pre[x]=rootx </span></span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isSame</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span>      		<span class="comment">//判断两个结点是否连通 </span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">find</span>(x) == <span class="built_in">find</span>(y);  	<span class="comment">//判断两个结点的根结点（即代表元）是否相同 </span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">join</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    x = <span class="built_in">find</span>(x);						<span class="comment">//寻找 x的代表元</span></span><br><span class="line">    y = <span class="built_in">find</span>(y);						<span class="comment">//寻找 y的代表元</span></span><br><span class="line">    <span class="keyword">if</span>(x == y) <span class="keyword">return</span> <span class="literal">false</span>;			<span class="comment">//如果 x和 y的代表元一致，说明他们共属同一集合，则不需要合并，返回 false，表示合并失败；否则，执行下面的逻辑</span></span><br><span class="line">    <span class="keyword">if</span>(rank[x] &gt; rank[y]) pre[y]=x;		<span class="comment">//如果 x的高度大于 y，则令 y的上级为 x</span></span><br><span class="line">    <span class="keyword">else</span>								<span class="comment">//否则</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(rank[x]==rank[y]) rank[y]++;	<span class="comment">//如果 x的高度和 y的高度相同，则令 y的高度加1</span></span><br><span class="line">        pre[x]=y;						<span class="comment">//让 x的上级为 y</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;						<span class="comment">//返回 true，表示合并成功</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Graph"><a href="#Graph" class="headerlink" title="Graph"></a>Graph</h3><p><strong>Strongly connected directed graph G</strong> <strong>::&#x3D;</strong> <strong>for every pair of</strong> **vi **and **vj **in V( G ), there exist directed paths from **vi **to <strong>v</strong>j <strong>and from</strong> <strong>vj <strong>to <strong>v</strong>i</strong>. If the graph is connected without direction to the edges, then it is said to be</strong> <strong>weakly connected</strong></p>
+<p>计算点的度数：即链表的结点数。（第一个结点不算）</p>
+<p>往往会这样实现：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">AdjVNode</span> *<span class="title">PtrToAdjVNode</span>;</span> </span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">AdjVNode</span>&#123;</span><span class="comment">/*一个顶点结点*/</span></span><br><span class="line">    Vertex AdjV;</span><br><span class="line">    PtrToAdjVNode Next;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">Vnode</span>&#123;</span></span><br><span class="line">    PtrToAdjVNode FirstEdge;</span><br><span class="line">&#125; AdjList[MaxVertexNum];<span class="comment">/*图的数组，指向第一个顶点*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">GNode</span> *<span class="title">PtrToGNode</span>;</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">GNode</span>&#123;</span>  </span><br><span class="line">    <span class="keyword">int</span> Nv;</span><br><span class="line">    <span class="keyword">int</span> Ne;</span><br><span class="line">    AdjList G;</span><br><span class="line">&#125;;<span class="comment">/*一个图的结点，记录边的个数，点的个数，以及数组*/</span></span><br><span class="line"><span class="keyword">typedef</span> PtrToGNode LGraph;</span><br></pre></td></tr></table></figure>
+
+
+<p>另一种方法是结点记录边：</p>
+<p>结点的中记录边的两个点，以及该点的下一条边结点</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">AdjENode</span>&#123;</span></span><br><span class="line">	Vertex Adjv;</span><br><span class="line">	PtrToAdjENode vNext;</span><br><span class="line">	Vertex Adjw;</span><br><span class="line">	PtrToAdjENode wNext;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Topsort</span><span class="params">( Graph G )</span></span></span><br><span class="line"><span class="function"></span>&#123;   <span class="keyword">int</span>  Counter;</span><br><span class="line">    Vertex  V, W;</span><br><span class="line">    <span class="keyword">for</span> ( Counter = <span class="number">0</span>; Counter &lt; NumVertex; Counter ++ ) &#123;</span><br><span class="line">		V = <span class="built_in">FindNewVertexOfDegreeZero</span>( );</span><br><span class="line">		<span class="keyword">if</span> ( V == NotAVertex ) &#123;</span><br><span class="line">	    	<span class="built_in">Error</span> ( “Graph has a cycle” );   </span><br><span class="line">	    	<span class="keyword">break</span>;  </span><br><span class="line">		&#125;</span><br><span class="line">		TopNum[ V ] = Counter; <span class="comment">/* or output V */</span></span><br><span class="line">		<span class="keyword">for</span> ( each W adjacent to V )</span><br><span class="line">	    	Indegree[ W ] – – ;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="topological-order"><a href="#topological-order" class="headerlink" title="topological order"></a>topological order</h4><p>拓扑排序！这里是in&#x3D;&#x3D;0的时候enqueue</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Topsort</span><span class="params">(Graph G)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Queue Q;</span><br><span class="line">    <span class="keyword">int</span> Counter = <span class="number">0</span>;</span><br><span class="line">    Vertex V, W;</span><br><span class="line">    Q = <span class="built_in">CreateQueue</span>(NumVertex);</span><br><span class="line">    <span class="built_in">MakeEmpty</span>(Q);</span><br><span class="line">    <span class="keyword">for</span> (each vertex V)</span><br><span class="line">        <span class="keyword">if</span> (Indegree[V] == <span class="number">0</span>)</span><br><span class="line">            <span class="built_in">Enqueue</span>(V, Q);</span><br><span class="line">    <span class="keyword">while</span> (!<span class="built_in">IsEmpty</span>(Q))</span><br><span class="line">    &#123;</span><br><span class="line">        V = <span class="built_in">Dequeue</span>(Q);</span><br><span class="line">        TopNum[V] = ++Counter; <span class="comment">/* assign next */</span></span><br><span class="line">        <span class="keyword">for</span> (each W adjacent to V)</span><br><span class="line">            <span class="keyword">if</span> ( – – Indegree[W] == <span class="number">0</span>)</span><br><span class="line">                <span class="built_in">Enqueue</span>(W, Q);</span><br><span class="line">    &#125; <span class="comment">/* end-while */</span></span><br><span class="line">    <span class="keyword">if</span> (Counter != NumVertex)</span><br><span class="line">        <span class="built_in">Error</span>( “Graph has a cycle” );</span><br><span class="line">    <span class="built_in">DisposeQueue</span>(Q); <span class="comment">/* free memory */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>If a graph has a topological sequence, then its adjacency matrix must be triangular.</p>
+<p>错的，在无向图中不一定</p>
+<p>If precedes in a topological sequence, then there must be a path from to .</p>
+<p>错的，不一定有</p>
+<p>If the adjacency matrix is triangular, then the corresponding directed graph must have a unique topological sequence.</p>
+<p>错的，可以举出反例</p>
+<p>Dijkstra算法</p>
+<h4 id="最大流量图"><a href="#最大流量图" class="headerlink" title="最大流量图"></a>最大流量图</h4><p>Dinic算法</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">bfs</span><span class="params">(<span class="keyword">int</span> s, <span class="keyword">int</span> t)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">memset</span>(pre, <span class="number">-1</span>, <span class="built_in"><span class="keyword">sizeof</span></span>(pre));</span><br><span class="line">    <span class="keyword">int</span> flow[MAX1] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">    flow[s] = INF;</span><br><span class="line">    pre[s] = <span class="number">0</span>; <span class="comment">//初始化起点</span></span><br><span class="line">    <span class="built_in">init</span>();</span><br><span class="line">    <span class="built_in">push</span>(s);</span><br><span class="line">    <span class="keyword">while</span> (<span class="built_in">isempty</span>() != <span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> u = <span class="built_in">top</span>();</span><br><span class="line">        <span class="built_in">pop</span>();</span><br><span class="line">        <span class="keyword">if</span> (u == t)</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= count; ++i)</span><br><span class="line">        &#123; <span class="comment">//BFS所有的邻接点</span></span><br><span class="line">            <span class="keyword">if</span> (i != s &amp;&amp; Graph[u][i] &gt; <span class="number">0</span> &amp;&amp; pre[i] == <span class="number">-1</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                pre[i] = u; <span class="comment">//记录路径</span></span><br><span class="line">                <span class="built_in">push</span>(i);</span><br><span class="line">                flow[i] = <span class="built_in">min</span>(flow[u], Graph[u][i]); <span class="comment">//更新节点流量(计算增广路上的最小流量)</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> pre[t] == <span class="number">-1</span> ? <span class="number">-1</span> : flow[t]; <span class="comment">//没有找到新的增广路就返回-1,否则返回这个增广路的流量</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Dinic</span><span class="params">(<span class="keyword">int</span> s, <span class="keyword">int</span> t)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> maxflow = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> flow = <span class="built_in">bfs</span>(s, t);</span><br><span class="line">        <span class="keyword">if</span> (flow == <span class="number">-1</span>)</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">int</span> cur = t;</span><br><span class="line">        <span class="keyword">while</span> (cur != s)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">int</span> father = pre[cur]; <span class="comment">//回溯上一个点？</span></span><br><span class="line">            Graph[father][cur] -= flow;</span><br><span class="line">            Graph[cur][father] += flow;</span><br><span class="line">            cur = father;</span><br><span class="line">        &#125;</span><br><span class="line">        maxflow += flow;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> maxflow;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="最小生成树"><a href="#最小生成树" class="headerlink" title="最小生成树"></a>最小生成树</h4><h5 id="prim算法"><a href="#prim算法" class="headerlink" title="prim算法"></a>prim算法</h5><p>先选定一个点，然后压入栈中，然后遍历所有相邻的点，选取下一个点（边最小的）。。。</p>
+<h5 id="Kruskal算法"><a href="#Kruskal算法" class="headerlink" title="Kruskal算法"></a>Kruskal算法</h5><p>结构体存两端顶点和边的value，然后排序，从小到大，利用查并集进行归类，注意，Kruskal算法中，uniqueness问题要注意，这里若两个边长相同，且两个顶点分别属于不同的集合，则不唯一。</p>
+<p>强连通有向图:任意两个顶点之间存在有向的路径可以到达</p>
+<p>图论中一些难以判断的结论(都是对的)</p>
+<ul>
+<li>If e is the only shortest edge in the weighted graph G, then e must be in the minimum spanning tree of G.</li>
+<li>If the BFS sequence of a graph is 1234…, and if there is an edge between vertices 1 and 4, then there must be an edge between the vertices 1 and 3.</li>
+<li>In a directed graph G with at least two vertices, if DFS from any vertex can visit every other vertices, then the topological order must NOT exist.</li>
+<li>Suppose that a graph is represented by an adjacency matrix. If there exist non-zero entries in the matrix, yet all the entries below the diagonal are zeros, then this graph must be a directed graph.</li>
+<li>Kruskal’s algorithm is to grow the minimum spanning tree by adding one edge, and thus an associated vertex, to the tree in each stage.</li>
+</ul>
+<h3 id="Biconnectivity"><a href="#Biconnectivity" class="headerlink" title="Biconnectivity"></a>Biconnectivity</h3><h5 id="articulation-point"><a href="#articulation-point" class="headerlink" title="articulation point"></a>articulation point</h5><p>v is an articulation point if G’ &#x3D; DeleteVertex( G, v ) has at least 2 connected components.</p>
+<blockquote>
+<p> 就是删掉一个点，回产生两个联通图！connectivity</p>
+</blockquote>
+<p>G is a biconnected graph if G is connected and has no articulation points.</p>
+<p><strong>The</strong> <strong>root</strong> <strong>is an articulation point</strong> <strong>iff</strong> <strong>it has</strong> <strong>at least 2 children</strong></p>
+<p><strong>Any</strong> <strong>other vertex u</strong> <strong>is an articulation point</strong> <strong>iff</strong> <strong>u has</strong> <strong>at least 1 child</strong> <strong>and</strong> <strong>it is impossible to</strong> <strong>move down at least 1 step and then jump up to u’s ancestor</strong></p>
+<p>![image-20220104094048629](&#x2F;Users&#x2F;zjuchy&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220104094048629.png)</p>
+<h5 id="biconnected-subgraph"><a href="#biconnected-subgraph" class="headerlink" title="biconnected subgraph"></a>biconnected subgraph</h5><p>A biconnected component is a maximal biconnected subgraph.</p>
+<blockquote>
+<p> 联通分量是最大的联通子图</p>
+</blockquote>
+<p>![image-20220104093330496](&#x2F;Users&#x2F;zjuchy&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220104093330496.png)</p>
+<p>![image-20220105180155341](&#x2F;Users&#x2F;zjuchy&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220105180155341.png)</p>
+<p>注意这里的low就是自己的祖先的编号或者自己的编号的较小者，所以父亲节点不一定比儿子节点的low小！</p>
+<h5 id="Euler-circuit"><a href="#Euler-circuit" class="headerlink" title="Euler circuit"></a>Euler circuit</h5><blockquote>
+<p> 遍历图G中的每一条路径（每条路<strong>Edge</strong>仅通过一次，不是<strong>Vertex</strong>）（闭合回路！）</p>
+</blockquote>
+<p>An Euler circuit is possible only if the graph is connected and each vertex has an even degree.</p>
+<ul>
+<li><p>无向图存在欧拉回路，当且仅当该图的<strong>所有顶点度数都为偶数</strong>且连通</p>
+</li>
+<li><p>有向图存在欧拉回路，当且仅当每一个点的出度等于入度且图要连通</p>
+</li>
+</ul>
+<h5 id="Euler-tour"><a href="#Euler-tour" class="headerlink" title="Euler tour"></a>Euler tour</h5><blockquote>
+<p>遍历图G中的每一条路径（每条路<strong>Edge</strong>仅通过一次，不是<strong>Vertex</strong>）（不是闭合的回路！）</p>
+</blockquote>
+<p>An Euler tour is possible if there are exactly two vertices having odd degree.  One must start at one of the odd-degree vertices.</p>
+<h5 id="Hamilton-cycle"><a href="#Hamilton-cycle" class="headerlink" title="Hamilton cycle"></a>Hamilton cycle</h5><blockquote>
+<p> 恰好通过图G的每个Vertex一次</p>
+<p><strong>T</strong> <strong>&#x3D; O( |E| + |V| )</strong></p>
+</blockquote>
+<h3 id="Sort"><a href="#Sort" class="headerlink" title="Sort"></a>Sort</h3><p>![image-20220105180559475](&#x2F;Users&#x2F;zjuchy&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220105180559475.png)</p>
+<p>Stable： insert，bubble，merge</p>
+<h4 id="Insert"><a href="#Insert" class="headerlink" title="Insert"></a>Insert</h4><p>从尾巴开始往前插入</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">InsertionSort</span> <span class="params">( ElementType A[ ], <span class="keyword">int</span> N )</span> </span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">      <span class="keyword">int</span>  j, P; </span><br><span class="line">      ElementType  Tmp; </span><br><span class="line"></span><br><span class="line">      <span class="keyword">for</span> ( P = <span class="number">1</span>; P &lt; N; P++ ) &#123; </span><br><span class="line">					Tmp = A[ P ];  <span class="comment">/* the next coming card */</span></span><br><span class="line">					<span class="keyword">for</span> ( j = P; j &gt; <span class="number">0</span> &amp;&amp; A[ j - <span class="number">1</span> ] &gt; Tmp; j-- ) </span><br><span class="line">	      			A[ j ] = A[ j - <span class="number">1</span> ]; </span><br><span class="line">	      <span class="comment">/* shift sorted cards to provide a position </span></span><br><span class="line"><span class="comment">                       for the new coming card */</span></span><br><span class="line">					A[ j ] = Tmp;  <span class="comment">/* place the new card at the proper position */</span></span><br><span class="line">      &#125;  <span class="comment">/* end for-P-loop */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>The worst case:Input A[ ] is in reverse order.   T( N ) &#x3D; O( N^2 )  逆序排列<br>The best case:Input A[ ] is in sorted order.   T( N ) &#x3D; O( N) 正序排列</p>
+</blockquote>
+<h4 id="inversion"><a href="#inversion" class="headerlink" title="inversion"></a>inversion</h4><p>An inversion in an array of numbers is any ordered pair ( i, j ) having the property that <strong>i &lt; j** but **A[i] &gt; A[j].</strong></p>
+<p>Input list 34, 8, 64, 51, 32, 21 has 9  inversions.</p>
+<blockquote>
+<p>(34, 8) (34, 32) (34, 21) (64, 51) (64, 32) (64, 21) (51, 32) (51, 21) (32, 21)</p>
+</blockquote>
+<ul>
+<li><p><strong>The</strong> <strong>average number of inversions in an array of</strong> <strong>N</strong> <strong>distinct numbers is</strong> <strong>N</strong> <strong>(</strong> <strong>N</strong> <strong>-</strong> <strong>1</strong> <strong>) &#x2F; 4</strong></p>
+</li>
+<li><p><strong>Any</strong> <strong>algorithm that sorts by exchanging adjacent elements requires</strong> $\Omega$ <strong>(</strong> **N^2 **) <strong>time on average.</strong></p>
+</li>
+</ul>
+<h4 id="Shell"><a href="#Shell" class="headerlink" title="Shell"></a>Shell</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Shellsort</span><span class="params">( ElementType A[ ], <span class="keyword">int</span> N )</span> </span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">      <span class="keyword">int</span>  i, j, Increment; </span><br><span class="line">      ElementType  Tmp; </span><br><span class="line">      <span class="keyword">for</span> ( Increment = N / <span class="number">2</span>; Increment &gt; <span class="number">0</span>; Increment /= <span class="number">2</span> )  </span><br><span class="line">	<span class="comment">/*h sequence */</span></span><br><span class="line">	<span class="keyword">for</span> ( i = Increment; i &lt; N; i++ ) &#123; <span class="comment">/* insertion sort */</span></span><br><span class="line">	      Tmp = A[ i ]; </span><br><span class="line">	      <span class="keyword">for</span> ( j = i; j &gt;= Increment; j - = Increment ) </span><br><span class="line">		<span class="keyword">if</span>( Tmp &lt; A[ j - Increment ] ) </span><br><span class="line">		      A[ j ] = A[ j - Increment ]; </span><br><span class="line">		<span class="keyword">else</span> </span><br><span class="line">		      <span class="keyword">break</span>; </span><br><span class="line">	      A[ j ] = Tmp; <span class="comment">//注意这里的变量！是Tmp不是tmp！	</span></span><br><span class="line">	&#125; <span class="comment">/* end for-I and for-Increment loops */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>The worst-case running time of Shellsort, using Shell’s increments, is $\theta$ ( N^2 ).</p>
+<p>注意，本质上就是分块进行Insert排序，这里就是<strong>交换</strong>的排序，最差的时间复杂度都是<strong>O(N^2)</strong></p>
+<h4 id="Heap-1"><a href="#Heap-1" class="headerlink" title="Heap"></a>Heap</h4><p>build heap;O(N)</p>
+<p>delete min;O(logN)重复N 次</p>
+<p><strong>total: T ( N ) &#x3D; O ( N  log N  )</strong></p>
+<p>The average number of comparisons used to heapsort a random permutation of N distinct items is 2N log N - O( N log log N ) .</p>
+<h4 id="Merge"><a href="#Merge" class="headerlink" title="Merge"></a>Merge</h4><p>Mergesort requires <strong>linear extra memory</strong>, and copying an array is slow.  It is hardly ever used for internal sorting, but is quite useful for external sorting.</p>
+<p>T ( N ) &#x3D; 2T ( N  &#x2F; 2  ) + O( N ) &#x3D; O( N  + N log N ) &#x3D; O(NlogN)</p>
+<h4 id="QuickSort"><a href="#QuickSort" class="headerlink" title="QuickSort"></a>QuickSort</h4><p>A[ ] is presorted – quicksort will take O( N^2 ) time to do nothing </p>
+<p>Worst case:O(N^2)</p>
+<p>Best and average case: O(NlogN)</p>
+<p>Median-of-Three Partitioning:<strong>Pivot &#x3D; median ( left, center, right )</strong></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">ElementType <span class="title">Median3</span><span class="params">( ElementType A[ ], <span class="keyword">int</span> Left, <span class="keyword">int</span> Right )</span> </span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">    <span class="keyword">int</span>  Center = ( Left + Right ) / <span class="number">2</span>; </span><br><span class="line">    <span class="keyword">if</span> ( A[ Left ] &gt; A[ Center ] ) </span><br><span class="line">        <span class="built_in">Swap</span>( &amp;A[ Left ], &amp;A[ Center ] ); </span><br><span class="line">    <span class="keyword">if</span> ( A[ Left ] &gt; A[ Right ] ) </span><br><span class="line">        <span class="built_in">Swap</span>( &amp;A[ Left ], &amp;A[ Right ] ); </span><br><span class="line">    <span class="keyword">if</span> ( A[ Center ] &gt; A[ Right ] ) </span><br><span class="line">        <span class="built_in">Swap</span>( &amp;A[ Center ], &amp;A[ Right ] ); </span><br><span class="line">    <span class="comment">/* Invariant: A[ Left ] &lt;= A[ Center ] &lt;= A[ Right ] */</span> </span><br><span class="line">    <span class="built_in">Swap</span>( &amp;A[ Center ], &amp;A[ Right - <span class="number">1</span> ] ); <span class="comment">/* Hide pivot */</span> </span><br><span class="line">    <span class="comment">/* only need to sort A[ Left + 1 ] … A[ Right – 2 ] */</span></span><br><span class="line">    <span class="keyword">return</span>  A[ Right - <span class="number">1</span> ];  <span class="comment">/* Return pivot */</span> </span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span>  <span class="title">Qsort</span><span class="params">( ElementType A[ ], <span class="keyword">int</span> Left, <span class="keyword">int</span> Right )</span> </span></span><br><span class="line"><span class="function"></span>&#123;   <span class="keyword">int</span>  i,  j; </span><br><span class="line">    ElementType  Pivot; </span><br><span class="line">    <span class="keyword">if</span> ( Left + Cutoff &lt;= Right ) &#123;  <span class="comment">/* if the sequence is not too short */</span></span><br><span class="line">        Pivot = <span class="built_in">Median3</span>( A, Left, Right );  <span class="comment">/* select pivot */</span></span><br><span class="line">        i = Left;     j = Right – <span class="number">1</span>;  <span class="comment">/* why not set Left+1 and Right-2? */</span></span><br><span class="line">        <span class="keyword">for</span>( ; ; ) &#123; </span><br><span class="line">	 <span class="keyword">while</span> ( A[ + +i ] &lt; Pivot ) &#123; &#125;  <span class="comment">/* scan from left */</span></span><br><span class="line">	 <span class="keyword">while</span> ( A[ – –j ] &gt; Pivot ) &#123; &#125;  <span class="comment">/* scan from right */</span></span><br><span class="line">	 <span class="keyword">if</span> ( i &lt; j ) </span><br><span class="line">	    <span class="built_in">Swap</span>( &amp;A[ i ], &amp;A[ j ] );  <span class="comment">/* adjust partition */</span></span><br><span class="line">	 <span class="keyword">else</span>     <span class="keyword">break</span>;  <span class="comment">/* partition done */</span></span><br><span class="line">        &#125; </span><br><span class="line">        <span class="built_in">Swap</span>( &amp;A[ i ], &amp;A[ Right - <span class="number">1</span> ] ); <span class="comment">/* restore pivot */</span> </span><br><span class="line">        <span class="built_in">Qsort</span>( A, Left, i - <span class="number">1</span> );      <span class="comment">/* recursively sort left part */</span></span><br><span class="line">        <span class="built_in">Qsort</span>( A, i + <span class="number">1</span>, Right );   <span class="comment">/* recursively sort right part */</span></span><br><span class="line">    &#125;  <span class="comment">/* end if - the sequence is long */</span></span><br><span class="line">    <span class="keyword">else</span> <span class="comment">/* do an insertion sort on the short subarray */</span> </span><br><span class="line">        <span class="built_in">InsertionSort</span>( A + Left, Right - Left + <span class="number">1</span> );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>千万看仔细！前面部分的是i，后面部分的是j，然后swap的是A[i]与A[Right-1]!也就是最终i停下的地方变成pivot！！！！！</strong></p>
+<h4 id="Decision-Tree"><a href="#Decision-Tree" class="headerlink" title="Decision Tree"></a>Decision Tree</h4><p>Any algorithm that sorts by comparisons only must have a worst case computing time of 下界( N log N ).</p>
+<h4 id="Bucket-Sort"><a href="#Bucket-Sort" class="headerlink" title="Bucket Sort"></a><strong>Bucket Sort</strong></h4><p><strong>linear</strong> time</p>
+<h4 id="Radix-Sort"><a href="#Radix-Sort" class="headerlink" title="Radix Sort"></a>Radix Sort</h4><p>基数排序</p>
+<p>  <strong>LSD</strong>（Least significant digital）：排序方式由数值的最右边（低位）开始</p>
+<p>  <strong>MSD</strong>（Most significant digital）：由数值的最左边（高位）开始。</p>
+<p><strong>LSD</strong></p>
+<p>Sort according to the Least Significant Digit first.</p>
+<p><strong>注意看这里，是按照后几位排序的，比如125–&gt;27–&gt;729，按照25 27 29排序！</strong></p>
+<p>![image-20220104105606706](&#x2F;Users&#x2F;zjuchy&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220104105606706.png)</p>
+<p><strong>MSD</strong></p>
+<p>( Most Significant Digit ) Sort</p>
+<h3 id="Hash"><a href="#Hash" class="headerlink" title="Hash"></a>Hash</h3><p>![image-20220104100119447](&#x2F;Users&#x2F;zjuchy&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220104100119447.png)</p>
+<p>Without overflow, Tsearch &#x3D; Tinsert &#x3D; Tdelete &#x3D; <strong>O( 1 )</strong></p>
+<p>A <strong>collision</strong> occurs when we hash two nonidentical identifiers into the same bucket, i.e.  f ( i1 ) &#x3D; f ( i2 ) when i1 不等于 i2 .<br>An <strong>overflow</strong> occurs when we hash a new identifier into a full bucket.</p>
+<h4 id="Separate-Chaining"><a href="#Separate-Chaining" class="headerlink" title="Separate Chaining"></a>Separate Chaining</h4><p>开散列</p>
+<h4 id="Open-Addressing"><a href="#Open-Addressing" class="headerlink" title="Open Addressing"></a>Open Addressing</h4><p>Generally <strong>$\lambda$</strong> &lt; 0.5.</p>
+<h5 id="Linear-Probing"><a href="#Linear-Probing" class="headerlink" title="Linear Probing"></a>Linear Probing</h5><ul>
+<li>冲突就+1</li>
+</ul>
+<h5 id="Quadratic-Probing"><a href="#Quadratic-Probing" class="headerlink" title="Quadratic Probing"></a>Quadratic Probing</h5><ul>
+<li>Insertion will be seriously slowed down if there are <strong>too many deletions intermixed with insertions.</strong></li>
+</ul>
+<h5 id="Double-Hashing"><a href="#Double-Hashing" class="headerlink" title="Double Hashing"></a>Double Hashing</h5><p>冲突后就加上<strong>i*hash2( x )</strong> </p>
+<p>hash2( x ) &#x3D; R – ( x % R ) </p>
+<h5 id="Rehashing"><a href="#Rehashing" class="headerlink" title="Rehashing"></a>Rehashing</h5><ul>
+<li><p>As soon as the table is half full</p>
+</li>
+<li><p>When an <strong>insertion fails</strong> </p>
+</li>
+<li><p>When the table reaches a certain load factor</p>
+</li>
+</ul>
+<blockquote>
+<p> Usually there should have been N&#x2F;2 insertions before rehash, so O(N) rehash only adds a constant cost to each insertion. However, in an interactive system, the unfortunate user whose insertion caused a rehash could see a slowdown.</p>
+</blockquote>
+<h3 id="UNSURE"><a href="#UNSURE" class="headerlink" title="UNSURE"></a>UNSURE</h3><p>![image-20220104105320088](&#x2F;Users&#x2F;zjuchy&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220104105320088.png)</p>
+<p>Apply DFS to a directed acyclic graph, and output the vertex before the end of each recursion. The output sequence will be:</p>
+<blockquote>
+<p>reversely topologically sorted？？？？output the vertex before the end of each recursion this means the postorder of DFS</p>
+</blockquote>
+<p>During the sorting, processing every element which is not yet at its final position is called a “run”. To sort a list of integers using quick sort, it may reduce the total number of recursions by processing the small partion first in each run.</p>
+<blockquote>
+<p>False ??</p>
+</blockquote>
+<p>Which of the following statements about HASH is true?</p>
+<blockquote>
+<p>the expected number of probes for insertions is greater than that for successful searches in linear probing method</p>
+<p><strong>if the table size is prime and the table is at least half empty, a new element can always be inserted with quadratic probing</strong></p>
+<p>in separate chaining method, if duplicate elements are allowed in the list, insertions are generally quicker than deletions</p>
+<p>insertions需要查找两次！</p>
+<p>all of the above</p>
+</blockquote>
+<p>What is the <strong>major difference</strong> among lists, stacks, and queues?</p>
+<p>Lists are linear structures while stacks and queues are not</p>
+<p>Lists use pointers, and stacks and queues use arrays</p>
+<ul>
+<li>Stacks and queues are lists with insertion&#x2F;deletion <strong>constraints</strong>（约束，限定） <code>container 容器</code></li>
+</ul>
+<p>Lists and queues can be implemented using circularly linked lists, but stacks cannot</p>
+<h2 id="PTA"><a href="#PTA" class="headerlink" title="PTA"></a>PTA</h2><h4 id="HW1"><a href="#HW1" class="headerlink" title="HW1"></a>HW1</h4><p>The recurrent equations for the time complexities of programs P1 and P2 are:</p>
+<ul>
+<li>P1: <em>T</em>(1)&#x3D;1,<em>T</em>(<em>N</em>)&#x3D;<em>T</em>(<em>N</em>&#x2F;3)+1</li>
+<li>P2: <em>T</em>(1)&#x3D;1,<em>T</em>(<em>N</em>)&#x3D;3<em>T</em>(<em>N</em>&#x2F;3)+1</li>
+</ul>
+<p>Then the correct conclusion about their time complexities is:</p>
+<blockquote>
+<p>P1: O(logN) </p>
+<p>P2: O(N) </p>
+</blockquote>
+<p>The Fibonacci number sequence {FN} is defined as: <em>F</em>0&#x3D;0, <em>F</em>1&#x3D;1,  The space complexity of the function which calculates FN recursively is: </p>
+<blockquote>
+<p>Spae complexity is O(N)</p>
+<p>Time complexity is O(FN)</p>
+</blockquote>
+<h4 id="HW2"><a href="#HW2" class="headerlink" title="HW2"></a>HW2</h4><p>consecutive连续的！！记住数组的内存是连续的！</p>
+<p>For a sequentially stored linear list of length <em>N</em>, the time complexities for deleting the first element and inserting the last element are <em>O</em>(1) and <em>O</em>(<em>N</em>), respectively.</p>
+<blockquote>
+<p>liner list 线性表&#x3D;一种概念，即序列，可以用数组和链表实现，sequentiantlly表示顺序存储，即数组，删第一个是O(N)（所有元素向前移动一个），删最后一个是O(1)，F</p>
+</blockquote>
+<p>To merge two singly linked ascending lists, both with <em>N</em> nodes, into one singly linked ascending list, the minimum possible number of comparisons is:</p>
+<blockquote>
+<p>显然是把一个接到另一个后面，即一张表的尾元素小于另一张表的首元素，最小比较一次。但是可能题目的意思是通常情况，从<strong>List1的第一个</strong>从List2的第一个比到最后一个，O(N)。</p>
+</blockquote>
+<h4 id="HW3"><a href="#HW3" class="headerlink" title="HW3"></a>HW3</h4><blockquote>
+<p>operators操作符</p>
+<p>operands操作数</p>
+</blockquote>
+<p>Represent a <strong>queue</strong> by a singly linked list. Given the current status of the linked list as <code>1-&gt;2-&gt;3</code> where <code>x-&gt;y</code> means <code>y</code> is linked after <code>x</code>. Now if <code>4</code> is enqueued and then a dequeue is done, the resulting status must be:</p>
+<blockquote>
+<p>2-&gt;3-&gt;4</p>
+<p>Queue FIFO</p>
+<p>queue: {1,2,3} –&gt;{1,2,3,4}–&gt;{2,3,4}</p>
+</blockquote>
+<p>Suppose that an array of size 6 is used to store a circular queue, and the values of <code>front</code> and <code>rear</code> are 0 and 4, respectively. Now after 2 dequeues and 2 enqueues, what will the values of <code>front</code> and <code>rear</code> be?</p>
+<blockquote>
+<p>2 and 0</p>
+<p>0 1 2 3 4 5 </p>
+<p>Front 0–&gt;1–&gt;2 </p>
+<p>rear 4–&gt;5–&gt;0</p>
+</blockquote>
+<h4 id="HW4"><a href="#HW4" class="headerlink" title="HW4"></a>HW4</h4><p><strong>结点拥有的子树数称为结点的度Degree</strong></p>
+<p><strong>If a general tree <em>T</em> is converted into a binary tree <em>BT</em>, then which of the following <em>BT</em> traversals gives the same sequence as that of the post-order traversal of <em>T</em>?</strong></p>
+<blockquote>
+<p><strong>In-order traversal</strong></p>
+<p>Attention: you can make example for preorder, in_order,post_order</p>
+</blockquote>
+<p>![image-20220103224647511](&#x2F;Users&#x2F;zjuchy&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220103224647511.png)</p>
+<h4 id="HW5"><a href="#HW5" class="headerlink" title="HW5"></a>HW5</h4><p>Among the following binary trees, which one can possibly be the <strong>decision tree</strong> (the external nodes are excluded) for binary search?</p>
+<p>1-10共10个数，然后按照n+m&#x2F;2取上整的顺序插入排序。决策树！</p>
+<p><img src="https://images.ptausercontent.com/282" alt="img"></p>
+<h4 id="HW6"><a href="#HW6" class="headerlink" title="HW6"></a>HW6</h4><p>Insert {5, 2, 7, 3, 4, 1, 6} one by one into an initially empty min-heap. The preorder traversal sequence of the resulting tree is</p>
+<blockquote>
+<p>1, 3, 5, 4, 2, 7, 6</p>
+<p>attention Insert！！！we need to build a min-heap whenever</p>
+</blockquote>
+<p>In a max-heap with <em>n</em> (&gt;1) elements, the array index of the minimum key x may be __.</p>
+<blockquote>
+<p>⌊n&#x2F;2⌋+2</p>
+</blockquote>
+<p>If a <em>d</em>-heap is stored as an array, for an entry located in position <em>i</em>, the parent, the first child and the last child are at</p>
+<blockquote>
+<p>⌊(<em>i</em>+d−2)&#x2F;d⌋, (i−1)d+2, and id+1</p>
+</blockquote>
+<h4 id="HW7"><a href="#HW7" class="headerlink" title="HW7"></a>HW7</h4><p>In Union&#x2F;Find algorithm, if Unions are done by <strong>size</strong>, the depth of any node must be no more than <em>N</em>&#x2F;2, but not <em>O</em>(logN).</p>
+<blockquote>
+<p>false H&lt;&#x3D;log N+1</p>
+</blockquote>
+<p>Let <em>T</em> be a tree created by union-by-size with <em>N</em> nodes, then the height of <em>T</em> can be .</p>
+<blockquote>
+<p>at most log2(N)+1</p>
+<p>这里的Union by size是指当一个高一个低时，低的并到高的树里，若两个树相同，则高度加一，所以树最高为log2(N)+1，准确来说应该是log2(N-1)+1</p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">SetType <span class="title">Find</span> <span class="params">( ElementType X, DisjSet S )</span></span></span><br><span class="line"><span class="function"></span>&#123;   </span><br><span class="line">   ElementType root, trail, lead;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">for</span> ( root = X; S[root] &gt; <span class="number">0</span>; root=S[root]);  </span><br><span class="line">   <span class="keyword">for</span> ( trail = X; trail != root; trail = lead ) &#123;</span><br><span class="line">      lead = S[trail] ;   </span><br><span class="line">      S[trail]=root;</span><br><span class="line">   &#125; </span><br><span class="line">   <span class="keyword">return</span> root;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>A relation <em>R</em> is defined on a set <em>S</em>. If for every element <em>e</em> in <em>S</em>, “<em>e</em> <em>R</em> <em>e</em>“ is always true, then <em>R</em> is said to be __ over <em>S</em></p>
+<blockquote>
+<p>reflexive</p>
+</blockquote>
+<h4 id="HW8"><a href="#HW8" class="headerlink" title="HW8"></a>HW8</h4><p>If graph G is NOT connected and has 35 edges, then it must have at least ____ vertices.</p>
+<blockquote>
+<p>因为C(9,2)&#x3D;36，即9个顶点的连通图最多有36条边，35条边也能符合。C(8,2)&#x3D;28，即8个顶点的联通图最多有28条边，显然是达不到35条边的，因此如果是不连通的，必须加上一个独立的顶点，9 + 1 &#x3D; 10</p>
+</blockquote>
+<p>A graph with 90 vertices and 20 edges must have at least __ <strong>connected component</strong>(s).</p>
+<blockquote>
+<p>70？？就是相当于69个独立的点，加上1个21个点的连通图，就是最少是69+1&#x3D;70</p>
+<p>20*2&#x3D;40 50+20&#x3D;70？</p>
+</blockquote>
+<p>directed graph 就是有相图，有表示方向</p>
+<p>Complete graph:完全图，拥有最大的边数</p>
+<p>connected graph联通图：最少边的就是树，任意两个点都相互联通。</p>
+<p>Strongly connected:强联通，对于有向图，任意两个顶点必须有路径使得v-&gt;w,w-&gt;v</p>
+<p>Weekly connected:对于有向图，其无向图模式满足联通图</p>
+<p>(Connected) Component of an undirected G  the maximal connected subgraph.</p>
+<h4 id="HW9"><a href="#HW9" class="headerlink" title="HW9"></a>HW9</h4><p>In a weighted undirected graph, if the length of the shortest path from <code>b</code> to <code>a</code> is 12, and there exists an edge of weight 2 between <code>c</code> and <code>b</code>, then the length of the shortest path from <code>c</code> to <code>a</code> must be no less than 10.</p>
+<blockquote>
+<p>true 若有小于10的话，则距离肯定小于12！</p>
+</blockquote>
+<h4 id="HW10"><a href="#HW10" class="headerlink" title="HW10"></a>HW10</h4><p>The minimum spanning tree of any weighted graph ____</p>
+<blockquote>
+<p>may not exist 可以有很多component</p>
+</blockquote>
+<h4 id="HW11"><a href="#HW11" class="headerlink" title="HW11"></a>HW11</h4><p>Apply DFS to a directed acyclic graph, and output the vertex before the end of each recursion. The output sequence will be:</p>
+<blockquote>
+<p>reversely topologically sorted？？？？output the vertex before the end of each recursion this means the postorder of DFS</p>
+</blockquote>
+<p>For a graph, if each vertex has an even degree or only two vertexes have odd degree, we can find a cycle that visits every edge exactly once</p>
+<blockquote>
+<p>false  Euler path 不是circle</p>
+</blockquote>
+<p>After the first run of Insertion Sort, it is possible that no element is placed in its final position.</p>
+<blockquote>
+<p>True！ 区别Insert and select</p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">insertion_sort</span><span class="params">(<span class="keyword">int</span> arr[],<span class="keyword">int</span> len)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;len;i++)&#123;</span><br><span class="line">        <span class="keyword">int</span> key=arr[i];</span><br><span class="line">        <span class="keyword">int</span> j=i<span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">while</span>((j&gt;=<span class="number">0</span>) &amp;&amp; (key&lt;arr[j]))&#123;</span><br><span class="line">            arr[j+<span class="number">1</span>]=arr[j];</span><br><span class="line">            j--;</span><br><span class="line">        &#125;</span><br><span class="line">        arr[j+<span class="number">1</span>]=key;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="HW12"><a href="#HW12" class="headerlink" title="HW12"></a>HW12</h4><p>To sort { 8, 3, 9, 11, 2, 1, 4, 7, 5, 10, 6 } by Shell Sort, if we obtain ( 4, 2, 1, 8, 3, 5, 10, 6, 9, 11, 7 ) after the first run, and ( 1, 2, 3, 5, 4, 6, 7, 8, 9, 11, 10 ) after the second run, then the increments of these two runs must be __ , respectively.</p>
+<blockquote>
+<p>3 and 2，距离相差两个</p>
+</blockquote>
+<p>To sort <em>N</em> elements by heap sort, the extra space complexity is:</p>
+<blockquote>
+<p>O(1)</p>
+</blockquote>
+<h4 id="HW13"><a href="#HW13" class="headerlink" title="HW13"></a>HW13</h4><p>During the sorting, processing every element which is not yet at its final position is called a “run”. To sort a list of integers using quick sort, it may reduce the total number of recursions by processing the small partion first in each run.</p>
+<blockquote>
+<p>False ??</p>
+</blockquote>
+<p>Among the following sorting methods, which ones will be slowed down if we store the elements in a linked structure instead of a sequential structure?</p>
+<ol>
+<li>Insertion sort; 2. Selection Sort; 3. Bubble sort; 4. <strong>Shell sort</strong>; 5. <strong>Heap sort</strong></li>
+</ol>
+<blockquote>
+<h5 id="Internal-sort"><a href="#Internal-sort" class="headerlink" title="Internal sort"></a>Internal sort</h5><p>内部排序是排序的基础，在排序的过程中，把所有元素调到内存中进行排序，称之为内部排序。</p>
+<h5 id="External-sort"><a href="#External-sort" class="headerlink" title="External sort"></a>External sort</h5><p>在数据量大的时候，只能分块排序，但是块和块排序不能保证有序，外排序用读写次数来衡量其效率。</p>
+<p>外部排序常用归并，多路归并用的是胜利树和失败树</p>
+</blockquote>
+<p>During the sorting, processing every element which is not yet at its final position is called a “run”. Which of the following cannot be the result after the second run of quicksort?</p>
+<blockquote>
+<p>5, 2, 16, 12, 28, 60, 32, 72</p>
+<p>2, 16, 5, 28, 12, 60, 32, 72</p>
+<p>2, 12, 16, 5, 28, 32, 72, 60</p>
+<p><strong>5, 2, 12, 28, 16, 32, 72, 60</strong></p>
+</blockquote>
+<p>Least Signification Digit (LSD) radix sort</p>
+<blockquote>
+<p>→7→321→28→331→33→34→46→156→57→63</p>
+</blockquote>
+<h4 id="HW14"><a href="#HW14" class="headerlink" title="HW14"></a>HW14</h4><p>Suppose that the numbers {4371, 1323, 6173, 4199, 4344, 9679, 1989} are hashed into a table of size 10 with the hash function <em>h</em>(<em>X</em>)&#x3D;<em>X</em>%10, and hence have indices {1, 3, 4, 9, 5, 0, 2}. What are their indices after rehashing using <em>h</em>(<em>X</em>)&#x3D;<em>X</em>%<em>T<strong>ab</strong>l<strong>e</strong>S<strong>i</strong>ze</em> with linear probing?</p>
+<blockquote>
+<p>rehashing double the Tablesize10*2&#x3D;20</p>
+<p>and choose a prime bigger than 20 : 23, so tablesize is 23</p>
+<p>1, 12, 9, 13, 20, 19, 11</p>
+</blockquote>
+<h4 id="HW15"><a href="#HW15" class="headerlink" title="HW15"></a>HW15</h4><p>The average search time of searching a hash table with <em>N</em> elements is:</p>
+<blockquote>
+<p> search time ：cannot be determined</p>
+</blockquote>
+<p>Which of the following statements about HASH is true?</p>
+<blockquote>
+<p>the expected number of probes for insertions is greater than that for successful searches in linear probing method</p>
+<p>if the table size is prime and the table is at least half empty, a new element can always be inserted with quadratic probing</p>
+<p>in separate chaining method, if duplicate elements are allowed in the list, insertions are generally quicker than deletions</p>
+<p>all of the above</p>
+</blockquote>
+<h4 id="Final0"><a href="#Final0" class="headerlink" title="Final0"></a>Final0</h4><p>In hashing with open addressing to solve collisions, the operarion FIND will be seriously slowed down if there are too many deletions intermixed with insertions.</p>
+<blockquote>
+<p>True</p>
+</blockquote>
+<p>For a connected graph, if there are exactly two vertices having odd degree, we can find an Euler tour that visits every vertex exactly once by starting from one of its odd-degree vertices.</p>
+<blockquote>
+<p>vertex wrong </p>
+<p>edge yes</p>
+</blockquote>
+<p>The average run time and the extra space of Quicksort for sorting <em>n</em> elements are <em>O</em>(<em>n</em>log<em>n</em>) and <em>O</em>(1), respectively.</p>
+<blockquote>
+<p>False </p>
+<p>快排可以说需要的空间为O(1)，因为是原地排序，不需要额外空间；也可以说需要的空间是O(n)，因为在递归调用时有栈的开销，当然最坏情况是O(n),平均情况是O(logn)。</p>
+</blockquote>
+<p>An inversion in an array A[ ] is any ordered pair (i,j) having the property that i&lt;j but A[i]&gt;A[j]. Given array A: {3，87，12，61，70，26，45}，after the first partition of Quicksort with Median3 pivot selection, the number of inversions will be decreased by _____.</p>
+<blockquote>
+<p>3 26 12 45 70 87 61！注意这里最后i是停在3点位置为61，j在2的位置，此时停止，而pivot是45，这里是交换i也就是45与61交换。</p>
+</blockquote>
+<p>left-child right-sibling representation of tree - 左孩子右兄弟表示树</p>
+<blockquote>
+<p>就是把兄弟变成自己的right son！</p>
+</blockquote>
+<p>In hashig with open addressing method，rehashing is definitely necessary when __.</p>
+<blockquote>
+<p><strong>an insertion fails</strong></p>
+<p>the hash table is half full</p>
+<p>primary clustering occurs</p>
+<p>the hash function is not uniform</p>
+</blockquote>
+<h4 id="Final1"><a href="#Final1" class="headerlink" title="Final1"></a>Final1</h4><p>对一棵平衡二叉树，所有非叶结点的平衡因子都是0，当且仅当该树是完全二叉树。</p>
+<blockquote>
+<p>False</p>
+<p>区别满二树叉与完全二叉树</p>
+<p>一棵深度为k且有$2^k-1$个结点的二叉树称为满二叉树</p>
+<p>如果对满二叉树的结点进行编号, 约定编号从根结点起, 自上而下, 自左而右。则深度为k的, 有n个结点的二叉树, 当且仅当其每一个结点都与深度为k的满二叉树中编号从1至n的结点一一对应时, 称之为完全二叉树</p>
+</blockquote>
+<p>对给定序列{ 110，119，7，911，114，120，122 }采用次位优先（LSD）的基数排序，则两趟收集后的结果为：</p>
+<blockquote>
+<p>7, 110, 911, 114, 119, 120, 122</p>
+</blockquote>
+<blockquote>
+<p>0 1 2 3 4 5 6 7 8 9</p>
+<p>110 120 911 122 114 7 119</p>
+<p>0 1 2 3 4 5 6 7 8 9</p>
+<p>7 110 911 114 119 120 122</p>
+</blockquote>
+<p>给定输入序列 {4371, 1323, 6173, 4199, 4344, 9679, 1989} 以及散列函数 h(X)&#x3D;X%10。如果用大小为10的散列表，并且用分离链接法解决冲突，则输入各项经散列后在表中的下标为：（-1表示相应的插入无法成功）(2分)</p>
+<blockquote>
+<p>1, 3, 3, 9, 4, 9, 9 </p>
+</blockquote>
+<p>设数字 {4371, 1323, 6173, 4199, 4344, 9679, 1989} 在大小为10的散列表中根据散列函数 <em>h</em>(<em>X</em>)&#x3D;<em>X</em>%10得到的下标对应为 {1, 3, 4, 9, 5, 0, 2}。那么继续用散列函数 “<em>h</em>(<em>X</em>)&#x3D;<em>X</em>%表长”实施再散列并用线性探测法解决冲突后，它们的下标变为：</p>
+<blockquote>
+<p>1, 12, 9, 13, 20, 19, 11 首先表长翻倍&#x3D;20 取最近的质数23，</p>
+</blockquote>
+<h4 id="DidTerm"><a href="#DidTerm" class="headerlink" title="DidTerm"></a>DidTerm</h4><p>If <em>N</em> numbers are stored in a singly <strong>linked list</strong> in increasing order, then the average time complexity for binary search is O(logN).</p>
+<blockquote>
+<p>false , see the linked list!  是链表！所以都需要全部遍历一遍？</p>
+</blockquote>
+<p>The Fibonacci number sequence {<em>F**N</em>} is defined as: <em>F</em>0&#x3D;0, <em>F</em>1&#x3D;1, <em>FN</em>&#x3D;<em>FN</em>−1+<em>FN</em>−2, <em>N</em>&#x3D;2, 3, …. The time complexity of the function which calculates <em>F**N</em> recursively is <em>O</em>(FN)</p>
+<blockquote>
+<p>True ？？</p>
+</blockquote>
+<p>(logN)^2 is O(N).</p>
+<blockquote>
+<p>True</p>
+</blockquote>
+<p>The array representation of the disjoint sets is given by { 3, 1, -5, 2, 1, -3, -1, 6, 6 }. Keep in mind that the elements are numbered from 1 to 9. After invoking Union(Find(4), Find(8)) with <strong>union-by-size</strong> and <strong>path compression,</strong> how many elements will be changed in the resulting array?</p>
+<blockquote>
+<p> <strong>union-by-size</strong> change 3 and 6, but path compression change 3!!! because the 7 will be change too!</p>
+<p>注意！在Find(4)的时候，这里就要考path compression了，因为这一路径下的东西都要接到根节点上，4和2都直接挂到3下面</p>
+</blockquote>
+<p>![image-20211115164013589](&#x2F;Users&#x2F;zjuchy&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20211115164013589.png)</p>
+<p> <strong>union-by-size</strong></p>
+<p><code>height&lt;= 1+[logN]</code> </p>
+<p>Always change the smaller tree</p>
+<p> <strong>union-by-height</strong></p>
+<p>Always change the shallow tree 改变高度小的树</p>
+<p><strong>threaded tree</strong></p>
+<blockquote>
+<p>线索树，其实非常简单，首先写出inorder 或者postorder或者preorder的顺序，然后看左右subtree是否缺腿，如果缺腿则在上面遍历的表里连接左边或者右边的树！</p>
+</blockquote>
+<p>What is the major difference among lists, stacks, and queues?</p>
+<p>Lists are linear structures while stacks and queues are not</p>
+<p>Lists use pointers, and stacks and queues use arrays</p>
+<ul>
+<li>Stacks and queues are lists with insertion&#x2F;deletion <strong>constraints</strong>（分辨） <code>container 容器</code></li>
+</ul>
+<p>Lists and queues can be implemented using circularly linked lists, but stacks cannot</p>
+<h2 id="PAT"><a href="#PAT" class="headerlink" title="PAT"></a>PAT</h2><h4 id="1064"><a href="#1064" class="headerlink" title="1064"></a>1064</h4><h4 id="1006"><a href="#1006" class="headerlink" title="1006"></a>1006</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">cmp</span><span class="params">(<span class="keyword">const</span> <span class="keyword">void</span> *a, <span class="keyword">const</span> <span class="keyword">void</span> *b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> *(<span class="keyword">int</span> *)a - *(<span class="keyword">int</span> *)b;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">qsort</span>(a,n,<span class="built_in"><span class="keyword">sizeof</span></span>(<span class="keyword">int</span>),cmp);</span><br></pre></td></tr></table></figure>
+
+
+
+
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">Haoyang Chen</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://zjuchy.github.io/2022/02/17/Data-Structure/">https://zjuchy.github.io/2022/02/17/Data-Structure/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://s2.loli.net/2022/02/02/oJiXKmjqWT5Qk9n.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2022/02/09/IMPORTANT/"><img class="next-cover" src="https://s2.loli.net/2022/02/02/rLZKxailymv5bCH.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">IMPORTANT</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/head.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Haoyang Chen</div><div class="author-info__description">I'm a ZJUer, welcome to contact me!</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">7</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">5</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/zjuchy"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/zjuchy" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:3190102984@zju.edu.cn" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Asymptotic-Notation"><span class="toc-number">1.</span> <span class="toc-text">Asymptotic Notation</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Time-amp-space-complexities"><span class="toc-number">1.1.</span> <span class="toc-text">Time &amp; space complexities</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%80%E5%A4%A7%E5%AD%90%E5%88%97%E5%92%8C"><span class="toc-number">1.2.</span> <span class="toc-text">最大子列和</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linked-List"><span class="toc-number">2.</span> <span class="toc-text">Linked List</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Array"><span class="toc-number">2.1.</span> <span class="toc-text">Array</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Linked-List-1"><span class="toc-number">2.2.</span> <span class="toc-text">Linked List</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Linked-List-Sort"><span class="toc-number">2.3.</span> <span class="toc-text">Linked List Sort</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Doubly-Linked-Circular-Lists"><span class="toc-number">2.4.</span> <span class="toc-text">Doubly Linked Circular Lists</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Cursor-Implementation"><span class="toc-number">2.5.</span> <span class="toc-text">Cursor Implementation</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Stack"><span class="toc-number">3.</span> <span class="toc-text">Stack</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Queue"><span class="toc-number">4.</span> <span class="toc-text">Queue</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Circular-Queue"><span class="toc-number">4.1.</span> <span class="toc-text">Circular Queue</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Heap"><span class="toc-number">5.</span> <span class="toc-text">Heap</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#tree"><span class="toc-number">6.</span> <span class="toc-text">tree</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Expression-Trees-syntax-trees"><span class="toc-number">6.1.</span> <span class="toc-text">Expression Trees (syntax trees)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Threaded-Binary-Trees"><span class="toc-number">6.2.</span> <span class="toc-text">Threaded Binary Trees</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Dynamic-Equivalence-Problem"><span class="toc-number">7.</span> <span class="toc-text">Dynamic Equivalence Problem</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Graph"><span class="toc-number">8.</span> <span class="toc-text">Graph</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#topological-order"><span class="toc-number">8.1.</span> <span class="toc-text">topological order</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%80%E5%A4%A7%E6%B5%81%E9%87%8F%E5%9B%BE"><span class="toc-number">8.2.</span> <span class="toc-text">最大流量图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91"><span class="toc-number">8.3.</span> <span class="toc-text">最小生成树</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#prim%E7%AE%97%E6%B3%95"><span class="toc-number">8.3.1.</span> <span class="toc-text">prim算法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Kruskal%E7%AE%97%E6%B3%95"><span class="toc-number">8.3.2.</span> <span class="toc-text">Kruskal算法</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Biconnectivity"><span class="toc-number">9.</span> <span class="toc-text">Biconnectivity</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#articulation-point"><span class="toc-number">9.0.1.</span> <span class="toc-text">articulation point</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#biconnected-subgraph"><span class="toc-number">9.0.2.</span> <span class="toc-text">biconnected subgraph</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Euler-circuit"><span class="toc-number">9.0.3.</span> <span class="toc-text">Euler circuit</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Euler-tour"><span class="toc-number">9.0.4.</span> <span class="toc-text">Euler tour</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Hamilton-cycle"><span class="toc-number">9.0.5.</span> <span class="toc-text">Hamilton cycle</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Sort"><span class="toc-number">10.</span> <span class="toc-text">Sort</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Insert"><span class="toc-number">10.1.</span> <span class="toc-text">Insert</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#inversion"><span class="toc-number">10.2.</span> <span class="toc-text">inversion</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Shell"><span class="toc-number">10.3.</span> <span class="toc-text">Shell</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Heap-1"><span class="toc-number">10.4.</span> <span class="toc-text">Heap</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Merge"><span class="toc-number">10.5.</span> <span class="toc-text">Merge</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#QuickSort"><span class="toc-number">10.6.</span> <span class="toc-text">QuickSort</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Decision-Tree"><span class="toc-number">10.7.</span> <span class="toc-text">Decision Tree</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Bucket-Sort"><span class="toc-number">10.8.</span> <span class="toc-text">Bucket Sort</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Radix-Sort"><span class="toc-number">10.9.</span> <span class="toc-text">Radix Sort</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hash"><span class="toc-number">11.</span> <span class="toc-text">Hash</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Separate-Chaining"><span class="toc-number">11.1.</span> <span class="toc-text">Separate Chaining</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Open-Addressing"><span class="toc-number">11.2.</span> <span class="toc-text">Open Addressing</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Linear-Probing"><span class="toc-number">11.2.1.</span> <span class="toc-text">Linear Probing</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Quadratic-Probing"><span class="toc-number">11.2.2.</span> <span class="toc-text">Quadratic Probing</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Double-Hashing"><span class="toc-number">11.2.3.</span> <span class="toc-text">Double Hashing</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Rehashing"><span class="toc-number">11.2.4.</span> <span class="toc-text">Rehashing</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#UNSURE"><span class="toc-number">12.</span> <span class="toc-text">UNSURE</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PTA"><span class="toc-number"></span> <span class="toc-text">PTA</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#HW1"><span class="toc-number">0.1.</span> <span class="toc-text">HW1</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HW2"><span class="toc-number">0.2.</span> <span class="toc-text">HW2</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HW3"><span class="toc-number">0.3.</span> <span class="toc-text">HW3</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HW4"><span class="toc-number">0.4.</span> <span class="toc-text">HW4</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HW5"><span class="toc-number">0.5.</span> <span class="toc-text">HW5</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HW6"><span class="toc-number">0.6.</span> <span class="toc-text">HW6</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HW7"><span class="toc-number">0.7.</span> <span class="toc-text">HW7</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HW8"><span class="toc-number">0.8.</span> <span class="toc-text">HW8</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HW9"><span class="toc-number">0.9.</span> <span class="toc-text">HW9</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HW10"><span class="toc-number">0.10.</span> <span class="toc-text">HW10</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HW11"><span class="toc-number">0.11.</span> <span class="toc-text">HW11</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HW12"><span class="toc-number">0.12.</span> <span class="toc-text">HW12</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HW13"><span class="toc-number">0.13.</span> <span class="toc-text">HW13</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Internal-sort"><span class="toc-number">0.13.1.</span> <span class="toc-text">Internal sort</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#External-sort"><span class="toc-number">0.13.2.</span> <span class="toc-text">External sort</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HW14"><span class="toc-number">0.14.</span> <span class="toc-text">HW14</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HW15"><span class="toc-number">0.15.</span> <span class="toc-text">HW15</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Final0"><span class="toc-number">0.16.</span> <span class="toc-text">Final0</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Final1"><span class="toc-number">0.17.</span> <span class="toc-text">Final1</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#DidTerm"><span class="toc-number">0.18.</span> <span class="toc-text">DidTerm</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PAT"><span class="toc-number"></span> <span class="toc-text">PAT</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1064"><span class="toc-number">0.1.</span> <span class="toc-text">1064</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1006"><span class="toc-number">0.2.</span> <span class="toc-text">1006</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/02/17/Data-Structure/" title="Data_Structure">Data_Structure</a><time datetime="2022-02-17T03:13:35.000Z" title="Created 2022-02-17 11:13:35">2022-02-17</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/02/09/IMPORTANT/" title="IMPORTANT">IMPORTANT</a><time datetime="2022-02-09T14:43:05.000Z" title="Created 2022-02-09 22:43:05">2022-02-09</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/02/03/Daily/" title="Daily">Daily</a><time datetime="2022-02-03T14:10:41.000Z" title="Created 2022-02-03 22:10:41">2022-02-03</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/02/02/S081/" title="S081">S081</a><time datetime="2022-02-02T11:59:02.000Z" title="Created 2022-02-02 19:59:02">2022-02-02</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/02/02/Leetcode/" title="Leetcode">Leetcode</a><time datetime="2022-02-02T11:58:28.000Z" title="Created 2022-02-02 19:58:28">2022-02-02</time></div></div></div></div></div></div></main><footer id="footer" style="background: transparent"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By Haoyang Chen</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"></div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-nest.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
