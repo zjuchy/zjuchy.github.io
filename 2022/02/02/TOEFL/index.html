@@ -1,32 +1,1122 @@
-extends includes/layout.pug
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>TOEFL | ZJUCHY の blog</title><meta name="keywords" content="English"><meta name="author" content="Haoyang Chen"><meta name="copyright" content="Haoyang Chen"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Indispensible Daily2022.1.21principality 公国 quest for寻找  squeeze 压榨  plane 平面 roid flora植物群 fungus真菌  fauna动物群  plow soil  petal花瓣 pedal踏板 feeble虚弱的 locomotor 器官运动的 flop pond水池 feasible moderate modes">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TOEFL">
+<meta property="og:url" content="https://zjuchy.github.io/2022/02/02/TOEFL/index.html">
+<meta property="og:site_name" content="ZJUCHY の blog">
+<meta property="og:description" content="Indispensible Daily2022.1.21principality 公国 quest for寻找  squeeze 压榨  plane 平面 roid flora植物群 fungus真菌  fauna动物群  plow soil  petal花瓣 pedal踏板 feeble虚弱的 locomotor 器官运动的 flop pond水池 feasible moderate modes">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s2.loli.net/2022/02/02/rLZKxailymv5bCH.png">
+<meta property="article:published_time" content="2022-02-02T09:10:43.000Z">
+<meta property="article:modified_time" content="2022-04-06T06:39:57.599Z">
+<meta property="article:author" content="Haoyang Chen">
+<meta property="article:tag" content="English">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2022/02/02/rLZKxailymv5bCH.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://zjuchy.github.io/2022/02/02/TOEFL/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'TOEFL',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-04-06 14:39:57'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
 
-block content
-  #post
-    if top_img === false
-      include includes/header/post-info.pug
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
 
-    article#article-container.post-content!=page.content
-    include includes/post/post-copyright.pug
-    .tag_share
-      if (theme.post_meta.post.tags)
-        .post-meta__tag-list
-          each item, index in page.tags.data
-            a(href=url_for(item.path)).post-meta__tags #[=item.name]
-      include includes/third-party/share/index.pug
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
         
-    if theme.reward.enable
-      !=partial('includes/post/reward', {}, {cache: true})
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.1.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">Loading...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/head.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">10</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">5</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://s2.loli.net/2022/02/02/rLZKxailymv5bCH.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">ZJUCHY の blog</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">TOEFL</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2022-02-02T09:10:43.000Z" title="Created 2022-02-02 17:10:43">2022-02-02</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2022-04-06T06:39:57.599Z" title="Updated 2022-04-06 14:39:57">2022-04-06</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="TOEFL"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><a target="_blank" rel="noopener" href="https://www.toeflresources.com/speaking-section/">Indispensible</a></p>
+<h1 id="Daily"><a href="#Daily" class="headerlink" title="Daily"></a>Daily</h1><h2 id="2022-1-21"><a href="#2022-1-21" class="headerlink" title="2022.1.21"></a>2022.1.21</h2><p>principality 公国 quest for寻找  squeeze 压榨  plane 平面 roid <strong>flora植物群 fungus真菌  fauna动物群</strong>  plow soil  petal花瓣 pedal踏板 <strong>feeble</strong>虚弱的 locomotor 器官运动的 flop <strong>pond水池</strong> feasible moderate modest demise mortality immortal</p>
+<p>algae海藻 <strong>tide tidal潮汐 intertidal</strong> <strong>trial审判 trail道路痕迹 tribal部落</strong> <strong>shelter避难所栖息</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">shelter me from the stress</span><br></pre></td></tr></table></figure>
 
-    //- ad
-    if theme.ad && theme.ad.post
-      .ads-wrap!=theme.ad.post
+<p>sediment沉积物 sedimentary <strong>basin</strong>沉积平原 erosion侵蚀 susceptible to 脆弱易受侵蚀</p>
+<p>typify作为代表，典型</p>
+<p>striking  noteworthy obvious remarkable dramatic prominent</p>
+<p>pertinent relevant</p>
+<p>Palace-dwelling 居住在宫殿 Prosperous 繁荣的 prosper繁荣 prosperity prospect</p>
+<p>allergy过敏</p>
+<p>particle颗粒 jaw下颚 equivalent等价物 elongated细长的 dislocate脱臼</p>
+<p>persumably假设 reasonable to assume </p>
+<p>attest 认定 promote促进（积极） speed up加速（中性） encourage 积极鼓励 <strong>看词性</strong></p>
+<p>a wealth of 大量的 a great value大量的</p>
+<p>propagated</p>
+<p>exploit 利用，剥削 use &#x2F;utilize &#x2F;take advantage of  property财产,属性</p>
+<p>Explosion 爆炸 explicit明确的</p>
+<p>Moral 道德寓意 lesson 教训 </p>
+<p>nonindigenous predator 不是的本土的这捕食者 indigenous &#x2F;inherent继承遗传的</p>
+<p><strong>exclusively only sole</strong> </p>
+<p>configuration 配置 arrangement&#x2F;shape</p>
+<p>provided &#x3D; if 如果 herd 兽群 herb草药</p>
+<p>stroke中风  tail stroke甩尾巴 </p>
+<p><strong>appreciate 欣赏，理解领会 understand理解的</strong></p>
+<p><strong>minute &#x3D; tiny</strong> <strong>minute particle微小的颗粒</strong></p>
+<p><strong>seek 寻求 sought sink下沉 think thought</strong>  sink——&gt;sank</p>
+<p>sought-after备受追捧</p>
+<p>Likewise同样的</p>
+<p>strain 品种种类（细菌）累</p>
+<p><strong>robust茁壮</strong> healthy</p>
+<p>project &#x3D; estimate</p>
+<p>proposed 计划 propose计划</p>
+<p>注意感情色彩 encourage——&gt;promote</p>
+<h2 id="2022-1-22"><a href="#2022-1-22" class="headerlink" title="2022.1.22"></a>2022.1.22</h2><h3 id="reading"><a href="#reading" class="headerlink" title="reading"></a>reading</h3><p>intensive密集的 Density 密度 **irrigation **灌溉 <strong>ridge</strong>山脊</p>
+<p>Comprehensive contemporary sense 综合现代感</p>
+<p><strong>Spatial空间的</strong> dimensional</p>
+<p><strong>comprehensive</strong>综合的 <strong>contemporary</strong>现代的 <strong>temporary</strong>暂时的 dimension方面 comprehend理解 comprehension理解</p>
+<p>revolution革命 evolution进化</p>
+<p>field studies 实地调研 reassessment 重新评估（负） assumption 假说 boom繁荣 a large volume of大量 suspended sediment悬浮沉积物 </p>
+<p>reassessment not负负得正，就是好的</p>
+<p>at the same pace&#x2F;rate同步的 demographic人口的 surge激增</p>
+<p>A, B without witch C 没有B就没有C</p>
+<p><strong>exclutively &#x3D; only 不敏感</strong></p>
+<p><strong>new equal never fisrt only all</strong>这些词需要特别注意</p>
+<p>from A to B： A下限 B上限</p>
+<p>Turnover 轮转率 reside居住 dwelling居住 prosperity繁荣</p>
+<p>metropolitan大都市 metro地铁+politan 政治的 politic</p>
+<p>tenfold十倍 quantity数量 fertilizer话费 at a steady rate稳定增长</p>
+<p>nitrogen 氮 phosphorus磷</p>
+<p>habitation定居的 doscourage一致 precipitation降水 irregular不规则 </p>
+<p>runoff地表径流</p>
+<p>close to the mark接近事实 marine fossil sequence mollusk软体动物 tangible 可行的 evolution </p>
+<p>Category categorize分类 exhibit展示</p>
+<p>infect infectious传染性 nomadic游牧的 organism生物 organ器官</p>
+<p>mobility流动性 flexibility灵活性 incentive刺激 boon福利 bane毒药，祸害 craving渴望 </p>
+<p>hatch孵化  incubate surf海浪 scramble 爬 orienting mechanism导航机制 undertow水下逆流 tow拖 sweep推送 exclusively唯一的 recede撤退 afloat adj.</p>
+<p>asteroid小行星 meteorite陨石 metallic金属的 designate指定的 mixture混合物 meteor流星体 particle颗粒 fragment碎片</p>
+<p>strike struck击中罢工 comprise组成 component组成部件</p>
+<p>glacier glacial <strong>deposit</strong>沉积物 propose提出 continent大陆</p>
+<p>friction摩擦 pollutant污染物pollute  skyscraper 摩天大楼 air turbulence气流  turbulence湍流 disturb打扰 modify修改</p>
+<h3 id="listening-难"><a href="#listening-难" class="headerlink" title="listening 难"></a>listening 难</h3><p>Mosaics马赛克</p>
+<p>Ceramics陶瓷</p>
+<p>Physiology of sensory organs感知器官</p>
+<p>food foraging 觅食</p>
+<p>astronomy and cosmology天文宇宙学 cosmology 宇宙学</p>
+<p>Particle physics 粒子物理</p>
+<p>Seismology地震学</p>
+<p>optics光学</p>
+<p>**pragmatic使用 ** Gist 主旨 detail细节 inference推断</p>
+<p><strong>-ology：学问，科学</strong> graphy  <strong>geology</strong></p>
+<h2 id="2022-1-23"><a href="#2022-1-23" class="headerlink" title="2022.1.23"></a>2022.1.23</h2><h3 id="writing"><a href="#writing" class="headerlink" title="writing"></a>writing</h3><p>inaccurate imprecise occasional coherently</p>
+<p>要求语言准确</p>
+<p>idiomaticity lexical</p>
+<p>somewhat有点 syntactic句式 </p>
+<h3 id="reading-1"><a href="#reading-1" class="headerlink" title="reading"></a>reading</h3><p>via &#x3D; by</p>
+<p>coupled with &#x3D; and</p>
+<p>construction建造 combustible易燃的 sanitation卫生状况</p>
+<h2 id="2022-1-24"><a href="#2022-1-24" class="headerlink" title="2022.1.24"></a>2022.1.24</h2><h3 id="reading-2"><a href="#reading-2" class="headerlink" title="reading"></a>reading</h3><p>aspiration志向抱负 enclose围住 symbolic象征性的 architecture建筑学</p>
+<p> fertilizer话费 spore孢子 moisture moist </p>
+<p>workshop作坊 apartment公寓 complex复杂的 complexity grid网格</p>
+<p>profound深远的 blacksmith铁匠 warrior勇士 ritual仪式 region地区 religion宗教 hose软管 hoes覆盖</p>
+<p>autumn秋天 ushering迎来 revitalize 振兴</p>
+<p>colony殖民地 landscape地貌 stake on压赌注 cultivate种植 graze畜牧 plumb探索</p>
+<p>Aquifer蓄水层 aquatic水生物 recharge蓄水 depression下降 water table地下水水位 well水井 saturate渗透 deplete枯竭 pump泵水？ gravel砾石 porous多孔的 pore小孔 once曾经withdrawn抽取</p>
+<p>once&#x3D;at one time</p>
+<p>outpost节点 plant安置，工厂</p>
+<p>elaborate详细的 landlord地主 semiprivate半私人化 gome家？</p>
+<p>volatile易挥发的易变的 <strong>virtually</strong>几乎 <strong>virtually &#x3D; almost</strong></p>
+<p>feedlot养殖场 machinery机械 manure粪便 motorize机动化</p>
+<p>oak橡树 render使得 outcompete竞争中获胜</p>
+<p>注意段首与段尾！一定要看到！先看ABCD，注意时间节点！today once等 以及审题cannot ，程度副词 main</p>
+<h2 id="2022-1-25"><a href="#2022-1-25" class="headerlink" title="2022.1.25"></a>2022.1.25</h2><h3 id="writing-1"><a href="#writing-1" class="headerlink" title="writing"></a>writing</h3><p>fence篱笆</p>
+<p>首先先看第一段的最后一句，再看剩下几段的第一句（都是总起的）</p>
+<p>T 3法：X CT in Au 1:nat fence block  2:catch  egg young easy water 3:vitus  hard toad X breed </p>
+<p>反驳：都没用&#x2F;都有害</p>
+<p>千万注意分段信号！ </p>
+<p>tpo 23的写作</p>
+<h2 id="2022-1-26"><a href="#2022-1-26" class="headerlink" title="2022.1.26"></a>2022.1.26</h2><h3 id="writing-2"><a href="#writing-2" class="headerlink" title="writing"></a>writing</h3><p>familiarize sb with sth</p>
+<p>it is inevitable that each individual has his own perspective and points of view</p>
+<p>be adept at &#x2F; be proficient in &#x2F;have proficiency in &#x2F; be expert at&#x2F;in doing sth &#x2F; be skilled in&#x2F;at sth.</p>
+<p>concentrate on</p>
+<p>Some embrace the statement that focusing on subjects students are expert in seems reasonable.</p>
+<p>She is highly skilled at dealing with difficult customers.</p>
+<p>To some extent, the essence contained within all school subjects <strong>simply resembles the concentrated frames of architecture.</strong></p>
+<p>简单地类似于建筑的集中框架。</p>
+<p>pool，collect 汇集 mirror映射</p>
+<h3 id="listening"><a href="#listening" class="headerlink" title="listening"></a>listening</h3><p>astronomy cosmos space launch scientific orbit comet planet <strong>asteroid</strong> nebula interplanetary solar <strong>heliocentric</strong> geocentric assumption estimate Mercury Venus Mars Saturn Jupiter Uranus supernova <strong>property</strong> galaxy  <strong>cluster</strong> classification distribution  <strong>emit</strong> mapping <strong>catalogue</strong> telescope scheme object moon sample <strong>crucial</strong> symmetry <strong>sphere</strong> spherical concentrated lopsided <strong>elliptical</strong> <strong>spiral</strong> specific radius distinguish mineral iron <strong>acid</strong> </p>
+<p>renaissance Impressionism expressionism realistic fine art frame canvas studio watercolor portrait  <strong>prevalence</strong> background subject work tube <strong>synthesize</strong> recede ultramarine pigment  impermanent symbol <strong>synthetic</strong> formula recipe time-consuming <strong>sponsor</strong>  combination <strong>substitute</strong> substance fundamental assign concept signature <strong>sculptor</strong> <strong>carve</strong> commission <strong>fresco</strong> assistant <strong>marble</strong> patron innovation established supervise <strong>sarcastic</strong> masterpiece  <strong>emotive</strong> feature statue <strong>facade</strong> arch </p>
+<p>Anatomy community herd swarm flock mammal  carnivore herbivore carnivorous herbivorous omnivorous predator prey rodent microbe primate <strong>reptile</strong> vertebrate invertebrate <strong>amphibian</strong> insect fungus migrate <strong>dormant</strong> offspring <strong>hatch</strong> breed fertilize camouflage <strong>parasite</strong> <strong>habitat</strong> domesticate pest lizard moth larva caterpillar dinosaur snake venomous bat toad octopus crocodile <strong>whale</strong> jellyfish coral tentacle spine beak </p>
+<p>ancester artifact ancient civilization anthropologist antiquity antique archaeology archaeologist BA bury clan container crania cranial cultural <strong>empire</strong>  <strong>excavate</strong> grave historical <strong>inhabit</strong> IA nomad origin originate <strong>porcelain pottery ceramic</strong> prehistoric medieval primitive relic religion remiains <strong>ritual</strong> <strong>ornament</strong> radiocarbon dating rock painting <strong>ruin</strong> shelter skull SA <strong>tribe</strong> tribal utensil site settlement stone chip artifical </p>
+<h4 id="注意转折与因果"><a href="#注意转折与因果" class="headerlink" title="注意转折与因果"></a>注意转折与因果</h4><p>but actually in fact however although of course </p>
+<p>Trigger 造就导致 account for  </p>
+<h4 id="层次"><a href="#层次" class="headerlink" title="层次"></a>层次</h4><h2 id="2022-1-27"><a href="#2022-1-27" class="headerlink" title="2022.1.27"></a>2022.1.27</h2><h3 id="listening-1"><a href="#listening-1" class="headerlink" title="listening"></a>listening</h3><p><strong>also</strong>特别容易4选2</p>
+<p>along with </p>
+<p><strong>now 记得分层</strong></p>
+<p>多数人认为的：<strong>It‘s commonly said that 一般都是错的！</strong></p>
+<p>重点关注<strong>but</strong></p>
+<p>spice香料 spoiled 腐烂坏的 be subject to fine受到罚款</p>
+<p>exhibit展示 prohibit禁止 inhibit抑制</p>
+<p>you might want to &#x3D; you should</p>
+<p><strong>you’d better off doing 你最好别做</strong></p>
+<p><strong>namely也就是</strong> which is&#x2F; that is &#x2F; In other words</p>
+<p>pottery sherds陶瓷碎片</p>
+<p>举例子： <strong>if &#x3D; example         think of&#x2F;about&#x2F;picture</strong></p>
+<p>steel cable铁制电缆 stainless防锈的</p>
+<p><strong>所有的对比都要记下来！！</strong></p>
+<p><strong>比较级与最高级！</strong></p>
+<p><strong>新旧对比</strong>！<strong>we thought</strong>是我们原以为！！！</p>
+<p>同向对比！resemble和 一样 <strong>compare analogy</strong>类比</p>
+<p>反向对比 contrast&#x2F;instead&#x2F;unlike&#x2F;on the other hand</p>
+<p>：）正面 ：(反面</p>
+<p><strong>controversial</strong>矛盾的争议的 ambitious野心的</p>
+<p>结论 <strong>conclude&#x2F;  turn out</strong>自带震惊的语气</p>
+<p><strong>reproductive</strong> rate繁育成功率 <strong>reproduce 繁衍</strong> breed</p>
+<p>do强调句，双否，反衬  </p>
+<p>meticulous精心的小心点</p>
+<p>hind后面的 behind paws are wide宽掌 feet of &#x2F;fedov&#x2F; hinterland内陆</p>
+<p>outweign比重要 outrun更快 displacement位移</p>
+<p>colony <strong>centralize and compact</strong>  graze animals and open field  was <strong>not unlike</strong> </p>
+<p>come through贯穿 disclaimer免责声明 </p>
+<p>ward off disease驱除  ward病房 ware器皿 <strong>porcelain ware陶瓷</strong></p>
+<h3 id="reading-3"><a href="#reading-3" class="headerlink" title="reading"></a>reading</h3><p>straightforward 简单的 </p>
+<h2 id="2022-1-28"><a href="#2022-1-28" class="headerlink" title="2022.1.28"></a>2022.1.28</h2><h3 id="reading-4"><a href="#reading-4" class="headerlink" title="reading"></a>reading</h3><p>be drawn to被吸引 draw my attention吸引注意 put up with&#x3D;bear忍受 bear a child 养育孩子</p>
+<p>impractical&#x3D;confusion不切实际的</p>
+<p>必须包含原文全部信息！因果必须一致，注意同义改写</p>
+<p>famine饥荒 epidemic传染病 spur刺激 </p>
+<p><strong>tomb</strong>墓 house收容容纳</p>
+<p><strong>preliminary</strong>初步的 makeup构成 over time随着时间 composition构成 </p>
+<p>erode侵蚀 erosion侵蚀 autonomous自治的 handicraft手工 capitalism资本主义的 prosperous繁荣的 artisan手艺人</p>
+<p><strong>曾经A 现在B，优先说现在</strong>！</p>
+<p>inhospitable不友好的 hospitable友好的</p>
+<p>replicate复制 blanket裹上</p>
+<h3 id="listening-2"><a href="#listening-2" class="headerlink" title="listening"></a>listening</h3><p>that‘s a mouthful.</p>
+<p>It’s a mouthful I suppose. mouthful拗口的</p>
+<p>it’s meant to show.</p>
+<p>Next assignment</p>
+<p>Produce  organically grown.</p>
+<p>Going to &#x3D; gonna</p>
+<p>I would have &#x3D; i’dave</p>
+<p>anything but除了 nothing but只不过</p>
+<p>on such short notice如此仓促</p>
+<p>in person亲自 impersonal没人情味的</p>
+<p>drive sth home讲清楚 high-end高端的 essay散文 conform符合 conformist墨守成规</p>
+<p>go down the drain付诸东流 All my hard work went down the drain.   </p>
+<p>goof off游手好闲</p>
+<p>due to</p>
+<p>start from scratch从头开始，白手起家</p>
+<p>It’s been shaped by constraints over vast stretches of time, all of which <strong>comes down to</strong> the fact that the best foraging strategy for beavers isn’t the one that yields the most food or wood.</p>
+<p>comes down to归结于 vast stretches of time历史长河中 constraint限制 yield产生带来 </p>
+<p>It‘s rear for us</p>
+<p>open spot 职位空缺 job openings <strong>opening空缺</strong></p>
+<p>not necessarily 未必不一定(让步)</p>
+<p>decorative walkway装饰走廊</p>
+<p>even though it’s <strong>at odds with</strong> 格格不入 fit in 融入</p>
+<p>lesserknown不知名的 usual author  syllabus教学大纲</p>
+<p>pros and cons优缺点权衡利弊</p>
+<p>in a different light从不通的角度</p>
+<p>low key低调得不张扬 nothing flashy不张扬的 It’s very thoughtful of you.你很体贴</p>
+<p>common denominators共同点，共性</p>
+<p><strong>variations</strong></p>
+<p>go to a lot of trouble大费周章</p>
+<p>pull them from thin air凭空捏造</p>
+<p>what I wouldn’t give迫不及待想要</p>
+<p>collage &#x2F;kəˈläZH&#x2F; stool凳子 </p>
+<p>![image-20220129213455956](&#x2F;Users&#x2F;zjuchy&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220129213455956.png)</p>
+<p>Systematic 系统上的 He does everything in a systematic way.或者well organized</p>
+<p>billboard公告板 disastrous灾难的 bowl碗 give away赠送 budget负担</p>
+<h2 id="2022-1-30"><a href="#2022-1-30" class="headerlink" title="2022.1.30"></a>2022.1.30</h2><h3 id="listening-3"><a href="#listening-3" class="headerlink" title="listening"></a>listening</h3><p>+3人&#x2F;-3人：最多&#x2F;最少的人</p>
+<p>++&#x2F; ––比较级</p>
+<p>![image-20220130230824027](&#x2F;Users&#x2F;zjuchy&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220130230824027.png)</p>
+<h2 id="2022-1-31"><a href="#2022-1-31" class="headerlink" title="2022.1.31"></a>2022.1.31</h2><p>alligator短吻鳄</p>
+<p>sewer下水道</p>
+<p>strike fear into sb吓一跳</p>
+<p>genetic mutation基因突变</p>
+<p>meme&#x3D;gene仿造</p>
+<h2 id="2022-2-3"><a href="#2022-2-3" class="headerlink" title="2022.2.3"></a>2022.2.3</h2><p>It blinds them to certain problems that might be obvious to sb else.</p>
+<p>On the other hand对立</p>
+<p>On another hand</p>
+<h2 id="2022-2-4"><a href="#2022-2-4" class="headerlink" title="2022.2.4"></a>2022.2.4</h2><h3 id="reading-5"><a href="#reading-5" class="headerlink" title="reading"></a>reading</h3><p>to illustrate解释说明 for instant instance实例</p>
+<p>to cast doubt on </p>
+<p>by contrast    to contrast</p>
+<p>discharge释放 recharge充电 intervention intervene drastically剧烈地</p>
+<p>fort堡垒 cavern缝隙 recesses凹陷 <strong>dwarf</strong>矮人相形见绌 turbine涡轮</p>
+<p>would not expect本不该期待 weigh权衡  take precedence over优先于 utilitarian功利的 propose提出</p>
+<p>welfare warfare plight困难 encroach入侵 log伐木 adornment装饰品 mandarin中国的普通话 progressive逐渐的 unrest动乱 </p>
+<h3 id="listening-4"><a href="#listening-4" class="headerlink" title="listening"></a>listening</h3><p>人数多，范围大，时间长，影响广都是被怼的</p>
+<p>注意根据题号排除，可以根据其他选项（3对1）来选择</p>
+<p>leave the impression that <strong>all is lost</strong>. 无药可救</p>
+<p>mitigate缓和减轻 last resort最后一招 in the vicinity of在附近 mangrove forest红树林 smother窒息 cost-effective省钱的</p>
+<p>chimpanzee黑猩猩 gorilla大猩猩 orangutan红毛猩猩 beaver河狸 hippopotamus河马 lizard蜥蜴 moth飞蛾 octopus章鱼 prairie dog土拨鼠 whale鲸鱼 jellyfish水母 jelly果冻 squirrel松鼠 camel骆驼 Corvidae鸦 colubrid无毒蛇 coyote草原狼 hare野兔 hawk鹰 marmot土拨鼠 pup狗崽狼崽 puppy狗 dolphin海豚 mammoth猛犸 toad蟾蜍 constrictor大蟒 cobra眼镜蛇 viper蝰蛇 sloth树懒 ostrich鸵鸟 lobster龙虾 pronghorn antelope叉角羚 cheetah猎豹 rhino犀牛 water buffalo水牛 sea urchin海胆 humming bird蜂鸟 giraffe长颈鹿 clam蛤 mastodon乳齿象 crocodile鳄鱼 alligator短吻鳄 finch雀类 raven黑乌鸦 falcon隼</p>
+<p><strong>出现controversial说明后面会出现两方观点</strong></p>
+<p><strong>it is well卡顿暗示</strong></p>
+<p><strong>do是一个强调</strong></p>
+<p><strong>pockets of小块</strong></p>
+<h2 id="2022-2-6"><a href="#2022-2-6" class="headerlink" title="2022.2.6"></a>2022.2.6</h2><h3 id="reading-6"><a href="#reading-6" class="headerlink" title="reading"></a>reading</h3><p>forbidding令人生畏 Grazer食草动物 sparse vegetation稀少的植被 metal metallic金属的</p>
+<p>lush forset cover郁郁葱葱 precipitation降水 a wealth of大量的 wealthy </p>
+<p>precipitation, precipitate, sediment, deposit</p>
+<p>copper铜 <strong>bronze</strong>青铜 tin锡 calcium钙 sodium钠 jade玉</p>
+<p>excpetional特优良 contiguous相邻的 contiguous nation相邻的国家 convention惯例 conventional传统的  controversial争议的</p>
+<p>opaque透明的 Antarctic南极 arctic北极 illusion幻觉 metallic金属的 horizonal水平的 vertical竖直的 continent similarity vary diversity  fantasy想象 Alpine高山 cushion电子 snowdrift雪堆  prostrate匍匐 leach浸出 manure粪便 compost堆肥 demograohic人口的 perilous危险的 agrarian土地的 malaise萎靡不振 rural folk乡下人 triple三倍 timing定时 timid胆小的</p>
+<p>infer imply allude deduce suggest </p>
+<p><strong>逆向推理90%</strong>  unlike uniquely after before&#x3D;prior to在..前</p>
+<p>千万注意the most ，late这种程度词！</p>
+<p>updraft上升 clash冲突 tornadoes龙卷风 other than除了 topographical地形的 livestock牲畜 expansion扩张</p>
+<p>harsh严酷的 hatch孵化 hibernate冬眠 compensation补偿 dormancy休眠 branch树枝  bushy浓密的</p>
+<p>found建立 founded建立 find——&gt;found</p>
+<p>fulfilling充实的 unfulfilling不满足 flat平坦地 depression低洼地 landform地形 meteor流星体 house容纳收容 <strong>hybird</strong>杂交！！</p>
+<p>modest中等的 rival对手 emerge出现 criterion范畴 straightforward直接的 </p>
+<p>dominate支配 dominant主导的 irritation刺激 cease cessation停止？resume恢复</p>
+<h2 id="2022-2-7"><a href="#2022-2-7" class="headerlink" title="2022.2.7"></a>2022.2.7</h2><h3 id="listening-5"><a href="#listening-5" class="headerlink" title="listening"></a>listening</h3><p>interpretation解释 lack of clarity清晰度的缺乏？？</p>
+<h3 id="writing-3"><a href="#writing-3" class="headerlink" title="writing"></a>writing</h3><p><strong>Do you agree or disagree with the statement: Getting advice from friends who are older than you is more valuable than getting advice from friends of your own age.</strong></p>
+<p>1.I agree</p>
+<p>2.From my point of opinion, the elder has more experience and broader horizons.</p>
+<p>3.It’s more efficient to get valuable advice from elders. Because they may have gone through the difficulty we are facing and know how to behave better on this circumstance.</p>
+<p>4.The peers’ advice may be effectless. </p>
+<p>5.Taking all reasons into consideration, we could reach the conclusion that….</p>
+<p><strong>Do you agree or disagree with the following statement: The ability to write well is more important than that of speaking?</strong></p>
+<p>1.disagree</p>
+<p>2.writing ability is important, however the speaking has the same significance with writing.</p>
+<p>3.Most of time, speaking is one of the most effective ways to express your opinions and share with others.</p>
+<p>4.So…</p>
+<p><strong>Do you agree or disagree with the following statement? Primary schools are considering spending more time on teaching young students (5-11) technology (like computer) than teaching music and art.</strong></p>
+<p>1.agree</p>
+<p>R1:Technology like computer is getting more and more important in our daily life, and it’s indispensible in our study and work.</p>
+<p>R2:We can still have change to learn music and art if we are really intrigued by it.</p>
+<p>R3:More technology can endow child with the chance and ability to realize their fantasy.</p>
+<p>Conclusion:So…</p>
+<h2 id="2022-2-8"><a href="#2022-2-8" class="headerlink" title="2022.2.8"></a>2022.2.8</h2><h3 id="writing-4"><a href="#writing-4" class="headerlink" title="writing"></a>writing</h3><ol>
+<li><strong>Which</strong> strengthens friendships, <strong>enjoying good time together</strong> or <strong>talking about problems and supporting each other</strong>.</li>
+</ol>
+<p>  B  “A friend in need is a friend indeed“</p>
+<p><strong>让步结构</strong></p>
+<img src="/Users/zjuchy/Library/Application Support/typora-user-images/image-20220208104104576.png" alt="image-20220208104104576" style="zoom: 33%;" />
 
-    if theme.post_pagination
-      include includes/pagination.pug
-    if theme.related_post && theme.related_post.enable
-      != related_posts(page,site.posts)
+<p>发起时要借他人之口：Some people may believe that enjoying good time together can strengthen friendships. They may consider the good time as</p>
+<ol start="2">
+<li>As a student of a university that has a long break between university semesters, you are required by the university to do one of the following for one month during the break:</li>
+</ol>
+<p>  (1) Students must take a course on a subject that has no direct connection to their majors of study.<br>  (2) Students must volunteer to work in the university’s city or their hometowns to improve some aspects of life of the city or their hometowns. </p>
+<p>  Which would you prefer to do, and why?</p>
+<ol start="3">
+<li><p>Do you agree or disagree with the following statement?Students with the same skill levels in certain subjects should be included in the same class.</p>
+<p>Should</p>
+</li>
+<li><p>If you need to improve your performance in order to get better promotion or higher pay in a company, which of the following would you choose?<br>(1) Doing more work or assignments that are required.<br>(2) Participating more actively or contributing your own ideas more frequently in group discussions.</p>
+</li>
+</ol>
+<img src="/Users/zjuchy/Library/Application Support/typora-user-images/image-20220208110918534.png" alt="image-20220208110918534" style="zoom:33%;" />
 
-    if page.comments !== false && theme.comments && theme.comments.use
-      - var commentsJsLoad = true
-      !=partial('includes/third-party/comments/index', {}, {cache: true})
-      
+<p>段落：主题句+解释+举例+总结（可有可无）</p>
+<img src="/Users/zjuchy/Library/Application Support/typora-user-images/image-20220208113143077.png" alt="image-20220208113143077" style="zoom:33%;" />
+
+<h3 id="reading-7"><a href="#reading-7" class="headerlink" title="reading"></a>reading</h3><p>perch栖息 compatible兼容的 deteriorate恶化的 folding折叠的 scaffolding脚手架 binder粘合剂 durable持久的 plaster石灰 incense香 engulf吞没 somber忧郁的 scrub洗刷 scrub, wipe, scour dull钝的暗 cosmetic maintenance美容保养 net网，净含量，final最终的 state quo状态地位 vigorous有力地 restoration恢复 override推翻 repeal, abolish, abrogate, revoke, do away with, override revoke撤销</p>
+<p>rarely**, if ever,** resorting to finishing a section with touch-up paint containing binder. &#x3D; rarely resorting to finishing a section with touch-up paint containing binder.</p>
+<p>provided &#x3D; if？如果 would have been本该 demographic人口学的</p>
+<h2 id="2022-2-9"><a href="#2022-2-9" class="headerlink" title="2022.2.9"></a>2022.2.9</h2><h3 id="reading-8"><a href="#reading-8" class="headerlink" title="reading"></a>reading</h3><p>a vast increase in agricultural output <strong>without which</strong> industrialization would have been impossible&#x3D;</p>
+<p>industrialization would have been impossible withou a vast increase in agricultural output.</p>
+<ul>
+<li><strong>which指代的是前面最近的一个名词</strong></li>
+</ul>
+<p>guild行会 <strong>in that因为</strong></p>
+<p>Up <strong>until</strong> 1000 A.D, merchant guilds associations were <strong>not</strong> organized into separate groups according to the merchandise they sold.</p>
+<p><strong>not until直到才</strong></p>
+<p><strong>the former the latter</strong></p>
+<p>weathering侵蚀</p>
+<p><strong>cons and pros</strong>优缺点 aloft漂浮 presumably假设的 amplify加强 thermal热的 visibility可见的 vision视觉 inertia惯性 replenish补充 hypothesis假说</p>
+<h3 id="listening-6"><a href="#listening-6" class="headerlink" title="listening"></a>listening</h3><p>1+2+1+1注意寒暄！conversation</p>
+<ol>
+<li>abstract&#x3D;summary摘要</li>
+<li>call no. 索书号，索盘码，书脊</li>
+<li>information desk 前台</li>
+<li>stack 书架</li>
+<li>audio-video center 视听中心</li>
+<li>return area 还书区</li>
+<li>periodical期刊 reading room 期刊阅览室</li>
+<li>collection of rare book 馆藏图书</li>
+<li>index索引</li>
+<li>current <strong>issue</strong> 现刊 issue期刊</li>
+<li>back issue 过刊</li>
+<li>photocopier 复印机</li>
+<li>copier复印机</li>
+<li>copying machine 复印机</li>
+<li>two-sided copying双面复印</li>
+<li>jammed卡纸</li>
+<li>书籍状态</li>
+</ol>
+<ul>
+<li>inter-library loan 跨馆借阅</li>
+<li>available 在库可借  <strong>NA不可借</strong></li>
+<li>in circulation 在借阅期</li>
+<li><strong>check out 把书借走</strong></li>
+<li><strong>overdue 书超期限了</strong></li>
+<li><strong>renewal</strong> 续借</li>
+<li><strong>put on reserve</strong> 在馆阅读</li>
+</ul>
+<p>at my last school 有新旧对比的暗示 </p>
+<p>Loan period借阅期限 hook it up插电源</p>
+<h2 id="2022-2-10"><a href="#2022-2-10" class="headerlink" title="2022.2.10"></a>2022.2.10</h2><h3 id="listening-7"><a href="#listening-7" class="headerlink" title="listening"></a>listening</h3><p>T.A. Teaching assistant 助教</p>
+<p>R.A. Research assistant 助研</p>
+<p>turn down the job 拒绝这份工作</p>
+<p>work load 工作量</p>
+<p>inter ship 实习期</p>
+<p>resume 简历</p>
+<p>morning shift 早班</p>
+<p>night shift 晚班</p>
+<p><strong>switch shift 换班</strong></p>
+<p>opening&#x2F;vacancy 职位空缺</p>
+<p><strong>a letter of reference</strong> 推荐信</p>
+<p><strong>re-shelved重新上架</strong></p>
+<p>Short-staffed人手短缺</p>
+<p>weird奇怪</p>
+<p><strong>swamped n.沼泽 v.陷入大量工作，大量问题</strong></p>
+<p>be swamped with application充满的神奇</p>
+<p>flexbility ling huo xing</p>
+<p>work-study勤工俭学</p>
+<p>选课注册话题场景词汇：MIT BIT北理 HIT哈工 SHIT上理</p>
+<p><strong>freshman sophomore junior senior</strong></p>
+<ul>
+<li><p>1.register for&#x2F;sign up for&#x2F;enroll in&#x2F;enlist in&#x2F;take</p>
+</li>
+<li><p>2.registrar注册办公室的人 registrar office注册办</p>
+</li>
+<li><p>3.drop quit</p>
+</li>
+<li><p>4.prerequisite course 先修课</p>
+</li>
+<li><p>5.introductory course&amp; intro course 入门课程intermediate-level course中级 <strong>advanced course</strong>高级</p>
+</li>
+<li><p>6.required course &amp; compulsory course 必修课</p>
+</li>
+<li><p>7.<strong>optional</strong> course &amp; <strong>elective</strong> course 选修课 <strong>elective</strong></p>
+</li>
+<li><p>8.credit学分</p>
+</li>
+<li><p>9.deadline</p>
+</li>
+<li><p>10.<strong>get one’s a signature&#x2F;permission</strong>  得到批准（上一门课）</p>
+</li>
+<li><p>11.<strong>audit</strong> a course 旁听一门课</p>
+</li>
+<li><p>12.<strong>waive</strong> a course 免修一门课</p>
+</li>
+<li><p><strong>13.transcript</strong> 成绩单 reportcard</p>
+</li>
+</ul>
+<p>先上入门课，后上高级课</p>
+<p>如果要破例(make an exception)，教授要同意</p>
+<p>热门popular course提前报，超负overload要退掉drop </p>
+<p>老师的oh wow really是特殊的语气词，重要出题点</p>
+<p><strong>been after sb.催着某人</strong></p>
+<p>Term paper学期论文</p>
+<p><strong>proposed topics</strong> 论文选题，在对话中如果听到了论文的标题，是<strong>重点（记笔记）</strong>，会出细节题</p>
+<p><strong>narrow down 缩小范围</strong></p>
+<p>preliminary outline 初步的大纲 preliminary</p>
+<p>hard copy 打印版</p>
+<p>syllabus 课程大纲</p>
+<p>handout 讲义</p>
+<p>extension延期</p>
+<p>free rider搭便车</p>
+<p><strong>do the trick&#x3D;work out</strong></p>
+<p><strong>literature review文献综述</strong></p>
+<p>start from stratch白手起家</p>
+<p>end端，也可以相当于aspect</p>
+<p>assume需要，需求</p>
+<h2 id="2022-2-12"><a href="#2022-2-12" class="headerlink" title="2022.2.12"></a>2022.2.12</h2><h3 id="listening-8"><a href="#listening-8" class="headerlink" title="listening"></a>listening</h3><p>understatement轻描淡写 overstatement言过其实 <strong>lecture halls阶梯教室</strong> keep pace with material跟得上？impersonal没人情味的 take somthing personally因为针对而不快 </p>
+<p>Why not stop by his office during office hours?混个面熟</p>
+<p>反问句必出题</p>
+<p>round圆的 square方 cubic cube立方 crescent新月 cone锥体 triangle quadrangle pentagon五角 penta kill hexagon六角</p>
+<p>![image-20220212172033651](&#x2F;Users&#x2F;zjuchy&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220212172033651.png)</p>
+<p>名词及时缩写</p>
+<p>copper铜 zinc锌 lead铅</p>
+<p>![image-20220212172336859](&#x2F;Users&#x2F;zjuchy&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220212172336859.png)</p>
+<p>adapt改变 adopt收养(son) adept内行</p>
+<p>Dairy 奶 Diary日记 contend竞争 content内容满足 context语境 contest竞赛</p>
+<p>![image-20220212172540131](&#x2F;Users&#x2F;zjuchy&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220212172540131.png)</p>
+<p>implicit含蓄的 explicit清晰的 dissert论述 dissertation论文</p>
+<p>slap拍 suite套房  tap开发利用 decent体面的 descent descend下降</p>
+<p>![image-20220212173014987](&#x2F;Users&#x2F;zjuchy&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220212173014987.png)</p>
+<p>![image-20220212193123561](&#x2F;Users&#x2F;zjuchy&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220212193123561.png)</p>
+<p>![image-20220212193353213](&#x2F;Users&#x2F;zjuchy&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220212193353213.png)</p>
+<p>chore琐事 chord和弦 choir合唱团 clash冲突 crash conform随大众  council理事会 crown王冠 crow乌鸦 </p>
+<p>![image-20220212193547884](&#x2F;Users&#x2F;zjuchy&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220212193547884.png)</p>
+<h2 id="2022-2-13"><a href="#2022-2-13" class="headerlink" title="2022.2.13"></a>2022.2.13</h2><h3 id="writing-5"><a href="#writing-5" class="headerlink" title="writing"></a>writing</h3><p>独立写作</p>
+<p>elevation海拔 saturated chemical渗透化学物质</p>
+<p><strong>开头段</strong>点出争议，指出阅读给出的主要观点并从三个方面支持，听力三个方面反对</p>
+<p><strong>分论点</strong> 阅读说，但是听力说</p>
+<p>谁谁说就是一般现在时：sb says</p>
+<h2 id="2022-2-24"><a href="#2022-2-24" class="headerlink" title="2022.2.24"></a>2022.2.24</h2><h3 id="writing-6"><a href="#writing-6" class="headerlink" title="writing"></a>writing</h3><p>综合写作20分钟，独立写作30分钟</p>
+<p>important&#x3D;essential,key,crucial,significant</p>
+<p>A influences B &#x3D; B is influenced by A            affected</p>
+<p>Decide&#x3D;make a decision</p>
+<p>Be willing to do &#x3D; willing to do</p>
+<p> wealthy有钱</p>
+<p>开头表面立场！</p>
+<p>The <strong>reading</strong> proposes three hypotheses to explain the decline of yellow cedar population. <strong>However</strong>, the <strong>lecturer</strong> points out that none of them are adequate.</p>
+<p>propose建议 hypothese假设 lecturer讲师 points out</p>
+<p><strong>reading propose</strong>&#x2F;say</p>
+<p><strong>lecturer rejects</strong></p>
+<p><strong>Author</strong></p>
+<p><strong>Speaker</strong></p>
+<p><strong>writer</strong></p>
+<p><strong>professor</strong></p>
+<p>On the contrary</p>
+<p>undermine损坏</p>
+<p>namely也就是</p>
+<p>第一段</p>
+<p>First, the <strong>author believes</strong> that the cedars have been killed by insect parasites, namely cedar bark beetles. On the contrary, the <strong>speaker</strong> points out that bettles cannot be the fundamental reason of the decline. Cedars are saturated with chemicals that are poisonous to beetles and therefore are resistant. He also explains that the dead trees found with bettles must have been damaged before the bettles eat them.</p>
+<p>Second, the reading says the brown bears can cause the decline through eaing the <strong>barks</strong> for sugar. Nevertheless, the listening argues that the bears may influence the population but cannot be responsible for the overall decline. Yellow cedar decline on both the mainland and island, while no bears live on the latter. Therefore, bears could not be the fundamental reason of the overall decline.</p>
+<p>Third, the writer attributed to the decline to the. climate change. Because of the changes in the temperature, the yellow cader trees now grow in late winter, which could lead to frozen roots and undermined overall health. However, the professor rejects this theory. According to him, the trees are found dying more at lower elevations where the weather is warmer and less at higher elevations where it is colder. <strong>If coldness were the reason</strong>, trees should be dying more at colder places.  While in reality, this is not the case.</p>
+<p>虚拟语气were</p>
+<p>elevate elevator elevation海拔 chermistry overall全部的 resistant saturated with chemical that are poisonous to the beetles and therefore are resistant.</p>
+<p>chemistry化学 chemical化学物质</p>
+<h2 id="2022-2-25"><a href="#2022-2-25" class="headerlink" title="2022.2.25"></a>2022.2.25</h2><h3 id="writing-7"><a href="#writing-7" class="headerlink" title="writing"></a>writing</h3><p>TPO 34 theory is not the same with reason! factor因素 </p>
+<p>![image-20220223161140728](&#x2F;Users&#x2F;zjuchy&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220223161140728.png)</p>
+<p>TPO 16</p>
+<p>construction company建筑公司 </p>
+<p>注意时态，尤其是阅读与听力的时态。暗示现在这些问题已经不存在了。 </p>
+<p>,![image-20220225221159010](&#x2F;Users&#x2F;zjuchy&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220225221159010.png)</p>
+<p>while 只强调两者之间的对比，并不强调转折</p>
+<p>while conj. 然而 &#x3D; whereas</p>
+<p>while前后句子之结构要求并列相对</p>
+<p>这里要注意三个主语！以及两个做法</p>
+<p>preserve the artifacts, either by building around them.</p>
+<p>![image-20220226213017244](&#x2F;Users&#x2F;zjuchy&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220226213017244.png)</p>
+<p>250</p>
+<p>pros and cons : advantage and disadvantage</p>
+<h2 id="2022-2-26"><a href="#2022-2-26" class="headerlink" title="2022.2.26"></a>2022.2.26</h2><p>独立写作开头与结尾</p>
+<p>字数300+ 时间30min</p>
+<p>600字 30min    1min 20单词</p>
+<p>总分总结构 一般1+3+1或者1+2+1</p>
+<p>每段60–100字.</p>
+<ul>
+<li>一边倒</li>
+<li>让步转折递进（先承认原题有道理一段，但是我这也不是不好：2个好处，而且会有进一步的作用）</li>
+</ul>
+<p>一般3段时：开头结尾5min，每段body 7-8min，其余时间检查</p>
+<p>TPO 9</p>
+<p> Technology has made children less creative than they were in the past.</p>
+<p>注意关键词：technology children <strong>creative</strong> </p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">I agree with the </span><br><span class="line">Technology has booming nowadays, <span class="keyword">and</span> it inevitably has the affection on children</span><br><span class="line">Technology has lots of advantage that …help children …</span><br><span class="line">However these behave will decrease the creation of the children.</span><br><span class="line"></span><br><span class="line">I think one of the most important reason is</span><br></pre></td></tr></table></figure>
+
+<p>开头改写一下句子，变为范文</p>
+<p><strong>Are our kids becoming lazier and less creative, less imaginable than before as a consequence of highly advanced technology?</strong> My answer is <strong>no</strong>, and just the opposite, technology has aapparently assisted our kids to become more creative.</p>
+<p><strong>First and foremost,</strong></p>
+<p><strong>Second,</strong></p>
+<p><strong>Third</strong>,</p>
+<p>![image-20220227092758935](&#x2F;Users&#x2F;zjuchy&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220227092758935.png)</p>
+<p>![image-20220227092821076](&#x2F;Users&#x2F;zjuchy&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220227092821076.png)</p>
+<p>![image-20220227092951811](&#x2F;Users&#x2F;zjuchy&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220227092951811.png)</p>
+<p>![image-20220227093204488](&#x2F;Users&#x2F;zjuchy&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220227093204488.png)</p>
+<p>professional apparatus </p>
+<p>creative ideas are economically encouraged . Steve Jobs Mark Zuckberg</p>
+<p>In a nutshell,</p>
+<p>![image-20220227095700909](&#x2F;Users&#x2F;zjuchy&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220227095700909.png)</p>
+<p>![image-20220227105315316](&#x2F;Users&#x2F;zjuchy&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220227105315316.png)</p>
+<p>![image-20220227105402922](&#x2F;Users&#x2F;zjuchy&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220227105402922.png)</p>
+<p>![image-20220227110058818](&#x2F;Users&#x2F;zjuchy&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220227110058818.png)</p>
+<h2 id="2022-2-27"><a href="#2022-2-27" class="headerlink" title="2022.2.27"></a>2022.2.27</h2><p>独立写作</p>
+<p>![image-20220227230925257](&#x2F;Users&#x2F;zjuchy&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220227230925257.png)</p>
+<p>T0 money health efficiency emotion</p>
+<p>look for work, investigate tex regime tariff stimulate improve the work population and help raise tax revenue</p>
+<p>save money or to be economical</p>
+<p>T1 knowledgement experience pleasure comfort relaxation  potrait quality characteristic</p>
+<p>T2 technology environment sustainable</p>
+<p>T3 fair cultural value community</p>
+<p>TPO 11</p>
+<p>obtain the useful skills to improve our own academic and professional performance.</p>
+<p>offer us a lot of information about the meaningful events happening all over the world and can help us broaden our horizons.</p>
+<p><strong>Admittedly</strong>, there is some unreal informaiton on the Internet. However, these unreal information forces us to be critical thinkers and have the ability to tell the truth.</p>
+<p>钱，健康，效率，情感</p>
+<p>![image-20220228085626896](&#x2F;Users&#x2F;zjuchy&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220228085626896.png)</p>
+<p>use our own knowledge and experience to solve problem than to ask other people for advice.</p>
+<p>It’s good to use own knowledge and experience to solve problem. And it can help us improve the ability to think independently. However, it’s not good to just stick in the problem when you have no idea or experience. you will gain nothing but discouragement.</p>
+<p>However, it’s more efficient to ask other for advice.  </p>
+<p>And it can help promote emotional communication </p>
+<p><strong>三选一</strong>的话，需要褒一贬二</p>
+<p>分类法</p>
+<p>万用找茬角度</p>
+<p>恶性后果</p>
+<p>用不着做，边际效益递减了</p>
+<p>做不出来，技术要求太高了，成本太大，执行起来太困难</p>
+<p>各种原因达不到原本的目的</p>
+<p>People benefit more from travelling in their own country than from travelling to foreign countries.</p>
+<p>开头benifit more travelling <strong>foreign</strong> countries.</p>
+<p>first, travelling abroad can help us broaden our horizons and experience different types of life. Normally, we can have change to get in touch with different people and things. </p>
+<p>Admittedly, travelling abroad may cost more money, however, with the development of the transmission, it’s becoming much cheaper than before, and it’s also more convenient to go abroad.</p>
+<p>consequently,</p>
+<p>mental and physical</p>
+<p>bosom friends知己</p>
+<h2 id="2022-2-28"><a href="#2022-2-28" class="headerlink" title="2022.2.28"></a>2022.2.28</h2><p>想不出理由：controlling idea放在几个并列的分类上验证想法</p>
+<p>万能理由？</p>
+<p><strong>Time&#x2F;energy</strong></p>
+<p>有的同学会觉得，a group of people.一组人同时做一件事情，可能是省时间的。但是也有同学说，一组人做事情，很难达到一个统一，可能最后的结果是费精力，费时间</p>
+<p><strong>Money</strong></p>
+<p>钱，到底是带给我们时间和精力上的节省了，还是消耗了我们的时间与精力，到底对我们是省钱有帮助，还是说其实是浪费了很多的钱和时间，都是可以从两方面来说的。</p>
+<p>save money的角度，我们看的是我们做一件事情是否经济化，是否值得做。或者说，这件事是不是实用。比如说买大量的图书，或者参与一个社会活动，哪个更有价值，更值得投入精力去做。</p>
+<p>waste money的角度。当我们说到费钱的时候，可能是经济成本，也可能是时间成本。</p>
+<p><strong>health&#x2F;safety</strong></p>
+<p>通常能够促进我们身体和心理健康的事情，一般是好事情，是值得去做的。</p>
+<p>比如说sports、看书、交朋友或者出去玩，让我们开心的事情都是促进我们心理健康的。运动、规律的作息、健康的饮食，它可以给我们带来的就是一个Physical health，身体上的健康。结交朋友、写日记、良好的生活习惯，这些可以给我们带来的是一个mental health心理上的健康。</p>
+<p><strong>relationship</strong></p>
+<p>network&#x2F;friends&#x2F;family&#x2F;job opportunities </p>
+<p>大家做事情，不管是写作业，或者是以后大学里面做一个project的项目，是喜欢一个人做，还是喜欢一组做?这一点就非常适合这一道题目。</p>
+<p>你喜欢住在大城市还是小城市?</p>
+<p>相对来说可能大城市带来的教育的机会或者是职业的机会更多。但小城市，人与人之间往往有一种比较紧密的关系。可以从正着、反着两个方面来讨论。</p>
+<p><strong>knowledge&#x2F;experience</strong></p>
+<p>Gain&#x2F;acquire&#x2F;obtain vast amount of knowledge</p>
+<p>知识、经验下还包括了眼界、积累、专业学识等</p>
+<p><strong>ability&#x2F;skills</strong></p>
+<p>在托福写作中特别常见的比如：</p>
+<p>independence、management、communicational skills、specific skills</p>
+<p>在目前的这个社会条件下，这几种能力都是非常重要的，是在托福的写作中经常被拿出来问到的</p>
+<p><strong>personalities&#x2F;characteristics</strong></p>
+<p>leadership， <strong>team spirit</strong>或responsibility</p>
+<p>例题是不是应该让小孩子照顾宠物?</p>
+<p>这种题目可能大家会说，在小孩子照顾宠物的过程中会锻炼小孩子的一个<strong>责任感</strong>，他就知道该怎么去照顾别人，照顾自己，他现在照顾的是宠物，可能是小狗或者小猫，但是他以后要<strong>照顾自己</strong>，包括会<strong>照顾父母</strong>，这种都可以从responsibility上考虑，也就是我们所说的personality里面去抽出来。</p>
+<p><strong>relaxation&#x2F;happiness</strong></p>
+<p>如果一件事情它能够<strong>带给我们快乐</strong>，然后我们选择我要去做，有问题吗，没毛病。我选择这件事情的原因是它让我很开心，让我很放松很享受。如果一个议论文从“是否能带给自己快乐”的角度出发，怎么说都是有理由的。</p>
+<p><strong>technology</strong></p>
+<p>公共交通的发展</p>
+<p>　　医疗方面的便捷</p>
+<p>　　信息的传播</p>
+<p>　　生活方式的改变</p>
+<p><strong>environment</strong></p>
+<p>以下做哪件事情是最环保的，或者以下哪些事情是人们做了可以保护环境的。</p>
+<p>在找分论点的时候，我们可以考虑环保的意识。如果我们有这种环保的意识的话，我们觉得这件事情是很值得去做的，包括一个可持续发展：sustainable development。</p>
+<p><strong>落实自身法</strong>：衍生到本人的</p>
+<p><strong>I may not be able to represent everyone’s preference, but just for me</strong>, <strong>I would value&#x2F;support</strong> the price if my apartment most when choosing a place to accommodate myself.（选择观点一）</p>
+<p>Price matters, especially given that I am just a college student depending on my parents.（选择观点一的原因，）</p>
+<p>while some people may suggest me to do something（反对观点二）</p>
+<p>Finally（反对观点三）poverty poor</p>
+<p>总结：再次强调自身的情况，不像我一样具备核心特质的X和Y的人可以会做出不同的选择，但是由于我。。。所以我支持选项。</p>
+<p><strong>my reason is realistic and mundane</strong></p>
+<p>firstly consequently</p>
+<p>enable trigger thus triggering</p>
+<h3 id="展开段落"><a href="#展开段落" class="headerlink" title="展开段落"></a>展开段落</h3><p>分析因果</p>
+<p>Reasoning  an opinion大前提，小前提，结论</p>
+<p>email邮件</p>
+<p>brains are programmed to understand the contents more quickly through reading than through listening</p>
+<p>There is no shortage of debate about whether .In my opinion, I feel this way for three reasons which I will explore in the following essay.</p>
+<p>First of all</p>
+<h3 id="Reading"><a href="#Reading" class="headerlink" title="Reading"></a>Reading</h3><p><strong>TPO 41 19&#x2F;30</strong> 目标27&#x2F;30差太多了。。。</p>
+<p>注意词性里，要关注also里的对应关系！</p>
+<p>unity单元 mythic神话 tornado龙卷风 valcano火山 recount叙述 narrate level off平缓 emanate发出 reciprocity互惠的 diversity diverse diversify vary改变 scarce scarcely scarcity缺乏</p>
+<p>The <strong>change from redistribution to formal trade-often</strong> based on regulated commerce that perhaps involved fixed prices and even currency-was closely tied to growing political and social complexity and hence to the development of the state in the ancient world.</p>
+<p>power the emergence of complex society.推动复杂社会的出现</p>
+<h3 id="listening-9"><a href="#listening-9" class="headerlink" title="listening"></a>listening</h3><p>Salt-marsh restoration </p>
+<p>too good an opportunity to pass up</p>
+<h2 id="2022-3-1"><a href="#2022-3-1" class="headerlink" title="2022.3.1"></a>2022.3.1</h2><p>perpetual permanent永久的</p>
+<p>sacred grove grove树林</p>
+<p>literal字面上</p>
+<p>grind 研磨</p>
+<p>departure离开</p>
+<p>dissuade劝阻</p>
+<p>dormant休眠</p>
+<h2 id="2022-3-3"><a href="#2022-3-3" class="headerlink" title="2022.3.3"></a>2022.3.3</h2><p>TPO 50</p>
+<p>Schedule jammed日程卡住</p>
+<p>straw poll&#x2F;ˌstrô ˈpōl&#x2F;民意调查</p>
+<p>paper ballots 纸质选票</p>
+<p>referenda全民公决</p>
+<p>quartz石英</p>
+<p>ground to powder磨成粉</p>
+<p>vessel&#x3D;container</p>
+<p>mutual trade</p>
+<p>strengthen political alliance</p>
+<p>critics and scourers</p>
+<p>emulate仿真</p>
+<h2 id="2022-3-4"><a href="#2022-3-4" class="headerlink" title="2022.3.4"></a>2022.3.4</h2><h3 id="Speaking"><a href="#Speaking" class="headerlink" title="Speaking"></a>Speaking</h3><h4 id="Task1"><a href="#Task1" class="headerlink" title="Task1"></a>Task1</h4><ul>
+<li><p>Multiple Choice</p>
+</li>
+<li><p>Giving Advice</p>
+</li>
+<li><p>Advantage&#x2F; Disadvantage</p>
+</li>
+</ul>
+<p><strong>Personal choice</strong></p>
+<h5 id="Agree-and-disagree"><a href="#Agree-and-disagree" class="headerlink" title="Agree and disagree"></a>Agree and disagree</h5><p>It is important for students to be friends with their teachers outside of their classes. (agree and disagree)</p>
+<p>Education &#x2F; personal development</p>
+<h5 id="preference"><a href="#preference" class="headerlink" title="preference"></a>preference</h5><p>two options and pick one. closely related to each other.</p>
+<h5 id="Good-Idea"><a href="#Good-Idea" class="headerlink" title="Good Idea"></a>Good Idea</h5><p>Measure</p>
+<h5 id="Template"><a href="#Template" class="headerlink" title="Template"></a>Template</h5><h6 id="state-your-main-point"><a href="#state-your-main-point" class="headerlink" title="state your main point"></a>state your main point</h6><p>I agree with the idea that</p>
+<p>I think it is better to </p>
+<p>I think it is a great&#x2F;terrible idea to</p>
+<h6 id="Transition-to-the-Details"><a href="#Transition-to-the-Details" class="headerlink" title="Transition to the Details"></a>Transition to the Details</h6><p>I feel this way for two reasons.</p>
+<h6 id="Support-your-point"><a href="#Support-your-point" class="headerlink" title="Support your point"></a>Support your point</h6><p>First, For example</p>
+<p>Seconde, To be more specific</p>
+<p>Don’t need conclusion</p>
+<p>Use discourse phrases : as a result , therefore, consequently, moreover, </p>
+<p>use both simple and compound</p>
+<p>直接说结论，use efficient vocabulary</p>
+<p>![image-20220304190458440](&#x2F;Users&#x2F;zjuchy&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220304190458440.png)</p>
+<p>conjunctions连词 Accordingly, As a result</p>
+<img src="/Users/zjuchy/Library/Application Support/typora-user-images/image-20220304190835001.png" alt="image-20220304190835001" style="zoom:33%;" />
+
+<p>![image-20220304190922696](&#x2F;Users&#x2F;zjuchy&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220304190922696.png)</p>
+<img src="/Users/zjuchy/Library/Application Support/typora-user-images/image-20220304191153492.png" alt="image-20220304191153492" style="zoom:33%;" />
+
+<p>![image-20220304192728082](&#x2F;Users&#x2F;zjuchy&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220304192728082.png)</p>
+<h4 id="Task2"><a href="#Task2" class="headerlink" title="Task2"></a>Task2</h4><p>The (100words) short announcement will give <strong>two reasons</strong> for change. 45s to read it and it will disappear forever. Remember to identify them and note them.</p>
+<p>And then you will heard of two students talk about the reading 1.5min. And one of the students will express an opinion about the change. He agrees or disagrees with the change, or (rarely) have a mixed opinion. They will specifically refer to the two reasons.</p>
+<h4 id="Topics"><a href="#Topics" class="headerlink" title="Topics"></a>Topics</h4><ul>
+<li>change to campus building (library, housing, <strong>cafeteria</strong>,etc.)</li>
+<li>change to class(schedule,availablity, new class,etc.)</li>
+<li>Transportation change(bus service, parking,etc.)</li>
+<li>Extra-curricular activity(sports, club,etc.)</li>
+</ul>
+<h5 id="Template-1"><a href="#Template-1" class="headerlink" title="Template"></a>Template</h5><h6 id="State-the-change"><a href="#State-the-change" class="headerlink" title="State the change"></a>State the change</h6><p>according to the announcement&#x2F;artical&#x2F;letter</p>
+<h6 id="State-the-reasons-for-change"><a href="#State-the-reasons-for-change" class="headerlink" title="State the reasons for change"></a>State the reasons for change</h6><p>This is beacause A and B</p>
+<h6 id="State-the-speaker’s-Opinion"><a href="#State-the-speaker’s-Opinion" class="headerlink" title="State the speaker’s Opinion"></a>State the speaker’s Opinion</h6><p>The man&#x2F;woman does not support this change</p>
+<p>have mixed opinion about this change </p>
+<h6 id="State-the-Speaker’s-First-Reason"><a href="#State-the-Speaker’s-First-Reason" class="headerlink" title="State the Speaker’s First Reason"></a>State the Speaker’s First Reason</h6><p>To begin with, he &#x2F;she points out that</p>
+<h6 id="State-the-Speaker’s-Second-Reason"><a href="#State-the-Speaker’s-Second-Reason" class="headerlink" title="State the Speaker’s Second Reason"></a>State the Speaker’s Second Reason</h6><p>Moreover, he&#x2F;she argues that</p>
+<p>记关键词</p>
+<p>Domish campus auditorium &amp; build new</p>
+<p>R1： old showing the signs of age</p>
+<p>R2： too small for the current of student.</p>
+<p>![image-20220304195322438](&#x2F;Users&#x2F;zjuchy&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220304195322438.png)</p>
+<h4 id="Task3"><a href="#Task3" class="headerlink" title="Task3"></a>Task3</h4><p>announcement of 100 words ： specific <strong>term or concept</strong>  </p>
+<p>Lecture 1.5min consist of one or two examples that demonstrate the term or idea.</p>
+<p> If only one example：before &#x2F; after or cause&#x2F;effect relationship </p>
+<p>And it could be the life.</p>
+<h5 id="Topic"><a href="#Topic" class="headerlink" title="Topic"></a>Topic</h5><p>Biology&#x2F;Anaimals</p>
+<p>Business&#x2F;Marketing</p>
+<p>Psychology&#x2F;Learning</p>
+<p>Art&#x2F;History&#x2F;Literature</p>
+<p><strong>two example</strong></p>
+<p>![image-20220304201657302](&#x2F;Users&#x2F;zjuchy&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220304201657302.png)</p>
+<h5 id="Template-2"><a href="#Template-2" class="headerlink" title="Template"></a>Template</h5><p>![image-20220304201733218](&#x2F;Users&#x2F;zjuchy&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220304201733218.png)</p>
+<p>![image-20220304201846440](&#x2F;Users&#x2F;zjuchy&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220304201846440.png)</p>
+<p>![image-20220304202301355](&#x2F;Users&#x2F;zjuchy&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220304202301355.png)</p>
+<p>evade capture</p>
+<h4 id="Task4"><a href="#Task4" class="headerlink" title="Task4"></a>Task4</h4><p>1.5-2.5min lecture academic term &#x2F; concept &#x2F; process </p>
+<p><strong>illustrated by two examples</strong></p>
+<p>we need to summarize the examples</p>
+<p>Biology&#x2F;Anaimals</p>
+<p>Business&#x2F;Marketing</p>
+<p>Psychology&#x2F;Learning</p>
+<p>Art&#x2F;History&#x2F;Literature</p>
+<p>![image-20220304203439323](&#x2F;Users&#x2F;zjuchy&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220304203439323.png)</p>
+<h5 id="Template-3"><a href="#Template-3" class="headerlink" title="Template"></a>Template</h5><p>![image-20220304203510057](&#x2F;Users&#x2F;zjuchy&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220304203510057.png)</p>
+<p>![image-20220304203959359](&#x2F;Users&#x2F;zjuchy&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220304203959359.png)</p>
+<h3 id="Writing"><a href="#Writing" class="headerlink" title="Writing"></a>Writing</h3><h4 id="opposition-style"><a href="#opposition-style" class="headerlink" title="opposition style"></a>opposition style</h4><h4 id="Problems-and-Solutions"><a href="#Problems-and-Solutions" class="headerlink" title="Problems and Solutions"></a>Problems and Solutions</h4><p>Author of reading processes three problems related to something.</p>
+<p>And lecturer points out sulotions to each of these peoblems.</p>
+<h4 id="Solutions-and-Problems"><a href="#Solutions-and-Problems" class="headerlink" title="Solutions and Problems"></a>Solutions and Problems</h4><ul>
+<li>lecturer never support the artical.</li>
+</ul>
+<h2 id="2022-3-7"><a href="#2022-3-7" class="headerlink" title="2022.3.7"></a>2022.3.7</h2><h3 id="writing-8"><a href="#writing-8" class="headerlink" title="writing"></a>writing</h3><h3 id="Integrated-essay"><a href="#Integrated-essay" class="headerlink" title="Integrated essay"></a>Integrated essay</h3><p><strong>The reading and the lecture are both about</strong> the collapse of the civilization on Easter Island. <strong>The author of the reading feels that</strong> there are three possible explanations for the  collapse. <strong>The lecturer challenges the claims made by  the author.</strong> <strong>He&#x2F;She  is of the opinion that</strong>  these explanations  are faulty.</p>
+<p><strong>To begin with, the author argues that</strong> the collapse may have been caused by rats that ate the seeds of palm trees. <strong>The artical mentions that</strong> this caused erosion and soil loss, which made it hard to grow food. <strong>This specific argument is challenged by the lecturer</strong>. <strong>He claims that</strong> even if deforsetation occurred the people on this island would have had enough food. <strong>Additionally, he says</strong> that 60% of their diet came from the sea, and they also used rock gardens to grow potatoes in weak soil.</p>
+<p><strong>Secondly, the writer suggests that</strong> the collapse may have been caused by warfare. <strong>In the article, it is said that</strong> many curved blades used as weapons have been found on Easter Island. <strong>The lecturer, however, rebuts this by mentioning that</strong> the shapes of the blades suggest that they were not actually weapons, <strong>He elabotates on this by bringing up the point that</strong> they are neither sharp not pointy, so they were probably just used as tools for cutting stone.</p>
+<p><strong>Finally, the author points that</strong> the society on the island could have been destroyed by exposure to diseases brought by foreign visitors. <strong>Moreover, in the article it is stated</strong> that thousands died as a result of this. <strong>In contrast, the lecturer’s position is that</strong> when contact with XX began the population of the island was only about 3000. <strong>He notes</strong> that since the population was twenty thousand before cantact, whatever caused the decline must have started long before then.</p>
+<p>Remember we can summarize the reading in to single sentence per paragraph. But never shorten the lecture sentence. Avoid copying from reading.</p>
+<p>Amid 280-300words </p>
+<h3 id="Independent-essay"><a href="#Independent-essay" class="headerlink" title="Independent essay"></a>Independent essay</h3><ul>
+<li><p>agree or disagree</p>
+</li>
+<li><p>Multiple choice 3 in 1 or 4 in 1</p>
+</li>
+<li><p>preference</p>
+</li>
+<li><p>Situation</p>
+</li>
+</ul>
+<p>just state your opinion</p>
+<h4 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h4><p><strong>sentence 1:show the phenomenon &#x2F; phenomena</strong></p>
+<p><strong>sentence 2:Personally, I believe that …..</strong></p>
+<p><strong>sentence 3: I feel this way for two reasons, which I will explore in the following  essay.</strong></p>
+<p>There are many different learning styles, and it is important that we look for classes that match our academic preferences. <strong>Personally, I believe</strong> that it is extremely benificial to take classes which are very interactive. <strong>I feel this way for two reasons, which I will explore in the following essay.</strong></p>
+<p><strong>sentence 1:First of all</strong></p>
+<p><strong>sentence 2-4: explain what you mean(shorten)</strong></p>
+<p><strong>sentence 5:A trasition. Just use “My personal experience is a compelling example of this.”</strong></p>
+<p><strong>sentence 6-end: An example from your life that illustrates this argument. Make it longer that the explanation part.</strong></p>
+<p><strong>First of all</strong>, classes that include a lot of discussions develop our communication skills. Our long-term success depends on our ability to persuade others to accept our ideas and proposals, <strong>so</strong> it <strong>critically</strong> important to seize opportunities to talk to a variety of people. If we do not practice this skill, we will never develop it. <strong>My personal experience is a compelling example of this</strong>. About ten yeors ago, I enrolled in a history class. At that time I had already taken many classes at university, but I was still very shy around strangers. However, after nine months of participating in debates, discussions and presentations in that class I <strong>came out of my shell</strong> and became a very confident public speaker. As a result, when I began my career following my graduation I excelled in group work and was seen by my supervisors as a natural leader. For this reason, I was quickly promoted within my company. I have been very successful at my workplace, and I owe it all to that wonderful class.</p>
+<p><strong>sentence 1:secondly</strong></p>
+<p><strong>sentence 2-4: explain what you mean(shorten)</strong></p>
+<p><strong>sentence 5:A trasition. Just use “For instance,”</strong></p>
+<p><strong>sentence 6-end: An example from your life that illustrates this argument. Make it longer that the explanation part.</strong></p>
+<p><strong>Secondly</strong>, class that are very interactive help us to form connections with our classmates and these can lead to future opportunities. When we regularly converse with our peers, we get to know their personalities. Consequently, we can even become very close friends with them. In contrast, when students just sit and passively listen to their professor, they are unlikely to get to know each other. <strong>For instance</strong>, when my brother was in college he took an information technology class that required a lot of group work. He spent two months that semester working on a programming project with two other students and during that time they all became very close. In fact, a year later they felt comfortable enough to actually form a company together. It has been six years since they founded that business and it is still very profitable.</p>
+<p><strong>In conclusion, I am of the opinion that</strong> it is a great idea to take classes where students actually talk to each other and their professor. <strong>This is because</strong> they help us develop valuable skills and abilities, <strong>and because</strong> they help us form important social connections.</p>
+<p>Amid 380-400</p>
+<p>Example is important and easy.  over 60%</p>
+<h1 id="Vocabulary"><a href="#Vocabulary" class="headerlink" title="Vocabulary"></a>Vocabulary</h1><h2 id="2022-1-29"><a href="#2022-1-29" class="headerlink" title="2022.1.29"></a>2022.1.29</h2><p>relish collaboration  glacial galcier infer imply succession continuity  cattle kettle bottle a tent pole listless Exuberant effusive effuse diffuse  Uber优步 uberty丰饶的 pebble bubble Inspect prospect suspect respect  lung lump <strong>Exempt from</strong> <strong>panel</strong> <strong>Celestial</strong>  <strong>rhetoric</strong> <strong>Prodigious</strong> make great <strong>strides</strong> in &#x2F; strode <strong>Resonance</strong>  yearn to do&#x2F; for  <strong>yarn</strong> <strong>wagon</strong> wage Vibrant vival vigorous rigorous <strong>tributary tribute贡品 contribute贡献 distribute分发</strong> attribute evenly  Vapor evaporate <strong>Spontaneous</strong>   sponge  <strong>spontaneous applause</strong> <strong>Spawn</strong>  <strong>spawn opportunity</strong> whereas Suburb  Impervious pervious previous  <strong>Imperative</strong> <strong>Cellar</strong>  <strong>terrace</strong> cellar was <strong>infest</strong>ed with rats <strong>balcony</strong> cellular细胞层面的  temporary  contemporary   Exert oneself to do &#x2F;Endeavor to do</p>
+<h2 id="2022-1-30-1"><a href="#2022-1-30-1" class="headerlink" title="2022.1.30"></a>2022.1.30</h2><p>preservation preserve 保存 starve 饿 stitch缝补，针脚 needle thread sew seam <strong>barter</strong>交换 stroke中风 strike击中，撞击，敲打，罢工 weird古怪的 perculiar mutual interest 共同爱好 mutual cable电缆缆绳 vibrate vibrant yield to产生，让步 hard work yield good result <strong>melody, rhythm</strong> blow刮 amicable neighbor和蔼的邻居 sack of一袋 strain拉伤，劳损 haunt出没，萦绕 hover prolong   <strong>haul tow</strong> <strong>burgeon</strong> budget burden tranquil and appealing crutial vital fatal fishing reel预先 reef paradox paradise paralyse <strong>irrigate</strong> <strong>pluck</strong> drift off draft  craft <strong>debris</strong>碎片残骸 loyalty  <strong>fidelity</strong>忠诚的<strong>hail</strong>出生 ion ore molecule atom axis pivot cord pole cable  limb  shaft <strong>pivotal</strong>  <strong>pivot on</strong> barb wire <strong>sanitation</strong></p>
+<p>inflation is a serious <strong>impediment</strong> to economic developmnt. <strong>impede</strong></p>
+<p>hinder, impede, block, obstruct, hamper, discourage</p>
+<p>hesitate, fluctuate, halt, oscillate, <strong>scruple</strong>, seesaw misgive </p>
+<p><strong>balcony</strong>, <strong>terrace</strong>, veranda, <strong>porch</strong>, verandah, deck</p>
+<p>mill   powder</p>
+<p>anthropology 人类学</p>
+<p>show, indicate, demonstrate, clear, reveal, <strong>attest</strong></p>
+<p>evaluate, <strong>assess</strong>, appraise</p>
+<p>carnivore herbivore</p>
+<p>report repertoire repertory</p>
+<p>myriad of problem大量的问题</p>
+<p><strong>sensaional</strong>轰动的 <strong>sentimental</strong>  <strong>sentiment</strong></p>
+<p>porch pitch whittle削 &#x2F;widl&#x2F; perch</p>
+<p>meager income</p>
+<p>kinetic energy</p>
+<p>sharp balde</p>
+<p><strong>adjunct</strong>附属物 auxiliary辅助的</p>
+<p><strong>cabinet minister</strong></p>
+<p><strong>antibiotic</strong>抗生素 tavern小酒馆 <strong>artery动脉干线 vein静脉 vessel血管</strong></p>
+<p>auditory acoustic</p>
+<p>boast &#x3D;  show off <strong>coast</strong> coarse</p>
+<p>carpent木匠</p>
+<h2 id="2022-1-31-1"><a href="#2022-1-31-1" class="headerlink" title="2022.1.31"></a>2022.1.31</h2><p><strong>poem prose verse</strong></p>
+<p><strong>Crude</strong> oil</p>
+<p>Drip drop tap is dripping</p>
+<p>dime 十分钱 dime novel</p>
+<p>face <strong>facade</strong>表面 hide hostility behind a friendly facade.</p>
+<p>gland腺体？ take for grant.  grand隆重</p>
+<p><strong>identity identify identical</strong></p>
+<p>hominid人科的 human</p>
+<p>interfere intervene干涉 intervene in the crisis. interval</p>
+<p>The lure of fame and money tends to make people commit crimes.</p>
+<p>radius diameter</p>
+<p>money monetary</p>
+<p>lithosphere岩石圈 ledge台，架</p>
+<p>chief chef niche商机</p>
+<p>subjective objective</p>
+<p><strong>perspective</strong></p>
+<p>千万注意！ <strong>presumably</strong> permeable</p>
+<p>extract refine</p>
+<p>melancholy忧郁</p>
+<p>repeat repetitive</p>
+<p>satellite</p>
+<p>scruple sculptor sculpture</p>
+<p><strong>soar soaring</strong></p>
+<p>Spawn oppotinity    <strong>sprawl</strong> &#x2F;spro:l&#x2F;蔓延的</p>
+<p>sprawl brawl drawl scrawl trawl sprawling潦草的</p>
+<p><strong>stroll</strong>, wander, ramble, <strong>roam</strong>, promenade, <strong>meander</strong></p>
+<p>timber, lumber</p>
+<p>relevant irrelevant reverent irreverent</p>
+<p><strong>transaction</strong> <strong>aquatic</strong></p>
+<h2 id="2022-2-1"><a href="#2022-2-1" class="headerlink" title="2022.2.1"></a>2022.2.1</h2><p>mental physical metal</p>
+<p>Wane fade eclipse &#x2F; wax and wane. popularity begin to wane.</p>
+<p>Adapt adopt</p>
+<p><strong>terrain territory</strong> </p>
+<p>twig</p>
+<p><strong>Freight</strong>货运寄送</p>
+<p>carpet carpenter</p>
+<p>shield against</p>
+<p>legend and myth</p>
+<p>quarrel</p>
+<p>be obliged to sb感激 oblige强迫</p>
+<p>pedagogy教育学</p>
+<p>chord和弦</p>
+<p>burgeon快速增长 surgeon外科医生 physician内科医生</p>
+<p>tongue舌头 tone音调</p>
+<p>lawn dawn dusk</p>
+<p>hallmark特点 humor is the hallmark of his style.</p>
+<p>content  context In the context of the present economic crisis.</p>
+<p>alloy合金 <strong>rally</strong>召集 a mass rally大群众的会</p>
+<p><strong>ward病房 warder看门人 ward off避开 outward外部外表的</strong>outward sign of distress</p>
+<p>skeleton骨架</p>
+<p>chorus合唱</p>
+<p>ribbon丝带</p>
+<h2 id="2022-2-2"><a href="#2022-2-2" class="headerlink" title="2022.2.2"></a>2022.2.2</h2><p>parameter参数 paramount至为重要的 paramount task</p>
+<p>replete充满的 replenish补充重新装满</p>
+<p>scurry快步疾跑</p>
+<p>Success succinct简明的</p>
+<p>Transcend cultural barriers.超越边界 transaction交易</p>
+<p>unprecedented前所未有的 precedent前例，先例</p>
+<p>Vanish varnish油漆 garnish装饰品</p>
+<p>absurd&#x3D;ridiculous  abuse</p>
+<p>cohesive coherent</p>
+<p>influx The influx of tourists.</p>
+<p>Intestine economy</p>
+<p>lust</p>
+<p>Implement</p>
+<p>Pervasive pervade</p>
+<p>Elevate elevator</p>
+<p>**pollen ** allergic to pollen</p>
+<p>practice practitioner</p>
+<p>coral reef</p>
+<p>protagonist主角 stooge</p>
+<p>terrestrial terrain</p>
+<p><strong>plague</strong> </p>
+<p>brittle脆的</p>
+<p>coil盘，卷 corridor 走廊 crystal水晶的</p>
+<p><strong>district</strong> distinct postal district</p>
+<p>erect barrier    <strong>eject驱逐</strong></p>
+<p>stationary vehicle &#x2F;ˈvēək(ə)l&#x2F;</p>
+<p><strong>intimate</strong>  imitate&#x3D;mimic&#x3D;stimulate intimate friends</p>
+<p>relief relieve relieve stress</p>
+<p>brim over with</p>
+<p>context背景环境文本 </p>
+<p><strong>possess</strong>拥有占有控制</p>
+<p>wrist twist</p>
+<h2 id="2022-2-3-1"><a href="#2022-2-3-1" class="headerlink" title="2022.2.3"></a>2022.2.3</h2><p>thrive derive deprive articulate表达 fabric fiber <strong>monotonous</strong>单调的 scout sprout发芽 claim acclaim proclaim exclaim fracture fraction <strong>elicit</strong> information explicit <strong>reject</strong>拒绝 ideology意识形态 political ideology attention, heed allude&#x3D; imply  allude to &#x3D; refer to     allusion illusion delusion elusion chunk of breakfast wholesale confirm conform&#x3D;correspond <strong>reform</strong> 改革 antique antiquate steer sheer sheer number of circuit电路 <strong>homogeneous</strong>同种的 <strong>cube</strong>立方 full <strong>dull</strong> thresh脱粒 fluid motion流畅的动作 liquid液体 margin边缘 compel <strong>impose</strong> impose on强加 implicit agreement潜规则 implicit含蓄的 specify明确说明 optical optic gear齿轮 legislation立法legal legislature  obscure hinder, <strong>impede</strong>, block, <strong>obstruct</strong>, hamper, discourage obstacle penalty <strong>prairie</strong> pasture ranch meadow <strong>symptom</strong> <strong>pyramid</strong>锥体，金字塔 specimen样本 heed give&#x2F;pay heed to carriage exhilarate exhilarating  antique antiquate</p>
+<h2 id="2022-2-4-1"><a href="#2022-2-4-1" class="headerlink" title="2022.2.4"></a>2022.2.4</h2><p>stunning印象深刻的 <strong>Spectacle</strong> spectator thrust  <strong>triumph</strong> proceed <strong>the proceed of收入</strong> the conversation has been proceeding. Coincidence coincide同时发生 <strong>coincide with</strong>符合 monotonous monotonous, <strong>dull</strong>, drab corrosion corrode erode miniature census <strong>population census</strong> <strong>serene</strong> serenity <strong>stature</strong> <strong>status</strong> statue stub penchant <strong>have a panchant for</strong>    <strong>synchronous</strong>  saturated <strong>saturate</strong>  exocrine cells endocrine ditch </p>
+<h2 id="2022-2-5"><a href="#2022-2-5" class="headerlink" title="2022.2.5"></a>2022.2.5</h2><p>prehistory prehistoric远古时期 tremendous diplomatic triumph巨大的外交成功  The Ministry of Defense.国防部 hay barn草料仓 new phase of development.  protest反抗 protest against solution <strong>resolution revolution</strong> equality  quality quantity <strong>qualify</strong>  monotonous <strong>mundane</strong> mundane world <strong>prairie</strong>  be eligible to合格 restrict约束 bone marrow transplant骨髓移植 disperse驱散 in surplus剩余 impose on强加 to the point of intoxication喝醉 toxic有毒的 plank urge <strong>virtually</strong>几乎&#x3D;almost <strong>virtually identical</strong> sole唯一的 celebrity celebrated decompose compose组成 entity entail需要 entility  <strong>monotone</strong>单调 parasite <strong>converse apply</strong> converse with与交谈 <strong>narration</strong>旁白解说 narrative解说的 polupation popularity流行 <strong>preach鼓吹</strong> profound <strong>restore</strong> reform revive review resolution revolution  decade facade&#x2F;fəˈsäd&#x2F; trivial不重要的事 triviality琐事 remember trivial incident in detail vault金库 fault ash began to erupt from the crater. autobiography自传 intricate复杂的 camouflage隐蔽 camouflage uniform迷彩服 exotic异国的 <strong>improvise</strong>即兴 obsess沉迷 with optimal最适宜的  adobe粘土&#x3D;clay&#x3D;brick sensor传感器 sector部门行业区域 topography地形 <strong>nomadic</strong>游牧的  nomadic tribe游牧民族 tyrannical暴君的 wrap包裹 warp弯曲变形弯曲 eliminate驱除 <strong>squarely</strong> speak squarely直言不讳</p>
+<h2 id="2022-2-6-1"><a href="#2022-2-6-1" class="headerlink" title="2022.2.6"></a>2022.2.6</h2><p>noxious有毒的 notorious臭名昭著的 collective集体的 culminate结束 culmination顶点 designate指定&#x2F;‘dezigneit&#x2F; <strong>saturated</strong>浸湿 saturated fat饱和脂肪 expertise专长 fist拳头 rift分歧 rift valley峡谷 frontier边界 hormone荷尔蒙 municipal市政的 lens透镜 magma岩浆 puddle水坑 mint铸币薄荷 ministry部门 plasma血浆离子体 precarious不稳定的 He earned a precarious living by working in a small factory. alternate轮流的 alternative二选一的 <strong>automated</strong>自动化的 <strong>autonomy</strong>自治 refurbish再装修 furbish磨光 fur皮毛 imperative紧急重要 Improving the country’s economy is a political <strong>imperative</strong> for the new president. imperious傲慢的 impervious不可渗透的 rub柔 rubbed  rob抢劫 potash 钾盐类 ion 离子hydrogen 氢气oxygen氧气 aluminum铝 magnesium 镁 sulfur 硫磺</p>
+<h2 id="2022-2-7-1"><a href="#2022-2-7-1" class="headerlink" title="2022.2.7"></a>2022.2.7</h2><p>generous慷慨的 general一般的 generalization概括 inherent内在的 coherent一致的 adhere粘 speculation推测 speculate推测 Rumours that they are about to divorce have been dismissed as pure speculation. squash挤压 squeeze stout敦实 hemisphere半球 sphere球 synthesis综合体 synthesize合成 textile织物 fabric纺织品 texture trolley手推车  usher引导 <strong>warrant</strong>需要授权令 No detail was too small to warrant his attention. wipe擦去 adorn装饰 adornment装饰品 adore爱慕 &#x3D;&#x3D;<strong>discern</strong>&#x3D;&#x3D;察觉 divergent diverge分散的 prototype原形 intrinsic内在的 baboon狒狒 bamboo竹子 levy征税 impose on施加 <strong>minuscule</strong>微小的 majuscule大写的 The chance of surviving under such temperature is <strong>minuscule</strong>. <strong>quarry</strong>采石场猎物prey quarrel squat蹲 receptacle容器 <strong>thwart</strong>组织 <strong>wary</strong>小心的 <strong>wispy</strong>一缕缕 propel推进促使 foster促进 frost结霜 landmark地标 handful一把 a handful of少数的 inherit继承 philosopher哲学家 synonymous同义的 anonymous匿名 barrel桶 apprentice学徒 besiege包围 siege围攻 designate指定</p>
+<h2 id="2022-2-8-1"><a href="#2022-2-8-1" class="headerlink" title="2022.2.8"></a>2022.2.8</h2><p>unprecedented precede先于 precedent pore孔隙 pore over钻研  utensil器具 steal stolen <strong>eloquent</strong> speech雄辩 prolific多产的 locomotion移动运动 asphalt沥青 bitumen沥青 stove火炉 shove猛推 shovel铲子 <strong>connoisseur</strong>鉴赏家 mason石匠 larva幼虫 buckle down to着手做 buckle变形 transparent透明的 translucent半透明的 <strong>advent</strong>到来 with the advent of 随着……的来临 with the advance of 随着……的进步 amateur业余的 intrinsic内在的 bind ——&gt; bound <strong>botanical</strong>植物学的 velocity速度 barren贫瘠的 bare秃 controversy争议 synthesis合成 sole单独的 solitary独自的 solidarity团结 solid bugle号角 avenue途径 revenue casual随意的 casualty死者 civic市政的 chamber会议室 conceal隐藏 reveal暴露 counterpart职位 Night is the counterpart of day. elusive难找的 <strong>plague</strong>瘟疫 epidemic  <strong>herald</strong>先锋预兆 These talks could herald a new era of peace. caste社会等级 caste system:种姓制度；等级制；阶级制度 frigid寒冷的 rigid僵硬的 inanimate无生命的 animate赋予生命 inhibit阻止&#x3D;prohibit inhabit居住</p>
+<h2 id="2022-2-9-1"><a href="#2022-2-9-1" class="headerlink" title="2022.2.9"></a>2022.2.9</h2><p>intrude invade intruder入侵者 isolate insulate隔热隔绝 jolt颠簸 lash鞭打 popular populous人口众多的 populate居住于 liberty自由 lodge提交声明 operate操作 defeat击败 defence防御 The local community lodged a complaint about the pollutants from the factory. conjunction连接 metabolism新陈代谢 metaphor隐喻 masterpiece杰作 minute minutely详细地 morphology形态学 navigate导航航行 navy海军 propensity倾向  convect对流 convection对流  gaze凝视 graze擦伤放牧 pasture牧场 particle粒子 article文章 <strong>philosopher</strong>哲学家 peninsula半岛 intrinsic内在的固有的 primal原始的 pirme首要的 primary基本的 agitation忧虑骚乱 ratify正式批准证实 rate provide——&gt;provision shrimp虾 squeak吱吱叫 counterpart职位 vent出口 turbine涡轮 utilitarian实用的 minor次要 major主要</p>
+<h2 id="2022-2-22"><a href="#2022-2-22" class="headerlink" title="2022.2.22"></a>2022.2.22</h2><p>manipulate stipulate stimulate</p>
+<h2 id="2022-2-24-1"><a href="#2022-2-24-1" class="headerlink" title="2022.2.24"></a>2022.2.24</h2><p>distinct清晰不同的 be intended to do  be intent on热衷于专注于 intent目的 pitch音高 wispy纤细的 civic市民的 civilization文明 utilitarian功利的实用的 <strong>thwart阻止</strong> track痕迹 tract道束 adornment装饰 adorn entreprenant entrepreneur proper合适恰当的 eloquent雄辩的 rod杆枝 steel rod钢筋 dealer交易商 inhibit&#x3D;prohibit&#x3D;refrain volatile易变的 propose proposition商业计划 manipulate熟练操作使用 equal equilibrium an equilibrum point elusive难找的 herald前兆 converge diverge divergent vacant空缺 bare barren贫瘠的 gigantic magnet巨大的磁铁 hail出生冰雹 haul拖拉 chamber会议室 council chamber council理事会 court primal原始的 cathedral教堂 squat蹲 squash挤压 sensational轰动的 avenue大道 a strand of一缕&#x2F;股 boulder巨石 peninsula integral整体的 potray描绘</p>
+<h2 id="2022-2-25-1"><a href="#2022-2-25-1" class="headerlink" title="2022.2.25"></a>2022.2.25</h2><p>boundry frontier venture  accommodate借宿 accommodate oneself to适应 recommendation exploit开采开拓 be exploited被利用 barter economy optical视觉的 optical illusion phrase短语 phase阶段 spectacle精彩的表演 consecutive连续的 symmetrical对成的 synonymous同义 anonymous匿名的 consent同意  hurl投掷 jurisdiction管辖权 comprehensive综合的 comprehension理解力 prototype原形  incessant不停的 His incessant complaining started to irritate her. tavern酒馆 tavern if off limit to <strong>adolescent</strong>  canopy树冠 the tree canopy.  synthesis综合 synthesis thesis hypothesis synthesis impervious不可影响的渗透的 be impervious to the criticism from all sides. Improvise即兴的临时的 previous graze glaze上釉呆滞 glass gaze praise</p>
+<h2 id="2022-2-26-1"><a href="#2022-2-26-1" class="headerlink" title="2022.2.26"></a>2022.2.26</h2><p>satire讽刺 satiric讽刺的 chronical慢性的 There has been a chronicle shortage of teachers. patriarchic家长的 disorder混乱失调  juridical司法的 jurisdiction管辖权司法权 evaluate评估 conspicuous明显的显眼的 make oneself <strong>conspicuous</strong>  <strong>perspicuous</strong>明白易懂的 dogged determination顽强的决心 toxic noxious有害的 notorious臭名昭著的 verge边缘 converge汇聚 diverge分岔 lament婉歌 lamented悼念 benefit beneficial prosecute起诉 sophisticated sophisticated machine精密的机器 perspicuous  brief report debriefing report总结报告 </p>
+<p> 忍受： stand &#x2F; endure &#x2F; put up with &#x2F; bear</p>
+<p>economic&#x2F;thrifty&#x2F;provident&#x2F;purdent&#x2F;frugal节约的 fungus herd–dog兽群 herb shrub灌木草本</p>
+<p>竞争 compete, contend, match, emulate, strive contender</p>
+<p>modern现代的 model modem <strong>panorama</strong>全景 panorama of the whole city. <strong>spectacle</strong> engineer  </p>
+<p><strong>counterfeit</strong>假冒的伪造的 frivolity轻浮的 vital重要的 vitalize有生气的 revitalize重获新生 portion部分 apportion分配 apportion one‘s time 支配时间 nosy爱管闲事的 devote oneself to  hypocritical伪善的 inevitably literature literacy有文化的 inert惰性的 inert gass惰性气体  commemorate庆祝纪念 in honor of memory memorate commemorate honor尊重&#x2F;荣誉 herald征兆 rip撕碎 ripped撕碎 wasp黄蜂 devastate摧毁</p>
+<p>rebel rebellion was <strong>suppress</strong>ed阻止 surpass超过 match火柴 scheme计策阴谋monetary财政的 unsubstantiated未经证实的 unsubstantiated <strong>substance</strong> substantiate证实 access <strong>accessable inaccessible</strong> accessory辅助的 auxiliary附属的 huddle蜷缩 adolescence adolescent <strong>ado le scence</strong> adolescent青少年的 copious of beer大量的 copious spawn a new opportunity孵化机会 template模版 <strong>contemplate</strong>思考contemplative沉思的 contemplative dispatch  famish famine olfactory嗅觉的 acoustic挺熟的 optical视觉的 generalization概括 convection diversity diverse pancreas胰腺 advent出现 indolent懒散的 the extent of the damage  to some extent某种程度上 <strong>appraise</strong>评估 praise appraise one‘s performance tolerable emit emissio omit <strong>dispatch</strong> <strong>frugal</strong> and hard-working  stain strain stainless无暇的 scruffy邋遢的 prioritize priority优先级 prove disprove证明不成立 picture pictorial sculpture sculptor union reunion thorough全面的彻底的 cardiac心脏病的 cradle摇篮 cardiac心脏病 remnent retain verdict slumber睡觉 slum贫民窟 slumb睡 slump跌  lumber木材缓慢移动 timber木材 lumber across teritorry amalgamation verfict裁定 ornate华丽的  patient momentous news重大新闻  coalition同盟 coalition government联合政府 throw up呕吐 bring up培养 congenial surrounding适宜的环境 ornate ceiling华丽的天花板 paste  plaster水泥灰 tentative尝试的 tournament比赛 ornament装饰 leisure time complaint complain prey depredation predation捕食 optimal最理想的 picturesque如画的 picturesque view <strong>denote象征预示</strong> connote暗示 imply predicate notation标记法 refund退款 cape<strong>海角</strong> crash crush压碎征服 replicate复制品 replica pertinent相关的 dilate扩大 dissipate消散 sun dissipate the mist espouse支持 endorse支持 coefficient系数 discern察觉 <strong>intrepid</strong>无谓的 assassinate暗杀 courageous extrapolate simmer充满积蓄 allege allerge allergic complementary complement补充 despoil夺取 pretext借口 mundance世俗的 aerial air aerial sprain clamor吵闹的</p>
+<ul>
+<li>emphasize</li>
+</ul>
+<h2 id="2022-2-27-1"><a href="#2022-2-27-1" class="headerlink" title="2022.2.27"></a>2022.2.27</h2><p>swell肿胀 dwell居住swollen肿的 pluralism plural多元化 doubt dubious怀疑的 waggle摆动 wiggle摆动 literature walnut胡桃 peanut花生 dubious and misleading怀疑的与误导的 hardy耐寒的吃苦耐劳的 <strong>apparatus</strong> assimilate assimilation of ethnics  ethnics mental mentality mentional mention mentality心理 mental sturdy <strong>vehicle is sturdy</strong> <strong>acquit宣告无罪</strong>  <strong>scruffy</strong>不整洁的邋遢的 scruffy old sweater wispy成束的 wispy hair悉数的头发 sow pluralism  plural多元化 cultrual pluralism esteem unanimous一致的  unanimous agreement juridical juridation discursive东拉西扯的  juridical and discursive forms of power.  keep sb informed about the information&#x2F;situation. Smirk cascade瀑布倾泻 convex concave  sporatic concert零星的音乐会 meticulous detail小心翼翼的 meticulous <strong>amateur</strong> pebble beach fixed fix  jumble of hostile curve曲线 signal prescription药方 antibiotics  <strong>contemplate</strong> template  sleigh雪橇 draw拖 haul拉 tow拖拉 hail出生冰雹 constructive construction mesmerize  mesmeric suppliment doctrine教条主义 cascade of precipitate加速降临precipitation降水 shrivel枯萎 shrivel up drowsy昏昏欲睡的 grocery congenial disposition性格</p>
+<p>congenial disposition情投意合 augment income增加收入 squabble争吵 squabble with&#x2F;over altruistic egoistic momentary distraction crumple皱 pretext context saunter away lax petition sign a petition请愿书 sporadic concerts diagnose with denote preeminent eminent inert inertia惯性保守 sturdy weathering  <strong>scruffy</strong> 邋遢 a suite of ceramic tiles porcelain  pottery primordial antonym synonym anonymous quaint acquaint认识 quaint古典的 correspondent记者 ornate华丽的 ornament subjugate conquer exploit benevolent慈善的 malevolent conducive conduce有益的 aloft半空中 contagious epidemic contagious infectious surcharge lunge plunge preside主持 metaphor隐喻 lethargy lethal死气沉沉的 repetition repeat reputation forestall预防 edifice大厦 skyscraper pulp integrity正直的 integrity liberty territorial integrity moral integrity  bonanza trifle laudable snide伪造的 particularly snide. 挖苦 loath reluctant loath tycoon巨头 surrender投降 cumbersome笨重的 cumber拖累妨碍 scheme schematic图解的纲要的 longitude经度 latitude纬度 principal校长负责人首要的 metropolis nosy爱管闲事的  mercantile商业的贸易的 merchant rendition render给予 <strong>rendition</strong>表演 <strong>seminar</strong>研讨会 semester <strong>gist</strong>主旨要义 gist of argument augment增加 subliminal潜意识的 <strong>sober</strong>清醒 patriarchic家长的 revitalize vital vitalize ethic ethnic march scruple scrupulous legitimate合法的 legal legislation permanent forsake一起 </p>
+<p>creativity originative独创性  <strong>knack</strong>诀窍 paradox <strong>mind and corporeal</strong> <strong>virtual</strong> compass compress addict addictive constant repetition repeat paste <strong>audible</strong> entity folk folklore民间故事</p>
+<p><strong>professional apparatus专业的仪器</strong></p>
+<p>He was <strong>deposed</strong> as chairman because of the scandal. </p>
+<p>The police unit Tom joined was specifically responsible for quelling the riots.  riots骚乱 quell平息</p>
+<h2 id="2022-2-28-1"><a href="#2022-2-28-1" class="headerlink" title="2022.2.28"></a>2022.2.28</h2><p><strong>archeology</strong>考古学 <strong>architect</strong>建筑学家 <strong>philosopher</strong>哲学家</p>
+<p>Successor predecessor precede</p>
+<p>faucet水龙头 lawsuit诉讼 suit诉讼  courier送急件 courier service快件服务 slacken slack松弛 slack off exhort劝告 advice counsel rede advise <strong>exhort</strong> principle原则principal校长主要的 gush滔滔不绝 gush blood喷血 languish煎熬烦恼 languish for  language illegible模糊的 legible清晰的 illegal <strong>legislation</strong> savage相残的野蛮的 <strong>brace</strong> embrace ripple涟漪波纹 tarnish失去光泽 burnish磨光 polish grind研磨 insolvent破产的 solve on the edge of insolvent batter击打 battery坚持 balm要搞 balmy apply balm on your lips uphold支持赞成 <strong>uphold the law</strong> granular颗粒状的 <strong>grain grainy</strong>颗粒的 scandal丑闻 communal社会的共享的 communism共产主义 community communication communal agument提升&#x2F;o:g’ment&#x2F; augment one’s income增加收入 arguement争吵 <strong>malleable</strong>延展性的 alloy合金 ally盟友 compound复合物 synthesize合成 obscene下流的淫秽的 obsess obscure模糊的无名的 addict addicted obsess be obsessed in <strong>propensity</strong> <strong>refute</strong>反驳 refuse拒绝 <strong>consecutive</strong>连续不断的 matrimony婚姻 children are the bonds of matrimony wrinkle皱纹 pioneer handy易使用的 scorn轻视 pour scorn on envelop envelope信封 denounce谴责指责 announce宣布 criminal罪犯 vascular血管的vessel血管 paucity极少量的 plurality多数的 <strong>resent</strong> syntactic句法 tactic战术 transend viscous粘稠的 query疑问提问 inquire <strong>give me a call if you have any query.</strong> crystallize结晶 crystal水晶的 spill泼出 impending即将发生的 charter宪章特权 consort联合 asort求助 consort联合 wholesome有益的道德的 loath不情愿 reluctant college colle<strong>agu</strong>e</p>
+<p>paucity scarcity insufficiency poverty scant scarceness</p>
+<p>plurality</p>
+<h2 id="2022-3-1-1"><a href="#2022-3-1-1" class="headerlink" title="2022.3.1"></a>2022.3.1</h2><p>navy naval海军 mimic imitate project工程，放映 snide disintegrate integrate整合 integral一体的 integration融合 integrity haste急忙的 intrinsic内部的 aristocratic贵族的？ epitomize成为缩影 example <strong>dormant</strong>休眠的 dormant volcano <strong>domicile</strong>住所 domic家 domestic国内的家养的 atrophy萎缩的 stigma污点耻辱 divine神圣的 opaque？不透明的 municipal市政的 extravagant奢侈挥霍放肆的 luxurious奢侈的 predecessor前辈 predecessor cursor光标 precursor先导 predecessor accede即位就位 accede to同意 spin spine脊椎 pending待办的 assemble <strong>assembly</strong>集合会议 interplay互相作用的interaction imprint印记 the look of grief would be imprinted on his mind. veto否决 vote strenuous费劲的 strenuous exercise剧烈运动 chubby丰满的 jeopardize破坏 jeopardy stash藏匿 <strong>disgu ise</strong>假扮的 conceal <strong>disgust</strong> propagate宣传繁衍 propagation传播 equitable公平的 plight困境苦境 The government has take measures to help the plight of the earthquake victims. ductile延展性的 <strong>tactile</strong>触觉 tantecle duct pipe tube roost栖息 exalt高度赞扬提拔 be exalted to 职业CEO。vocation job occupation profession职业 convex cortex表皮表层 premise前提假设 certitude确定必然的 certainty obscurity阴暗的 despise鄙视？officious爱发号施令的 indict控诉 induce引诱 leach过滤 filter delineate说明阐述 potency影响力 outrage愤怒 sneaky偷偷摸摸的 contradict反驳 contrary <strong>conceit</strong>自负的 <strong>hustle</strong>忙碌 emergent突然出现的 emerge racket球拍 ordeal折磨 ambience气氛周围环境 thwart阻碍 dwarf矮人</p>
+<h2 id="2022-3-2"><a href="#2022-3-2" class="headerlink" title="2022.3.2"></a>2022.3.2</h2><p>huddle蜷缩 sacred宗教的 unify统一union realtor房地产经纪人 realty不动产 ambush伏击 abysmal极坏的，糟糕的 nimble敏捷的 overall全部总计 abysmal working conditions marsh sacred lethal致命的 lethal weapon致命的武器 representative代理人 catastrophe灾难 <strong>geometric</strong>几何学  magnetic geomatric magnetic geomagnetic地磁的 magnetic <strong>geometric</strong>几何学 spatial awareness spacious accede the workers’ demands答应工人需求 nostalgia恋旧的 melt dissolve unprecedented空前的 unprecedented precedent前例 wan and listless oxygen implement实施  antecede在前  depart出发 department部门  conceive构思怀孕 conceivable可想象的  employ discharge解雇 antecede accede disseminate propagation faculty职员才能 both faculty and students oppose the policy.  citadel likewise extinct <strong>counseling</strong>辅导 counsel劝告忠告商议 council console vulgar粗俗不雅 envision设想展望   anticipate assumption enact制定法律 ambient周围环境的 dent下凹的 convex neutral中立的 portable bewilder迷惑 deductive演绎的推论的 deduce推演 conductive proposal提案计划 propose计划  busy business proposition **adept熟练的 adpot采用收养 adapt适应改编 ** intricate intrinsic  fume恼火 perfume香水 expertise专长 adjacent  tributary speculate推测 notify通知 pursue pursuit追求 inhale exhale吸气呼气 ordinary ordinate纵坐标 tranquil artifice plague瘟疫 antecede在之前 extravagant奢侈的 luxurious <strong>crippling</strong>？令人震惊的 cripple破腿的 crippling effects毁灭性影响 exposition展销 exhibition展览 expose展示 proposition <strong>bruise</strong>出现伤痕 abolish abolition废除 spur spurn拒绝摈弃 spurn all pursuer pursue pursuit追求 destination destined目的的命中注定的 destiny命运 destine注定 <strong>prosecute</strong>控诉 <strong>prosecutor</strong>检察官 larynx喉errand差事 sovereign元首至高无上的 <strong>reign</strong>统治的 blur模糊难以区分 artesian自流水 artisan工匠 solicit恳求勾引 solicit donation for a charity &#x2F;solicit opinions and suggestions cramp抽筋阻碍 expeditious迅速有效的 expedient权宜之计  expedition远征 expension artifice诡计 artifact postulate假定 voracious狼吞虎咽的贪婪的 <strong>rebate</strong>退款 drawback退税 refund of duty退税 reimburse偿还 anomaly反常名词 abnormal anomaly ablaze着火 blaze火焰 farce剧本 cuisine烹饪 forum公共讨论论坛 delineate说明阐述 germ微生物 opaque不透明的 op不 aque水 <strong>aquatic</strong>水生的 epitomize成为缩影 crevice裂口 stash贮藏  stash away存放 deflect偏向偏离 deflect from reflect反应 intersection十字路口  intersection of life人生的十字路口 proliferate激增 propagate传播繁衍 loathsome令人厌恶的 loath&#x3D; reluctant <strong>pertain</strong>与有关 pertain to适合 protein蛋白质 genesis起源开端 onset origin sumptuous奢华的 sumptuous palace percolate过滤渗入 bisect一分为二 trisect三等分 convene sustenance食物维持生计 sustain维持</p>
+<h2 id="2022-3-3-1"><a href="#2022-3-3-1" class="headerlink" title="2022.3.3"></a>2022.3.3</h2><p>captial首都资本 caption标题字幕 captain船长 weild行使运用weild enormous power whthin the party. recital音乐会 recite背诵 voracious贪婪的吞噬 devour狼吞虎咽 patriarchic家长的 facility设备 faulty pierce刺穿 deciduous落叶的非永久的 cipher密码 decipher解码 suppress镇压 pertain有关 protein蛋白质 rebellion was brutally suppressed . A <strong>senator</strong> questioned the proposal that pertains to employment problems.   defect defecate澄清排便 forsake抛弃 sake缘由 crevice裂缝 solicit恳求 contiguous接壤的 two countries contiguous to each other, but the culture are quite different. spray喷雾 prey gem宝石 germ微生物细菌 nominee被提名者 libel诽谤 <strong>revoke</strong>撤回？ entrench观念根深蒂固 aggravate恶化 burning trash aggravates the air quality.  <strong>scuffle</strong>扭打？ balk畏缩组织 chronological年代顺序的 yolk蛋黄 geology地质学 immense巨大的 plight苦难 pledge誓言 economic plight经济困境 delinquency过失失职 frequency  dose一剂 dosage剂量 affiliate附属 spill溢出 trilogy三部曲 speckle斑点点缀 acquit无罪quit dramatize戏剧化 crumple变皱崩溃 fiery似火的易怒的 fire semantic语义学 airborne空气传播的 borne由运载 insanity精神错乱的 sanity明智的 semiotics符号学 imperative紧急的 imperious傲慢的 impervious不可渗透的 improvise即兴的 acumen敏锐 acute surcharge额外收费 clutch紧握 metabolic新陈代谢的 metabolism新陈代谢 quench解渴 quench one’s hope断绝希望 wrench痛苦 charisma超凡魅力 charismas adventure advent venture affection understate轻描淡写 whereby凭借 spurn拒绝 vicinity附近地区 holistic整体的全面的 hostile indigent贫穷的 diligent勤奋的 quiescent静止的 quiet </p>
+<h2 id="2022-3-4-1"><a href="#2022-3-4-1" class="headerlink" title="2022.3.4"></a>2022.3.4</h2><p>withhold拒绝克制抑制 abundant多的 abound富于大量存在 </p>
+<h2 id="2022-3-7-1"><a href="#2022-3-7-1" class="headerlink" title="2022.3.7"></a>2022.3.7</h2><p>Disaster disease devoid of&#x3D; lack of flatter incongruous congruous  lavish propensity volatile arch archer architect meteorite nostalgia nebula abhor propensity  plummet contend声明都镇 contend with content内容 needy damp mock incessant constant without cease <strong>meager</strong>  <strong>meager income</strong>  prodigious pedagogy教育学 underscore下划线强调&#x3D;underline fishing reel specify specific明确的 specification devastate haunt <strong>implicit</strong>含蓄的 herald前兆 turnpike收费公路 ware容器 pronounced显著的 pronounciation lyric solitary digestive tract triumph poll投票 pull poll fidelity忠诚 be familiar with acquaint with  acquaint quaint古朴的 metabolism新陈代谢  symbiosis parasite stipulate geometric几何学的 canopy bison basin channel genuinely yarn纱线 yearn flat out精疲力尽 pitch  toss subjugation secrete分泌 secrete poison extradition warrant引渡授权 academy ratify正式批准 perpetuate永久的 <strong>agitation</strong>忧虑 litter垃圾 impediment障碍 impede妨碍 rattle拨浪 regime政体 conform遵从 confirm证实 slender scale scope turnout出席人数产量 repress克制压抑 surpress压制 surpress rebellion depress沮丧 contract合同 cynical gratify使满意 syllabus教学大纲 antecede在之前 ravine沟壑？ gross总共 senator <strong>seminar</strong>  venturesome敢于探险的 tiresome venture冒险投机 expropriate征用没收 expropriate funds挪用公款  cactus仙人掌 oasis绿洲 detract减损 souvenir memento criteria criterion validity正当的合法的认可 boulder dormant wholesome <strong>lush</strong> dedicate aquarium revert恢复 <strong>revert to normal</strong> converse交谈回话 converse with revitalize dual deflect nominate clog road are clogged with busy traffic <strong>property</strong> preliminary预备工作 liminary开头的 proper争吵的 ponder沉思 <strong>posit</strong> That economist posited that there would be no economic crisis in the next decade. position Deposit <strong>counter</strong>反驳相反地 secede脱出 signify表示说明 strap带 leather strap tremble tremulous  expedient权宜 displace置换 replace交换 disclose&#x3D;reveal discover gloomy manifest表明清楚 cram塞满 trek He trekked over mountains to meet her. ignite adroit <strong>torrent</strong>急流 torrent of rain disquiet不安忧虑 contempt轻视 warp扭曲变形 interim间歇过渡 discourse论文演讲 discourse on prosecute起诉控诉 prosecutor检察官 avert避免 avert from avert military confilction realtor房地产经纪人 estate房地产 realty不动产 sluggish slug迟缓的 transact transaction交易处理 aquifer含水层 controversy争议的 intricate复杂的 intrinsic内部的 complex  <strong>thaw</strong> thaw out融化 infiltrate渗入潜入 filter filtrate过滤 feudal封建 dehydrate脱水 ventilation通风 ventilate vent出气 </p>
+<h2 id="2022-3-8"><a href="#2022-3-8" class="headerlink" title="2022.3.8"></a>2022.3.8</h2><p> bureau tax bureau税务局 credential证书文凭 credit学分信誉 indigent diligent postpone推迟 eclecticism折中主义 uphold支持 uphold a law reptile爬行动物 missile offset额外的 offset the loss  compensate for choppy起伏的 complacence自满满足 circumference周围周长 germinate发芽 germ细菌种子 stigma污点 <strong>ensue</strong>继而发生 <strong>forfeit</strong>罚款 be forfeit to被征用 counterfeit赝品伪 劣 aptitude恰当合适的 falter衰退 unfaltering坚定的 falter发抖蹒跚 bloster支撑加固 hedge阻碍 contour等高线 relic遗物 staggered交错的 credence可信的 credit  <strong>adventitious</strong>偶然的 <strong>transcribe</strong>记录抄录  exorbitant价格不合理 delineate说明 <strong>inventory</strong>目录清单 robust强壮的 sauce调料 <strong>saucy</strong>无礼的 <strong>insolent</strong>傲慢无礼 packed挤压的 scrub洗刷 proofread校正 alienable可转让的 alien外国的 dissenter不同意consent同意 assent赞成 dismal dismay archive存档室 converse交谈 conversation converse相反的 fable语言 fellowship会员资格 shuffle洗牌拖走 appointment约会预约 take up an appointment上任就职 avert避免 avert conflict accredit归功于 impermeable不可渗透的 loath&#x3D;reluctant encroach coach encroach侵占 unconsolidated松散的 consolidate加固 scourge鞭挞 flair才能 shear剪 abreast并列的 keep abreast of </p>
+<h2 id="2022-3-9"><a href="#2022-3-9" class="headerlink" title="2022.3.9"></a>2022.3.9</h2><p>concede承认 cognitive认知的 congnize认知 turbance急流 disturbance perturbance cuneiform楔形文字 </p>
+<h2 id="2022-3-10"><a href="#2022-3-10" class="headerlink" title="2022.3.10"></a>2022.3.10</h2><p>illusion幻觉 optimal optical glamour venom毒液 <strong>ensue</strong> an arguement ensued. <strong>gallery</strong>画廊 traverse横穿 provocative provoke hospitable宜人的 infuriate激怒 irritate infuse灌输 staggered交错的震惊的 <strong>stagger</strong>蹒跚 internal international shrik推卸逃避 shrik responsibility <strong>slog</strong> at sth艰难前行 <strong>parliament</strong>议会 pliable可变的 column专栏 sage圣贤 algebra代数 geometrical lineage血统 respectable受人尊敬 kinship血缘 portray描绘 portrait censor审查员 sensor传感器 census普查 adroit be adroit at dealing with difficult problems.精明处理 punctual puncture漏气刺穿 chapel <strong>commune</strong>公社 communist party <strong>commute</strong>通勤 tempt诱惑感兴趣 meteor property incredulous怀疑的 evacuate疏散 excavate impersonal不讲人情的 senior junior sophomore freshman frivolous  flair for devour devout虔诚 dwindle population has dwindled to half of it’s former size. bode预示 indict控诉 nocturnal夜行 noct&#x3D;night incongruity hydraulic水压的 hydr aptitude适合的天赋 be endowed with  have aptitude for geometry几何 geometrical geology propagate宣传繁衍 jog credential文书资质 downside缺点 epic史诗 epidemic encroach侵占 emanate发散 outcome结果 adventitious偶然的 ethical道德的 ethnic人种的 <strong>affinity</strong>爱好喜好 affinity for condiment调味品 shuffle 拖 detest反感 tread踏 relay传达 reliable rely delay understate轻描淡写 disinterested无私公正的 uninterested不感兴趣  strenuous费力的 flora植物群 fauna&#x2F;fo:na&#x2F; tedious posit假设安排 deposit posit假设 genesis开端起源 <strong>paradigm</strong>范例 deplete枯竭耗尽 hoard up储蓄 <strong>Motivated by fear people began hoarding food and supplies</strong>. stash saving储蓄 deposit储蓄 perishable perish消灭 transcribe记录抄录  forfeit罚款没收 counterfeit假冒 <strong>fragment</strong>碎片化  expropriate concur同时发生 starch淀粉 engrave雕刻 proofread校正 Before you hand in the paper, you’d better proofread it. Dissenter反对者 <strong>bulletin</strong>公告公示 <strong>implore</strong>恳求哀求 implore sb to do sth <strong>abridge</strong>缩短 volatile挥发性的 henceforth从此以后 hence从此因此 accredit委任 inception开端 incinerate焚化 mediate dearth短缺 the dearth of water interim间歇 interim暂时的临时的 entreat恳请乞求  genial falter unfaltering不衰退 snide伪造挖苦 interplay相互影响的 slander诽谤 digression离题 <strong>substantiate证实</strong> transient短暂的 detract减损 distract转移注意力 combustion combustible centric center central emancipate解放 </p>
+<h2 id="2022-3-11"><a href="#2022-3-11" class="headerlink" title="2022.3.11"></a>2022.3.11</h2><p>Invade evade <strong>cordial</strong> atmosphere cordial atmosphere lounge候室 conserve conversion转换 embarrassed caution precautionary预防 amenity distant rural  tackle poverty property league联盟 colleague predator predation <strong>substantiate</strong> <strong>panorama</strong> spectacle  knit编织 <strong>coincide</strong> husbandry畜牧业 victim受害者 assail抨击 delegate代表 candidate grip抓握 migrate sednetary adjacent临近的 adjoin Legiable renovate&#x3D;restore novate新旧代替 denote象征 wrench猛拉扭 perishable perish腐烂坏死 decay腐烂 isolate <strong>desolate</strong>荒凉的 transcend transendent  cascade overhaul彻底检查 over haul用力拖,拉 <strong>calamitous</strong> calamity oval椭圆 process progress进展 savage也行 rape掠夺 ravage毁坏 semi一半的！！ apprise通知 promising有希望的 proclaim宣称 acclaim喝彩 arable land可耕地 reclaim开拓 amass积聚 dissipate消散驱散 tectonics地质学 chronical chronology chronological时间顺序的binoculars望远镜</p>
+<h2 id="2022-3-12"><a href="#2022-3-12" class="headerlink" title="2022.3.12"></a>2022.3.12</h2><p>rattle波浪 crawl爬 longevity ease pass the exam with ease. at one’s ease unrest动荡 turmoil ease sb into  proponent propose支持者 opponent  calamity disproportionate fray磨损斗争 shirk responsiblity immerse rhyme cramped狭小的 meagar income indignant愤怒的 confiscate没收 forfeit没收 assail抨击 assault攻击突袭 aroma芳香 hurry amenity tackle&#x2F;taekl&#x2F;  nothing was done to tackle the problem. meteorolgical meteor mature allergy allergic pertinent相关的 relevant chafe confiscate assail guideline方针指南 interrogate盘问审问 <strong>circumstance</strong> <strong>scheme</strong>  <strong>pertinent comment on the scheme</strong> usher引导领座 usher in expenditure支出 recede褪去 accede同意 concede承认 secede脱离退出 instilling conservative values in the students can inhibit their personal development.  Instill灌输 inhibit&#x3D;prohibit&#x3D;refrain阻碍 inhabit栖息 expend expensive expend expenditure支出 <strong>extrapolate</strong>外推推断 galloping inflation通货膨胀 hypothetical假设的 hypothesis hypothese closet储藏室 fortuitous偶然的 <strong>adventitous</strong>偶然的 aggressive aggression evolve evolusion <strong>vascular</strong>血管的  sedentary exculsive &#x3D;only external permanent discipline economic economy generalization general generation intimate persuasive intimate亲密的 secular现世的 <strong>secular</strong> axis  amass积聚 <strong>reveal</strong> some research reveal that technologcial technical technology reveal that  depose开除 scandel丑闻 homage敬意 <strong>desolate</strong> isolate insulate隔离 hedge围栏 hedge against the financial risk. finance financial  bustle忙 combustible <strong>spurn</strong>拒绝 solicit恳求召集 it’s quite important to solicit opinion and suggestion.  <strong>grip</strong> dissuade劝阻 persuade race racism racial watercourse discourse canvass游说 annotation denote表示 annote注视 annotation epitome典范 paradigm chart图表 diagram图解 archive档案室 refraction折射 reflection反射 enact制定法律 sanction is to be enacted against the company. punishment sanction 制裁 enact制定 dismal惨淡 reiterate literature reiterate重申 bruise伤痕 alienable转让的 cohesive联结的 cerebral理智的大脑的 cerebrity cerebrate diplomatic外交的 <strong>diploma</strong>文凭&#x2F;dəˈplōmə&#x2F; Embassy大使馆 compensate补偿 compensation  make up for pedagogy教育学 righteous right righteous progress make a progress progressive进步的 be lacking in lack of excessive rampant猖狂的 enlighten启蒙 recollection会回忆 overtime work overtime controversial controversy争议 <strong>conservative</strong> controversial convict convince therapy治疗 allot分发分配 allocate分配 ramble husbandry畜牧业 forage觅食 forge  <strong>provided假设</strong> coverage amenable amenity salient显著突出 saline quiescent静止的 flourish繁荣 peculiar奇怪的 peculiar recess休会期 recession经济衰退 specialize专门 contemporary同代的 linguistic  embody代表 associate相关的 associative联合的 league联盟联赛</p>
+<h2 id="2022-3-15"><a href="#2022-3-15" class="headerlink" title="2022.3.15"></a>2022.3.15</h2><p>swell swollen livestock家畜sporadic偶尔的 episodic erratic occasional noteworthy&#x3D;notable prefer A to B喜欢A prefer doing sth eschew unrest depository deposit posit假设 depot库房 topographical[ˌtɑːpəˈɡræfɪkl]地形的 recharge补充恢复 replenish补充 negligible可忽略的 neglect忽略 finite[ˈfaɪnaɪt]有限的 infinite[ˈɪnfɪnət]无尽的 solidify变硬 fallout沉积物 boundry边界的 in view of鉴于basalt玄武岩 ritual仪式 myth神话 envision设想 champion拥护捍卫 anthropologist人类学家 relative亲戚 related相关的 relevant</p>
+<h2 id="2022-3-16"><a href="#2022-3-16" class="headerlink" title="2022.3.16"></a>2022.3.16</h2><p>quote引用 quota&#x2F;ˈkwōdə&#x2F;定额 pave铺平 pavement路面 identify识别 identity身份 organic有机的 auction拍卖 favored有利的 swallow吞咽 shallow浅的 bule球状茎 bald光秃的 packed拥挤的 cheque支票 commit犯错承诺负责 inviting诱人的 soak up water &#x3D; absorb water disperse dispersal synthesize合成 starsh淀粉 residue残留物 germ胚芽 refuge避难所 even平坦？mitigate the effect mitigate缓解减轻 alleviate infrasound次声波 infrared红外线 <strong>metabolism</strong>新陈代谢 <strong>lotus</strong>莲花</p>
+<h2 id="2022-3-19"><a href="#2022-3-19" class="headerlink" title="2022.3.19"></a>2022.3.19</h2><p>prototype原型 stereotype刻板 royal皇家的 loyal忠诚的 as end in themselves以自己为目的 end&#x3D;purpose generic steep陡峭 steer驾驶引导 sheer操控</p>
+<h2 id="2022-3-20"><a href="#2022-3-20" class="headerlink" title="2022.3.20"></a>2022.3.20</h2><p>estate real estate liberate liberty deliberate  alumnus botany balcony drench  trench resolve resolution revolution outweigh advantage outweigh the disadvantage  discord accord stunt impede stunt阻碍特技表演 你 apprehend逮捕理会 deform disparate pharmacy drugstore pharm&#x3D;drug  afflict afflicted torment oppressive oppressive law压迫的法律 delirium insanity&#x3D;delirious mound mounds of glitter scrutinize仔细检查端详  disconcert不安困惑 worship崇拜 mount up增加的 cardinal最重要的 stratum阶层岩层 layer baffle困惑为难 discomfit plank plankton浮游生物 substantial大量的considerable  substance物质 sexism racism歧视 discrimination <strong>obsolete</strong>过时的 desolate荒凉的 isolate insulate obsolete device  superintendent主管负责人 oversee监管lope轻松的步伐 chagrin visualize想象 envision embody具体化 overgraze过度放牧 cannot do not primal最初的 primitive原始的 primary首要的 prime首要的 fundamental基本的  crooked不诚实的 crooked country roads弯曲的小路 intriguing吸引的 fascinating engaging  feign装作 mar损坏 Sadly, the essay is marred by careless errors.  incursion袭击 incur招致 incurable incursive入侵的 imprecise concise  penmanship书法 <strong>attire</strong>穿着 glaze上釉 pretension虚荣 pretend monopoly垄断  aquatic furnish提供 <strong>wintry</strong>  arduous 费力的  outlive长命  gentility  gentle dismiss不考虑驳回 discharge释放 culpable有罪的 credentialism文凭主义 credential wither枯萎 wilt枯萎 grape withered on the vine deficit赤字  financial deficit concomitant伴随的 comitant伴随的 coincide重合 coincidence巧合 mortgage抵押&#x3D;<strong>pledge</strong>保证 <strong>recitfy</strong>矫正 amend remedy</p>
+<h2 id="2022-3-21"><a href="#2022-3-21" class="headerlink" title="2022.3.21"></a>2022.3.21</h2><p>demise死亡 egalitarian平等主义 photodissociation dissolve溶解 symmetry token象征 reform象征 indifference不关心的 rhinoceros犀牛 confront&#x3D;encounter  pragmatic务实的实际的 <strong>pragmatic&#x3D;practical</strong> spellbind迷人，入迷&#x3D;mesmerize endorse签名  perch栖息处 reciprocity reciprocity互惠  evacuation excavate evacuation  <strong>aviation</strong>航空 folkway社会风俗 sprinkle&#x3D;spray riddle谜语  slick光滑的 counteract消除抵消 <strong>offset</strong>抵消 seep渗 deploy部署 magnet cartilage软骨 eradicate灭绝 redicate确立生根 the corruption has been  eradicated ephemeral comet转瞬即逝 disappointed despondent downcast downside缺点 muscle mass肌肉块 dissolve溶解 reform改革 readily&#x3D;easily&#x3D;willingly 乐意的容易的ordinal顺序的 </p>
+<h2 id="2022-3-22"><a href="#2022-3-22" class="headerlink" title="2022.3.22"></a>2022.3.22</h2><p>twine缠绕 smelt copper融化黄铜 spectator&#x3D;audiance debut初次登场 rebut反驳   accede&#x3D;acquiesce negate取消否认 outermost innermost debt债务欠款 liability责任义务 bring about&#x2F;generate&#x2F;cause fort要塞 deviate偏离 deviant不正常 bleak perspec惨淡的前景 retail零售 solitary独自的 anomaly异常 uncover&#x3D;unmask allay减少 <strong>quash</strong>撤销 suppress阻止 dissimulate掩盖 dissemble掩盖 <strong>effluent</strong>&#x3D;sewage废水 feasible feasibility可行性 viable obsolete过时的 aesthetic审美的 proprietor业主  slash削减 elementary基本的初级的 ranch牧场  rash皮疹鲁莽  wretch不幸的人 assimilate吸收理解 assimilate into the new culture press印刷 meridian子午线 aberrant异常的越轨的 fume fumigate烟熏 cellar地下室 exotic异国的 paraphrase解释 elapse lapse失效 empirical经验 imperial帝国的 fervor热情 ardency wither&#x3D;wilt枯萎 to relieve the tedium</p>
+<h2 id="2022-3-23"><a href="#2022-3-23" class="headerlink" title="2022.3.23"></a>2022.3.23</h2><p>sustain支持 subsist存在 subsist on subsistence维持生计  breach违背 shipwright造船工 stampede狂奔  jury陪审团 verdict裁定  overhaul仔细检查  snide伪造的 remark评论 pensive沉默寡言的 be wary about小心点 mime模仿聋哑 buoyant上浮  rudimentary原始的基本的 insolvent破产的  puppet人偶  pertain protein蛋白质</p>
+<h2 id="2022-3-24"><a href="#2022-3-24" class="headerlink" title="2022.3.24"></a>2022.3.24</h2><p>diminution减少 diminish减少  slog艰苦奋斗 ailment小病 surmise猜测 bureau局 agency中介 rural rustic blaze燃烧 prophet预言家 spurn咀嚼摈弃 discord concord和睦  in a fit of pique pique激怒 idiom idiomatic phrase  disgession离题 consiliate安抚 council理事会协商 annex吞并 annex to附属 forsake抛弃 astronomy astronaut align结盟 alignment呈直线的 renovate修复 restore修复 innovate创新 renovate修复 calamitous calamity灾难  exponent指数支持者 abbreviate缩写  enact制定法律 enactment lore folklore dissimulate dissemble conceal parliament congress arboreal树栖的  empiricism empiric经验的 unearth挖掘 sumptuous奢华的 assert asset财产&#x3D;property bequeathy遗赠  ovel椭圆  staff职员 franchise特权 gibe嘲笑</p>
+<h2 id="2022-3-25"><a href="#2022-3-25" class="headerlink" title="2022.3.25"></a>2022.3.25</h2><p>browse嫩草 In addition to除了 game猎物 subject to遭受 exploited利用 literally真正地 circumvented绕过 fashion方式 fellowship奖学金友谊 sinuous蜿蜒的曲折的 mar损坏 anchor锚 domain领土 </p>
+<h2 id="2022-3-26"><a href="#2022-3-26" class="headerlink" title="2022.3.26"></a>2022.3.26</h2><h2 id="2022-3-27"><a href="#2022-3-27" class="headerlink" title="2022.3.27"></a>2022.3.27</h2><p>appraisal评价 quench淬火 horde一大群 groom培养 pathology变态 haunt出没 ductile可延展的 pretentious自负的 synthetic合成 rustic乡村 <strong>detergent</strong>清洁剂 stratum层数 strata地层 counterpart对方副本 figurative比喻的 maintain维护保养 magnify放大表明 roost栖息 imprint牢记 frenzy狂暴 magnify放大 <strong>manifest</strong>表明显示 institude机构 institute研究所 adoption采用 stylistic文体 cardiac allegiance忠诚 notation符号 substance物质 substantial <strong>substantiate证实</strong> complement补充的 improvise临场的 nonsense胡说废话 arboreal树栖的 subsequent随后的 subsequence随后 indicative预示 cohesion团结 havoc storm caused havoc风暴造成了混乱 adversary对手 opponent对手 proponent支持者 imperial帝国的 flavor风味 embark上船 sympathy pathetic可怜的 philosophy哲学 corpus文献 infra以下 infrastructure基础设施 infrared红外线 relegate贬职 delegate代表 tenet理念 patriarch家长的 myriad大量的 susceptible to影响的  tract道束 spellbind迷人 economic torpor迟钝困境 torpor</p>
+<h2 id="2022-3-28"><a href="#2022-3-28" class="headerlink" title="2022.3.28"></a>2022.3.28</h2><p>trade sanction&#x2F;economic sanction同意制裁punishment potent potency影响力 odd剩余的奇怪的 eschew回避 civil市民的 dissuade劝阻 discourage使气馁 disinterest不感兴趣的 apportionment分配 homage salute shred碎片 chronical sickness malicious恶意的 attend to照顾致力于 quiescent静止的 possess possessor propriety proprietor业主 shrink收缩 service depot服务站 defiant反叛的</p>
+<h2 id="2022-3-29"><a href="#2022-3-29" class="headerlink" title="2022.3.29"></a>2022.3.29</h2><p>compel强迫 compelling迷人的 intervene干涉 intervening介于中间 despond沮丧 despondent失望的 aviation dent凹痕  ephemeral 短暂的 ephemeral comet  indigenous本土的 indigene当地人 ingredient成分interest利益 benefit profit intriguing tunnel隧道 channel频段 canal运河 bump撞击 spiny带刺的 spine脊椎 revolt反叛 abiding持久的 palate上颚 palatable可口的 evolvement evolve evolute evolution retrieve</p>
+<h2 id="2022-3-30"><a href="#2022-3-30" class="headerlink" title="2022.3.30"></a>2022.3.30</h2><p>dilate扩张的 diversification多样化 comprise组成 <strong>milieu</strong>出身背景 flair才能本领 sluggish缓慢的 handy容易做的&#x3D;accessible可接近的 succumb屈服 entreat祈求&#x3D;implore escort entourage随从 borne携带的 airborne空气传播的 commit犯罪 concomitant伴随的 comitant伴随的 heyday全盛期 lodge outfit infatuate迷恋 expropriate征用 lapse失误 expire失效 abut领接 affinity喜好 forfeit吞没没收 eradicate根除 obsolete过时的 avert避免 tangible可接触的 smear涂抹</p>
+<h2 id="2022-4-1"><a href="#2022-4-1" class="headerlink" title="2022.4.1"></a>2022.4.1</h2><p>delirium精神错乱 sporadic偶尔发生的 sporadic concerts deciduous落叶的 doodle乱涂乱画 arduous费力的 ardu&#x3D;difficult arduous task艰巨的任务 repress压抑 staggered交错的震惊的 startled relay转发播放 perch栖木 pluralism plural复数的 trauma精神创伤 contaminate污染 dwindle减少 population has dwindled to half of its former size. conspiracy阴谋  stampede狂奔 soprano女高音 horde一群人 inaugurate就职仪式 prodigious巨大的 committee委员会 frail脆弱的 benevolent慈善的 corporeal身体的  denounce指责抨击 acquit宣告无罪</p>
+<h2 id="2022-4-2"><a href="#2022-4-2" class="headerlink" title="2022.4.2"></a>2022.4.2</h2><p>credence可信度 appease平息 appease the protesters安抚抗议者 refraction折射 flint打火石 condiment调味品 typify典范 typical典范的 hoard贮藏 benign良性的 conterpart职位trance恍惚 auction拍卖 ratify批准 evade转移逃避 invade入侵 evade回避</p>
+<h2 id="2022-4-3"><a href="#2022-4-3" class="headerlink" title="2022.4.3"></a>2022.4.3</h2><p>diminution diminish errand差事 ambivalent对立的 domicile住处 extrapolate推测 imperative紧急的 cynical愤世嫉俗的 emancipate解脱 voracious贪婪的 pensive沉思的 arable可耕的 avalanche雪崩 exalted崇高的 speckle斑 feign操作 feign illness装病 wholesome有利健康的 devout虔诚 bustle匆忙 aberrant越轨的 lobby门厅 salient突出的 concur同时发生 protrude伸出 swoon昏厥 crooked弯曲欺诈 squirt喷射 delineate说明 plague瘟疫折磨 metaphor暗喻 balk猥琐阻止 balk at setting up a new company drench湿透 prosecute起诉 prosecutor检察官 languish憔悴 sober清醒 pertinent相关的 protein县官的 etiquette礼仪 stingy吝啬的 bait鱼饵 moor旷野 conceit自负的 indigent贫困的 bestow授予 </p>
+<h2 id="2022-4-4"><a href="#2022-4-4" class="headerlink" title="2022.4.4"></a>2022.4.4</h2><p>abbreviate缩写 attire衣着打扮 juridical法律的 trek跋涉 clamor吵闹的 glamor魅力 meridian经线 grovel卑躬屈膝 haphazard偶然的 orgaize task in haphazard manner <strong>versus</strong>抗衡vs A versus B  bequeath捐赠 contiguous领接 snide伪造的 adroit精明的 cramp抽筋 clarity明晰 clarify阐明 charity慈善机构 hitch technical hitch edifice大厦  rudimentary初级的基础的 antecedent高于 deviant异常的 surmise猜测推测 charter县长 falter衰弱 symptom syndrome综合症  strategic关键的 critial危急 crucial至关重要的 disciple门徒 <strong>disparate不同</strong> ascertain弄清楚 bud芽  counterfeit伪造的 adventitious偶然的 membrane薄膜  rodeo牛仔 brace支柱顶住 holistic整体的 holistic solution stadium竞技场 indict控诉 proprietor业主</p>
+<h1 id="听力词汇"><a href="#听力词汇" class="headerlink" title="听力词汇"></a>听力词汇</h1><p>oscillation conservatory luminosity Neptune Saturn constellation <strong>ordinance</strong> <strong>reinvent</strong> clustered Uranus trumpet <strong>accretion</strong> </p>
+<p>**uranium ** <strong>estuary</strong> crevice <strong>desolate</strong> gravel <strong>soluble</strong> <strong>gypsum</strong> <strong>monsoon</strong> <strong>Appalachian mountain range</strong> reclaim回收 phase阶段</p>
+<p>alloy合金 allay缓解 ally盟友 valley峡谷 repeal condense median</p>
+<p><strong>most only majority ！</strong></p>
+<h2 id="C"><a href="#C" class="headerlink" title="C"></a>C</h2><p>extension延期扩张 expansion扩张 final copy终稿 due到期 overdue过期 catalogue分类 draw up草稿 retake重考 fail挂科 intro基础课 elective&#x2F;optional 选秀 intermediate course中级课 advanced cource introductory course基础课 introduction基础课 <strong>seminar</strong>研讨会？也是class？ enroll in注册 drop推课 drop out退学 eligible合格的  <strong>sheet</strong>表格 <strong>signature</strong>签名 tuition学费 financial aid资助 credit学分 diploma文凭 diplomatic外交的 certificate证书 form表格 semester学期 fellowship奖学金  librarian图书管理员 loan service租借服务 <strong>literature review</strong>文献评论 electronic电子版 <strong>rare</strong>珍藏 verify证实 clarity明晰 clarify阐明 abstract摘要 student orientation情况介绍 orientation&#x3D;guide？circulation循环流通 loan counter借书处 renew续借 on reserve预留 photocopier影印机 journal杂志期刊 charge费用 surcharge附加费 perchase policy full refund snack organic food <strong>cafeteria</strong>  counselor  <strong>department secretary</strong>秘书 <strong>deposit</strong>存款 chart图表 form&#x3D;table salary&#x3D;income paradiam paycheck驯水 payroll工资单 <strong>career</strong> freshman sophomore junior senior graduate intern实习生 recruit招聘 resume建立，恢复  career fair recommendation accommodation  off campus校外 commute通勤 flyer传单 poster海报 announcement公告 laundry洗衣房 appointment约会预约 faculty全体教职工  staff职员 hall dormitory宿舍 auditorium &#x2F;ˌôdəˈtôrēəm&#x2F;礼堂 concert chorus&#x2F;choir rehearsal排练 construction施工 reschedule <strong>bulletin board</strong>公告板 consult咨询 <strong>enquiry</strong>询问 approach</p>
+<p>Anthropology</p>
+<p>Architecture</p>
+<p>Archaeology</p>
+<p>Astronomy</p>
+<p><strong>Botany</strong></p>
+<p>Biology</p>
+<p>Chemistry</p>
+<p>Choreography</p>
+<p>Ecology</p>
+<p>Economy</p>
+<p>Geology</p>
+<p>Linguistics</p>
+<p>Literature</p>
+<p>Philosophy</p>
+<p>Psychology</p>
+<p>psychological</p>
+<p>Sociology</p>
+<p>Zoology</p>
+<h2 id="L"><a href="#L" class="headerlink" title="L"></a>L</h2><h3 id="Biology"><a href="#Biology" class="headerlink" title="Biology"></a>Biology</h3><p>coral Antarctica translocation ecological navigate nasal acquatic temporate温带的 thaw融化 descendant后发你 hatch hibernate extinction</p>
+<h3 id="Marine-Biology"><a href="#Marine-Biology" class="headerlink" title="Marine Biology"></a>Marine Biology</h3><p>organism生物 microscopic organism breed cell电池？ feather barren  vegetation individual evolve pollen pollinate</p>
+<h3 id="Animal-Behavior"><a href="#Animal-Behavior" class="headerlink" title="Animal Behavior"></a>Animal Behavior</h3><p>Forage compass swarm shrub praire passive被动的 camouflage stretch drive <strong>enemy</strong>[ˈenəmi] glide滑行</p>
+<h3 id="Botany"><a href="#Botany" class="headerlink" title="Botany"></a>Botany</h3><p>Photosynthesis nectar scent dormant genus parasite <strong>trunk bark</strong> petal </p>
+<h3 id="Microorganism"><a href="#Microorganism" class="headerlink" title="Microorganism"></a>Microorganism</h3><p>carbon dioxide <strong>enzyme</strong> vent出风口 conversion转换 sulfide hydrothermal热水的 plankton</p>
+<h3 id="Painting"><a href="#Painting" class="headerlink" title="Painting"></a>Painting</h3><p>plaster renaissance realism impressionist impressionism photography salon canvas portraiture dimension gallery exhibition convention conventional <strong>critic</strong> sketch素描 sculpture sculpt texture brushstroke </p>
+<h3 id="Sculpture"><a href="#Sculpture" class="headerlink" title="Sculpture"></a>Sculpture</h3><p><strong>parchment</strong> statue marble <strong>strip</strong> <strong>villa</strong>别墅 maze迷宫 fountain喷泉 squirt喷射</p>
+<h3 id="Drama"><a href="#Drama" class="headerlink" title="Drama"></a>Drama</h3><p>lyric诗词 myth神话 mythology poetry drama tragedy script <strong>portray</strong>扮演描绘</p>
+<p>audition试镜 audience scene scenery narration stereo立体声 expose揭露 crew队 innovator创新者  conversion center会议中心 apprentice学徒 erratic不稳定的 rigid严格的 contemplative沉思的 sarcastic讽刺的 authentic真正的 </p>
+<h3 id="Architecture"><a href="#Architecture" class="headerlink" title="Architecture"></a>Architecture</h3><p>reverberate混响 chorus合唱 component成分 arch drainer auditorium  plaster石膏</p>
+<p>genre illustrator </p>
+<p>helio-centric geo-centric</p>
+<p>be immersed in immerse沉浸 immense巨大</p>
+<p>Confirm conform符合 conformity一致 </p>
+<p>Misspell the tittle </p>
+<p>pyschological心理学</p>
+<p>chronologically时间顺序</p>
+<p>progress进步</p>
+<p>千万关注But First等词</p>
+<p>epitomized imperial power <strong>imperial</strong>帝国的</p>
+<p>thinness薄！ thick厚！</p>
+<p>annual figures rose steadily and spectacularly. spectacle壮观的景象</p>
+<p>stab刺 analogy analogous类似的 grind研磨 shred plant unequivocal毫不含糊的 equivocal模棱两可的 haze霾</p>
+<p>vertical mixing and dispersion of pollutants are inhibited</p>
+<p>spearheaded the second phase of the transportation revolution</p>
+<p>spear矛 spearhead先锋引领 lumber木材 party政党 communist party</p>
+<p>propel the growth of <strong>propel</strong>推动推进</p>
+<p>estate speculation房地产投机 <strong>estate</strong>财产 <strong>speculation</strong>投机 <strong>speculate</strong>推测 replete充满 burden负担</p>
+<p>exert influence over the railroads’ internal affairs by supervising administrative reorganizations in times of trouble.</p>
+<p>In contrast to the political <strong>anarchy</strong>, economic dislocation, and military destruction in无政府状态，经济混乱</p>
+<p>conspiracy阴谋 rigid governmental control over严苛的政府 crown王冠</p>
+<p>废除让步 abrogating all the liberties and concessions Signify指示</p>
+<p>One result was an <strong>influx</strong> of cheap machine-made goods that swamped the handicrafts industry of the country.这导致的一个结果就是，大量廉价的机器制造的商品淹没了巴西的手工业。</p>
+<p>compact压缩的 contract收缩？合同 smash粉碎 bulge凸起？bugle号角 <strong>explicit</strong>明确的</p>
+<p>clarify阐述 clarity明晰</p>
+<p><strong>Disposal</strong> ：improve standards of waste disposal.</p>
+<p>Devastate: devastate is heavier than destroy.</p>
+<p>Domestic: domestic life.</p>
+<p>Shaft: elevator shaft.</p>
+<p>Motif: motif of betrayal. </p>
+<p>Recur: occur incur</p>
+<p>Sediment: layer of sediment.</p>
+<p>Majestic: major majestic</p>
+<p>Incessant: constant incessant</p>
+<p>Integrate: culture integration.</p>
+<p>Domain:political domain <code>dominate </code></p>
+<p>Formidable: formidable combination <code>forbidden</code></p>
+<p>Acquaint: acquaint me</p>
+<p>Incorporate: corporate culture. </p>
+<blockquote>
+<p> Eccentric Dairy Deity Transplant Transparent Grave Evenly Hardship</p>
+</blockquote>
+<p>loom :looming danger</p>
+<p>Intense concentration</p>
+<p>battle against&#x2F;with</p>
+<p>Moderate amount of stress</p>
+<p>subsidy subsidize</p>
+<p>vertebrate</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">*plate planet flat Plateau</span><br><span class="line">*crater</span><br><span class="line">*stuff</span><br><span class="line">	modern age / aged a lot <span class="comment">//衰老</span></span><br><span class="line">  spot <span class="keyword">for</span> picnic / spot on skirt / spotted by sb</span><br><span class="line">  a fair share</span><br><span class="line">    reclaim lost property</span><br><span class="line">    site</span><br></pre></td></tr></table></figure>
+
+<p>*<strong>trial &#x2F; safety trial&#x2F; life’s trial</strong><br>*<strong>delicate</strong><br>*<strong>diminish</strong><br>*<strong>ingest digest</strong><br>*<strong>ingenious author</strong><br>obscure &#x2F; obscure of &#x2F; motive for crime remains obscure<br>ambiguity ambiguous</p>
+<p><strong>Obligatory</strong> right and obligation</p>
+<p><strong>Diagram</strong> </p>
+<p>**exaggerate **exaggerate one’s merits</p>
+<p>*<em>*<em>Prosperous</em></em>  prospect</p>
+<p>Geometric </p>
+<p>inhibit</p>
+<p>cohensive coherence</p>
+<p>regional region religious</p>
+<p>Organism  Organ </p>
+<p>Conquest</p>
+<p>exploit deposit</p>
+<p>Battle</p>
+<p>criterion standard <strong>criterion</strong></p>
+<p>Proparation portion property</p>
+<p>distract divert</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">Haoyang Chen</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://zjuchy.github.io/2022/02/02/TOEFL/">https://zjuchy.github.io/2022/02/02/TOEFL/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/English/">English</a></div><div class="post_share"><div class="social-share" data-image="https://s2.loli.net/2022/02/02/rLZKxailymv5bCH.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/2022/02/02/Resource/"><img class="prev-cover" src="https://s2.loli.net/2022/02/02/oJiXKmjqWT5Qk9n.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">Resource</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/head.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Haoyang Chen</div><div class="author-info__description">I'm a ZJUer, welcome to contact me!</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">10</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">5</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/zjuchy"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/zjuchy" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:3190102984@zju.edu.cn" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Daily"><span class="toc-number">1.</span> <span class="toc-text">Daily</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-1-21"><span class="toc-number">1.1.</span> <span class="toc-text">2022.1.21</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-1-22"><span class="toc-number">1.2.</span> <span class="toc-text">2022.1.22</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#reading"><span class="toc-number">1.2.1.</span> <span class="toc-text">reading</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#listening-%E9%9A%BE"><span class="toc-number">1.2.2.</span> <span class="toc-text">listening 难</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-1-23"><span class="toc-number">1.3.</span> <span class="toc-text">2022.1.23</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#writing"><span class="toc-number">1.3.1.</span> <span class="toc-text">writing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#reading-1"><span class="toc-number">1.3.2.</span> <span class="toc-text">reading</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-1-24"><span class="toc-number">1.4.</span> <span class="toc-text">2022.1.24</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#reading-2"><span class="toc-number">1.4.1.</span> <span class="toc-text">reading</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-1-25"><span class="toc-number">1.5.</span> <span class="toc-text">2022.1.25</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#writing-1"><span class="toc-number">1.5.1.</span> <span class="toc-text">writing</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-1-26"><span class="toc-number">1.6.</span> <span class="toc-text">2022.1.26</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#writing-2"><span class="toc-number">1.6.1.</span> <span class="toc-text">writing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#listening"><span class="toc-number">1.6.2.</span> <span class="toc-text">listening</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E8%BD%AC%E6%8A%98%E4%B8%8E%E5%9B%A0%E6%9E%9C"><span class="toc-number">1.6.2.1.</span> <span class="toc-text">注意转折与因果</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B1%82%E6%AC%A1"><span class="toc-number">1.6.2.2.</span> <span class="toc-text">层次</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-1-27"><span class="toc-number">1.7.</span> <span class="toc-text">2022.1.27</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#listening-1"><span class="toc-number">1.7.1.</span> <span class="toc-text">listening</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#reading-3"><span class="toc-number">1.7.2.</span> <span class="toc-text">reading</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-1-28"><span class="toc-number">1.8.</span> <span class="toc-text">2022.1.28</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#reading-4"><span class="toc-number">1.8.1.</span> <span class="toc-text">reading</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#listening-2"><span class="toc-number">1.8.2.</span> <span class="toc-text">listening</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-1-30"><span class="toc-number">1.9.</span> <span class="toc-text">2022.1.30</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#listening-3"><span class="toc-number">1.9.1.</span> <span class="toc-text">listening</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-1-31"><span class="toc-number">1.10.</span> <span class="toc-text">2022.1.31</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-2-3"><span class="toc-number">1.11.</span> <span class="toc-text">2022.2.3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-2-4"><span class="toc-number">1.12.</span> <span class="toc-text">2022.2.4</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#reading-5"><span class="toc-number">1.12.1.</span> <span class="toc-text">reading</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#listening-4"><span class="toc-number">1.12.2.</span> <span class="toc-text">listening</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-2-6"><span class="toc-number">1.13.</span> <span class="toc-text">2022.2.6</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#reading-6"><span class="toc-number">1.13.1.</span> <span class="toc-text">reading</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-2-7"><span class="toc-number">1.14.</span> <span class="toc-text">2022.2.7</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#listening-5"><span class="toc-number">1.14.1.</span> <span class="toc-text">listening</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#writing-3"><span class="toc-number">1.14.2.</span> <span class="toc-text">writing</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-2-8"><span class="toc-number">1.15.</span> <span class="toc-text">2022.2.8</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#writing-4"><span class="toc-number">1.15.1.</span> <span class="toc-text">writing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#reading-7"><span class="toc-number">1.15.2.</span> <span class="toc-text">reading</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-2-9"><span class="toc-number">1.16.</span> <span class="toc-text">2022.2.9</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#reading-8"><span class="toc-number">1.16.1.</span> <span class="toc-text">reading</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#listening-6"><span class="toc-number">1.16.2.</span> <span class="toc-text">listening</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-2-10"><span class="toc-number">1.17.</span> <span class="toc-text">2022.2.10</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#listening-7"><span class="toc-number">1.17.1.</span> <span class="toc-text">listening</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-2-12"><span class="toc-number">1.18.</span> <span class="toc-text">2022.2.12</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#listening-8"><span class="toc-number">1.18.1.</span> <span class="toc-text">listening</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-2-13"><span class="toc-number">1.19.</span> <span class="toc-text">2022.2.13</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#writing-5"><span class="toc-number">1.19.1.</span> <span class="toc-text">writing</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-2-24"><span class="toc-number">1.20.</span> <span class="toc-text">2022.2.24</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#writing-6"><span class="toc-number">1.20.1.</span> <span class="toc-text">writing</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-2-25"><span class="toc-number">1.21.</span> <span class="toc-text">2022.2.25</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#writing-7"><span class="toc-number">1.21.1.</span> <span class="toc-text">writing</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-2-26"><span class="toc-number">1.22.</span> <span class="toc-text">2022.2.26</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-2-27"><span class="toc-number">1.23.</span> <span class="toc-text">2022.2.27</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-2-28"><span class="toc-number">1.24.</span> <span class="toc-text">2022.2.28</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%95%E5%BC%80%E6%AE%B5%E8%90%BD"><span class="toc-number">1.24.1.</span> <span class="toc-text">展开段落</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Reading"><span class="toc-number">1.24.2.</span> <span class="toc-text">Reading</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#listening-9"><span class="toc-number">1.24.3.</span> <span class="toc-text">listening</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-3-1"><span class="toc-number">1.25.</span> <span class="toc-text">2022.3.1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-3-3"><span class="toc-number">1.26.</span> <span class="toc-text">2022.3.3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-3-4"><span class="toc-number">1.27.</span> <span class="toc-text">2022.3.4</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Speaking"><span class="toc-number">1.27.1.</span> <span class="toc-text">Speaking</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Task1"><span class="toc-number">1.27.1.1.</span> <span class="toc-text">Task1</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Agree-and-disagree"><span class="toc-number">1.27.1.1.1.</span> <span class="toc-text">Agree and disagree</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#preference"><span class="toc-number">1.27.1.1.2.</span> <span class="toc-text">preference</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Good-Idea"><span class="toc-number">1.27.1.1.3.</span> <span class="toc-text">Good Idea</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Template"><span class="toc-number">1.27.1.1.4.</span> <span class="toc-text">Template</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#state-your-main-point"><span class="toc-number">1.27.1.1.4.1.</span> <span class="toc-text">state your main point</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#Transition-to-the-Details"><span class="toc-number">1.27.1.1.4.2.</span> <span class="toc-text">Transition to the Details</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#Support-your-point"><span class="toc-number">1.27.1.1.4.3.</span> <span class="toc-text">Support your point</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Task2"><span class="toc-number">1.27.1.2.</span> <span class="toc-text">Task2</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Topics"><span class="toc-number">1.27.1.3.</span> <span class="toc-text">Topics</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Template-1"><span class="toc-number">1.27.1.3.1.</span> <span class="toc-text">Template</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#State-the-change"><span class="toc-number">1.27.1.3.1.1.</span> <span class="toc-text">State the change</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#State-the-reasons-for-change"><span class="toc-number">1.27.1.3.1.2.</span> <span class="toc-text">State the reasons for change</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#State-the-speaker%E2%80%99s-Opinion"><span class="toc-number">1.27.1.3.1.3.</span> <span class="toc-text">State the speaker’s Opinion</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#State-the-Speaker%E2%80%99s-First-Reason"><span class="toc-number">1.27.1.3.1.4.</span> <span class="toc-text">State the Speaker’s First Reason</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#State-the-Speaker%E2%80%99s-Second-Reason"><span class="toc-number">1.27.1.3.1.5.</span> <span class="toc-text">State the Speaker’s Second Reason</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Task3"><span class="toc-number">1.27.1.4.</span> <span class="toc-text">Task3</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Topic"><span class="toc-number">1.27.1.4.1.</span> <span class="toc-text">Topic</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Template-2"><span class="toc-number">1.27.1.4.2.</span> <span class="toc-text">Template</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Task4"><span class="toc-number">1.27.1.5.</span> <span class="toc-text">Task4</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Template-3"><span class="toc-number">1.27.1.5.1.</span> <span class="toc-text">Template</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Writing"><span class="toc-number">1.27.2.</span> <span class="toc-text">Writing</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#opposition-style"><span class="toc-number">1.27.2.1.</span> <span class="toc-text">opposition style</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Problems-and-Solutions"><span class="toc-number">1.27.2.2.</span> <span class="toc-text">Problems and Solutions</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Solutions-and-Problems"><span class="toc-number">1.27.2.3.</span> <span class="toc-text">Solutions and Problems</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-3-7"><span class="toc-number">1.28.</span> <span class="toc-text">2022.3.7</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#writing-8"><span class="toc-number">1.28.1.</span> <span class="toc-text">writing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Integrated-essay"><span class="toc-number">1.28.2.</span> <span class="toc-text">Integrated essay</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Independent-essay"><span class="toc-number">1.28.3.</span> <span class="toc-text">Independent essay</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Introduction"><span class="toc-number">1.28.3.1.</span> <span class="toc-text">Introduction</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Vocabulary"><span class="toc-number">2.</span> <span class="toc-text">Vocabulary</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-1-29"><span class="toc-number">2.1.</span> <span class="toc-text">2022.1.29</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-1-30-1"><span class="toc-number">2.2.</span> <span class="toc-text">2022.1.30</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-1-31-1"><span class="toc-number">2.3.</span> <span class="toc-text">2022.1.31</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-2-1"><span class="toc-number">2.4.</span> <span class="toc-text">2022.2.1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-2-2"><span class="toc-number">2.5.</span> <span class="toc-text">2022.2.2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-2-3-1"><span class="toc-number">2.6.</span> <span class="toc-text">2022.2.3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-2-4-1"><span class="toc-number">2.7.</span> <span class="toc-text">2022.2.4</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-2-5"><span class="toc-number">2.8.</span> <span class="toc-text">2022.2.5</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-2-6-1"><span class="toc-number">2.9.</span> <span class="toc-text">2022.2.6</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-2-7-1"><span class="toc-number">2.10.</span> <span class="toc-text">2022.2.7</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-2-8-1"><span class="toc-number">2.11.</span> <span class="toc-text">2022.2.8</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-2-9-1"><span class="toc-number">2.12.</span> <span class="toc-text">2022.2.9</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-2-22"><span class="toc-number">2.13.</span> <span class="toc-text">2022.2.22</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-2-24-1"><span class="toc-number">2.14.</span> <span class="toc-text">2022.2.24</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-2-25-1"><span class="toc-number">2.15.</span> <span class="toc-text">2022.2.25</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-2-26-1"><span class="toc-number">2.16.</span> <span class="toc-text">2022.2.26</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-2-27-1"><span class="toc-number">2.17.</span> <span class="toc-text">2022.2.27</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-2-28-1"><span class="toc-number">2.18.</span> <span class="toc-text">2022.2.28</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-3-1-1"><span class="toc-number">2.19.</span> <span class="toc-text">2022.3.1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-3-2"><span class="toc-number">2.20.</span> <span class="toc-text">2022.3.2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-3-3-1"><span class="toc-number">2.21.</span> <span class="toc-text">2022.3.3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-3-4-1"><span class="toc-number">2.22.</span> <span class="toc-text">2022.3.4</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-3-7-1"><span class="toc-number">2.23.</span> <span class="toc-text">2022.3.7</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-3-8"><span class="toc-number">2.24.</span> <span class="toc-text">2022.3.8</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-3-9"><span class="toc-number">2.25.</span> <span class="toc-text">2022.3.9</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-3-10"><span class="toc-number">2.26.</span> <span class="toc-text">2022.3.10</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-3-11"><span class="toc-number">2.27.</span> <span class="toc-text">2022.3.11</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-3-12"><span class="toc-number">2.28.</span> <span class="toc-text">2022.3.12</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-3-15"><span class="toc-number">2.29.</span> <span class="toc-text">2022.3.15</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-3-16"><span class="toc-number">2.30.</span> <span class="toc-text">2022.3.16</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-3-19"><span class="toc-number">2.31.</span> <span class="toc-text">2022.3.19</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-3-20"><span class="toc-number">2.32.</span> <span class="toc-text">2022.3.20</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-3-21"><span class="toc-number">2.33.</span> <span class="toc-text">2022.3.21</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-3-22"><span class="toc-number">2.34.</span> <span class="toc-text">2022.3.22</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-3-23"><span class="toc-number">2.35.</span> <span class="toc-text">2022.3.23</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-3-24"><span class="toc-number">2.36.</span> <span class="toc-text">2022.3.24</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-3-25"><span class="toc-number">2.37.</span> <span class="toc-text">2022.3.25</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-3-26"><span class="toc-number">2.38.</span> <span class="toc-text">2022.3.26</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-3-27"><span class="toc-number">2.39.</span> <span class="toc-text">2022.3.27</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-3-28"><span class="toc-number">2.40.</span> <span class="toc-text">2022.3.28</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-3-29"><span class="toc-number">2.41.</span> <span class="toc-text">2022.3.29</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-3-30"><span class="toc-number">2.42.</span> <span class="toc-text">2022.3.30</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-4-1"><span class="toc-number">2.43.</span> <span class="toc-text">2022.4.1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-4-2"><span class="toc-number">2.44.</span> <span class="toc-text">2022.4.2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-4-3"><span class="toc-number">2.45.</span> <span class="toc-text">2022.4.3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2022-4-4"><span class="toc-number">2.46.</span> <span class="toc-text">2022.4.4</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%AC%E5%8A%9B%E8%AF%8D%E6%B1%87"><span class="toc-number">3.</span> <span class="toc-text">听力词汇</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#C"><span class="toc-number">3.1.</span> <span class="toc-text">C</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#L"><span class="toc-number">3.2.</span> <span class="toc-text">L</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Biology"><span class="toc-number">3.2.1.</span> <span class="toc-text">Biology</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Marine-Biology"><span class="toc-number">3.2.2.</span> <span class="toc-text">Marine Biology</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Animal-Behavior"><span class="toc-number">3.2.3.</span> <span class="toc-text">Animal Behavior</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Botany"><span class="toc-number">3.2.4.</span> <span class="toc-text">Botany</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Microorganism"><span class="toc-number">3.2.5.</span> <span class="toc-text">Microorganism</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Painting"><span class="toc-number">3.2.6.</span> <span class="toc-text">Painting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Sculpture"><span class="toc-number">3.2.7.</span> <span class="toc-text">Sculpture</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Drama"><span class="toc-number">3.2.8.</span> <span class="toc-text">Drama</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Architecture"><span class="toc-number">3.2.9.</span> <span class="toc-text">Architecture</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/04/23/tmp/" title="No title">No title</a><time datetime="2022-04-23T05:16:42.299Z" title="Created 2022-04-23 13:16:42">2022-04-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/03/14/tmp-Listening/" title="tmp_Listening">tmp_Listening</a><time datetime="2022-03-14T15:51:32.000Z" title="Created 2022-03-14 23:51:32">2022-03-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/03/04/OS/" title="OS">OS</a><time datetime="2022-03-04T10:25:43.000Z" title="Created 2022-03-04 18:25:43">2022-03-04</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/02/23/CV/" title="CV">CV</a><time datetime="2022-02-23T05:31:01.000Z" title="Created 2022-02-23 13:31:01">2022-02-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/02/17/Data-Structure/" title="Data_Structure">Data_Structure</a><time datetime="2022-02-17T03:13:35.000Z" title="Created 2022-02-17 11:13:35">2022-02-17</time></div></div></div></div></div></div></main><footer id="footer" style="background: transparent"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By Haoyang Chen</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"></div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-nest.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
