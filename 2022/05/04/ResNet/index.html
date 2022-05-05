@@ -1,13 +1,13 @@
-<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>ResNet | ZJUCHY の blog</title><meta name="keywords" content="Computer-Vision Deep-Learning"><meta name="author" content="Haoyang Chen"><meta name="copyright" content="Haoyang Chen"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="author: Kaiming He(恺神！) theme : residual(残差) learning framework to ease the training of networks that are substantially deeper than those used previously.">
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>ResNet | ZJUCHY の blog</title><meta name="keywords" content="Computer-Vision Deep-Learning"><meta name="author" content="Haoyang Chen"><meta name="copyright" content="Haoyang Chen"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Author: Kaiming He(恺神！)Themeresidual(残差) learning framework to ease the training of networks that are substantially deeper than those used previously.  With the network depth increasing, accuracy gets">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ResNet">
 <meta property="og:url" content="https://zjuchy.github.io/2022/05/04/ResNet/index.html">
 <meta property="og:site_name" content="ZJUCHY の blog">
-<meta property="og:description" content="author: Kaiming He(恺神！) theme : residual(残差) learning framework to ease the training of networks that are substantially deeper than those used previously.">
+<meta property="og:description" content="Author: Kaiming He(恺神！)Themeresidual(残差) learning framework to ease the training of networks that are substantially deeper than those used previously.  With the network depth increasing, accuracy gets">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://s2.loli.net/2022/02/02/oJiXKmjqWT5Qk9n.jpg">
 <meta property="article:published_time" content="2022-05-04T03:36:02.000Z">
-<meta property="article:modified_time" content="2022-05-04T03:43:37.647Z">
+<meta property="article:modified_time" content="2022-05-04T12:26:43.840Z">
 <meta property="article:author" content="Haoyang Chen">
 <meta property="article:tag" content="Computer-Vision Deep-Learning">
 <meta name="twitter:card" content="summary">
@@ -52,8 +52,8 @@
   isPost: true,
   isHome: false,
   isHighlightShrink: false,
-  isToc: false,
-  postUpdate: '2022-05-04 11:43:37'
+  isToc: true,
+  postUpdate: '2022-05-04 20:26:43'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -142,9 +142,171 @@
       }
     }
     detectApple()
-    })(window)</script><meta name="generator" content="Hexo 6.1.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">Loading...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/head.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">6</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">3</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://s2.loli.net/2022/02/02/oJiXKmjqWT5Qk9n.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">ZJUCHY の blog</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">ResNet</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2022-05-04T03:36:02.000Z" title="Created 2022-05-04 11:36:02">2022-05-04</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2022-05-04T03:43:37.647Z" title="Updated 2022-05-04 11:43:37">2022-05-04</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="ResNet"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>author: Kaiming He(恺神！)</p>
-<p>theme : residual(残差) learning framework to ease the training of networks that are substantially deeper than those used previously.</p>
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">Haoyang Chen</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://zjuchy.github.io/2022/05/04/ResNet/">https://zjuchy.github.io/2022/05/04/ResNet/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Computer-Vision-Deep-Learning/">Computer-Vision Deep-Learning</a></div><div class="post_share"><div class="social-share" data-image="https://s2.loli.net/2022/02/02/oJiXKmjqWT5Qk9n.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/05/04/%20Operating-System/"><img class="prev-cover" src="https://s2.loli.net/2022/02/02/oJiXKmjqWT5Qk9n.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">Operating-System</div></div></a></div><div class="next-post pull-right"><a href="/2022/05/02/AlexNet/"><img class="next-cover" src="https://s2.loli.net/2022/02/02/rLZKxailymv5bCH.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">AlexNet</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2022/05/02/AlexNet/" title="AlexNet"><img class="cover" src="https://s2.loli.net/2022/02/02/rLZKxailymv5bCH.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-05-02</div><div class="title">AlexNet</div></div></a></div><div><a href="/2022/02/23/Computer-Vision/" title="Computer-Vision"><img class="cover" src="https://s2.loli.net/2022/02/02/oJiXKmjqWT5Qk9n.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-02-23</div><div class="title">Computer-Vision</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/head.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Haoyang Chen</div><div class="author-info__description">I'm a ZJUer, welcome to contact me!</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">6</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">3</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/zjuchy"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/zjuchy" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:3190102984@zju.edu.cn" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/05/04/%20Operating-System/" title="Operating-System">Operating-System</a><time datetime="2022-05-04T03:41:02.000Z" title="Created 2022-05-04 11:41:02">2022-05-04</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/05/04/ResNet/" title="ResNet">ResNet</a><time datetime="2022-05-04T03:36:02.000Z" title="Created 2022-05-04 11:36:02">2022-05-04</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/05/02/AlexNet/" title="AlexNet">AlexNet</a><time datetime="2022-05-02T04:24:43.000Z" title="Created 2022-05-02 12:24:43">2022-05-02</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/02/23/Computer-Vision/" title="Computer-Vision">Computer-Vision</a><time datetime="2022-02-23T05:31:01.000Z" title="Created 2022-02-23 13:31:01">2022-02-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/02/17/Data-Structure/" title="Data_Structure">Data_Structure</a><time datetime="2022-02-17T03:13:35.000Z" title="Created 2022-02-17 11:13:35">2022-02-17</time></div></div></div></div></div></div></main><footer id="footer" style="background: transparent"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By Haoyang Chen</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script>var preloader = {
+    })(window)</script><meta name="generator" content="Hexo 6.1.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">Loading...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/head.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">6</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">3</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://s2.loli.net/2022/02/02/oJiXKmjqWT5Qk9n.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">ZJUCHY の blog</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">ResNet</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2022-05-04T03:36:02.000Z" title="Created 2022-05-04 11:36:02">2022-05-04</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2022-05-04T12:26:43.840Z" title="Updated 2022-05-04 20:26:43">2022-05-04</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="ResNet"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="Author-Kaiming-He-恺神！"><a href="#Author-Kaiming-He-恺神！" class="headerlink" title="Author: Kaiming He(恺神！)"></a>Author: Kaiming He(恺神！)</h1><h3 id="Theme"><a href="#Theme" class="headerlink" title="Theme"></a>Theme</h3><p>residual(残差) learning framework to ease the training of networks that are substantially deeper than those used previously.</p>
+<ul>
+<li>With the network depth increasing, accuracy gets saturated (which might be unsurprising) and then degrades rapidly. <strong>Degradation</strong> is not caused by <strong>overfitting</strong>, and adding more layers to a suitably deep model leads to higher training error.</li>
+</ul>
+<blockquote>
+<p>说明无残差的训练(plain)，深度上没有用的，训练不动（效果更差）</p>
+</blockquote>
+<p>Is learning better networks as easy as stacking more layers? (No)</p>
+<p><strong>vanishing&#x2F;exploding gradients</strong> can be addressed by <strong>normalized initialization</strong> and <strong>intermediate normalization layers</strong></p>
+<blockquote>
+<p>BN batch normalization </p>
+<p>避免一些层特别大或者特别小 </p>
+</blockquote>
+<h3 id="Identity-mapping"><a href="#Identity-mapping" class="headerlink" title="Identity mapping"></a>Identity mapping</h3><blockquote>
+<p>输入与输出一一对应，为了验证更深的网络实际上不会造成结果更差</p>
+</blockquote>
+<h3 id="Deep-residual-learning-framework"><a href="#Deep-residual-learning-framework" class="headerlink" title="Deep residual learning framework"></a>Deep residual learning framework</h3><img src="/Users/zjuchy/Library/Application Support/typora-user-images/image-20220504132647036.png" alt="image-20220504132647036" style="zoom:67%;" />
+
+<blockquote>
+<p>浅的网络输出X，后面一层的网络是训练H(X)-X的残差</p>
+</blockquote>
+<h3 id="Shortcut-Connection"><a href="#Shortcut-Connection" class="headerlink" title="Shortcut Connection"></a>Shortcut Connection</h3><blockquote>
+<p> 跳远连接</p>
+</blockquote>
+<h3 id="Experiment"><a href="#Experiment" class="headerlink" title="Experiment"></a>Experiment</h3><p>![image-20220504144940653](&#x2F;Users&#x2F;zjuchy&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220504144940653.png)</p>
+<h3 id="Convolution"><a href="#Convolution" class="headerlink" title="Convolution"></a>Convolution</h3><p>$$<br>(f * g)(x)&#x3D;\int_{-\infty}^{\infty} f(t) g(x-t) \mathrm{d} t<br>$$</p>
+<blockquote>
+<p>padding填充(在输入特征图的每一边添加一定数目的行列，使得输出的特征图的长、宽 &#x3D; 输入的特征图的长、宽), stride步幅 (卷积核经过输入特征图的采样间隔)</p>
+<p>一个尺寸 a*a的特征图，经过b*b的卷积层，步幅（stride）&#x3D;c，填充（padding）&#x3D;d，</p>
+<p>若d等于0，也就是不填充，输出的特征图的尺寸&#x3D;（a-b）&#x2F;c+1</p>
+<p>若d不等于0，也就是填充，输出的特征图的尺寸&#x3D;（a+2d-b）&#x2F;c+1</p>
+</blockquote>
+<p><strong>多通道卷积</strong></p>
+<p>如果要卷积后也输出多通道，增加卷积核（filers）的数量即可</p>
+<h3 id="Fully-Connected-Layer"><a href="#Fully-Connected-Layer" class="headerlink" title="Fully Connected Layer"></a>Fully Connected Layer</h3><h1 id="写的非常好的笔记"><a href="#写的非常好的笔记" class="headerlink" title="写的非常好的笔记"></a>写的非常好的笔记</h1><ul>
+<li><p><strong>ResNet</strong></p>
+<p><strong>1、introduction</strong></p>
+<p>深度神经网络好在可以加很多层把网络变得特别深，然后不同程度的层会得到不同等级的feature，比如低级的视觉特征或者是高级的语义特征</p>
+<p>提出问题：<strong>随着网络越来越深，梯度就会出现爆炸或者消失</strong></p>
+<ul>
+<li>解决他的办法就是：1、在初始化的时候要做好一点，就是权重在随机初始化的时候，权重不要特别大也不要特别小。2、在中间加入一些normalization，包括BN（batch normalization）可以使得校验每个层之间的那些输出和他的梯度的均值和方差相对来说比较深的网络是可以训练的，避免有一些层特别大，有一些层特别小。使用了这些技术之后是能够训练（能够收敛），虽然现在能够收敛了，但是当网络变深的时候，性能其实是变差的（精度会变差）</li>
+<li>文章提出出现精度变差的问题不是因为层数变多了，模型变复杂了导致的过拟合，而是因为训练误差也变高了（overfitting是说训练误差变得很低，但是测试误差变得很高），训练误差和测试误差都变高了，所以他不是overfitting。虽然网络是收敛的，但是好像没有训练出一个好的结果</li>
+</ul>
+<p>深入讲述了<strong>深度增加了之后精度也会变差</strong> </p>
+<ul>
+<li>考虑一个比较浅一点的网络和他对应的比较深的版本（在浅的网络中再多加一些层进去），如果钱的网络效果还不错的话，神的网络是不应该变差的：深的网络新加的那些层，总是可以把这些层学习的变成一个<strong>identity mapping</strong>（输入是x，输出也是x，等价于可以把一些权重学成比如说简单的n分之一，是的输入和输出是一一对应的），但是实际情况是，虽然理论上权重是可以学习成这样，但是实际上做不到：假设让SGD去优化，深层学到一个跟那些浅层网络精度比较好的一样的结果，上面的层变成identity（相对于浅层神经网络，深层神经网络中多加的那些层全部变成identity），这样的话精度不应该会变差，应该是跟浅层神经网络是一样的，但是实际上SGD找不到这种最优解</li>
+<li>这篇文章提出显式地构造出一个identity mapping，使得深层的神经网络不会变的比相对较浅的神经网络更差，它将其称为deep residual learning framework</li>
+<li>要学的东西叫做H（x），假设现在已经有了一个浅的神经网络，他的输出是x，然后要在这个浅的神经网络上面再新加一些层，让它变得更深。新加的那些层不要直接去学H（x），而是应该去学H（x）-x，x是原始的浅层神经网络已经学到的一些东西，新加的层不要重新去学习，而是去学习学到的东西和真实的东西之间的残差，最后整个神经网络的输出等价于浅层神经网络的输出x和新加的神经网络学习残差的输出之和，将优化目标从H（x）转变成为了H（x）-x</li>
+</ul>
+<p><img src="https://i0.hdslb.com/bfs/note/0a418ebf24535ae9494157b84c95460d67c4f11a.png" alt="img"></p>
+<ul>
+<li>上图中最下面的红色方框表示所要学习的H（x）</li>
+<li>蓝色方框表示原始的浅层神经网络</li>
+<li>红色阴影方框表示新加的层</li>
+<li>o表示最终整个神经网络的输出</li>
+<li>这样的好处是：只是加了一个东西进来，没有任何可以学的参数，不会增加任何的模型复杂度，也不会使计算变得更加复杂，而且这个网络跟之前一样，也是可以训练的，没有任何改变</li>
+</ul>
+<p>非常深的residual nets非常容易优化，但是如果不添加残差连接的话，效果就会很差。越深的网络，精度就越高</p>
+<p>introduction是摘要的扩充版本，也是对整个工作比较完整的描述</p>
+<p><strong>2、related work</strong></p>
+<p>一篇文章要成为经典，不见得一定要提出原创性的东西，很可能就是把之前的一些东西很巧妙的放在一起，能解决一个现在大家比较关心难的问题</p>
+<p>残差连接如何处理输入和输出的形状是不同的情况：</p>
+<ul>
+<li>第一个方案是在输入和输出上分别添加一些额外的0，使得这两个形状能够对应起来然后可以相加</li>
+<li>第二个方案是之前提到过的全连接怎么做投影，做到卷积上，是通过一个叫做1<em>1的卷积层，这个卷积层的特点是在空间维度上不做任何东西，主要是在通道维度上做改变。所以只要选取一个1</em>1的卷积使得输出通道是输入通道的两倍，这样就能将残差连接的输入和输出进行对比了。在ResNet中，如果把输出通道数翻了两倍，那么输入的高和宽通常都会被减半，所以在做1*1的卷积的时候，同样也会使步幅为2，这样的话使得高宽和通道上都能够匹配上</li>
+</ul>
+<p>implementation中讲了实验的一些细节</p>
+<ul>
+<li>把短边随机的采样到256和480（AlexNet是直接将短边变成256，而这里是随机的）。随机放的比较大的好处是做随机切割，切割成224*224的时候，随机性会更多一点</li>
+<li>将每一个pixel的均值都减掉了</li>
+<li>使用了颜色的增强（AlexNet上用的是PCA，现在我们所使用的是比较简单的RGB上面的，调节各个地方的亮度、饱和度等）</li>
+<li>使用了BN（batch normalization）</li>
+<li>所有的权重全部是跟另外一个paper中的一样（作者自己的另外一篇文章）。注意写论文的时候，尽量能够让别人不要去查找别的文献就能够知道你所做的事情</li>
+<li>批量大小是56，学习率是0.1，然后每一次当错误率比较平的时候除以10</li>
+<li>模型训练了60*10^4个批量。建议最好不要写这种iteration，因为他跟批量大小是相关的，如果变了一个批量大小，他就会发生改变，所以现在一般会说迭代了多少遍数据，相对来说稳定一点</li>
+<li>这里没有使用dropout，因为没有全连接层，所以dropout没有太大作用</li>
+<li>在测试的时候使用了标准的10个crop testing（给定一张测试图片，会在里面随机的或者是按照一定规则的去采样10个图片出来，然后再每个子图上面做预测，最后将结果做平均）。这样的好处是因为训练的时候每次是随机把图片拿出来，测试的时候也大概进行模拟这个过程，另外做10次预测能够降低方差。</li>
+<li>采样的时候是在不同的分辨率上去做采样，这样在测试的时候做的工作量比较多，但是在实际过程中使用比较少</li>
+</ul>
+<p><strong>4、experiments</strong></p>
+<ul>
+<li>如何评估ImagNet以</li>
+<li>各个不同版本的ResNet是如何设计的</li>
+</ul>
+<p>首先阐述了ImageNet</p>
+<p>描述了plain networks</p>
+<p>没有带残差的时候，使用了一个18层和34层</p>
+<p><img src="https://i0.hdslb.com/bfs/note/bcecbccc1aeaeb5620412f501396378706cbd175.png" alt="img"></p>
+<ul>
+<li>上表是整个ResNet不同架构之间的构成信息（5个版本）</li>
+<li>第一个7*7的卷积是一样的</li>
+<li>接下来的pooling层也是一样的</li>
+<li>最后的全连接层也是一样的（最后是一个全局的pooling然后再加一个1000的全连接层做输出）</li>
+<li>不同的架构之间，主要是中间部分不一样，也就是那些复制的卷积层是不同的</li>
+<li>conv2.x：x表示里面有很多不同的层（块）</li>
+<li>【3*3,64】:46是通道数</li>
+<li>模型的结构为什么取成表中的结构，论文中并没有细讲，这些超参数是作者自己调出来的，实际上这些参数可以通过一些网络架构的自动选取</li>
+<li><strong>flops</strong>：整个网络要计算多少个浮点数运算。卷积层的浮点运算等价于输入的高乘以宽乘以通道数乘以输出通道数再乘以核的窗口的高和宽</li>
+</ul>
+<p><img src="https://i0.hdslb.com/bfs/note/316285db5ae7f1c4dcab40937540681a5b0a7f04.png" alt="img"></p>
+<ul>
+<li>上图中比较了18层和34层在有残差连接和没有残差连接的结果</li>
+<li>左图中，红色曲线表示34的验证精度（或者说是测试精度）</li>
+<li>左图中，粉色曲线表示的是34的训练精度</li>
+<li>一开始训练精度是要比测试精度高的，因为在一开始的时候使用了大量的数据增强，使得寻来你误差相对来说是比较大的，而在测试的时候没有做数据增强，噪音比较低，所以一开始的测试误差是比较低的</li>
+<li>图中曲线的数值部分是由于学习率的下降，每一次乘以0.1，对整个曲线来说下降就比较明显。为什么现在不使用乘0.1这种方法：在什么时候乘时机不好掌控，如果乘的太早，会后期收敛无力，晚一点乘的话，一开始找的方向更准一点，对后期来说是比较好的</li>
+<li>上图主要是想说明在有残差连接的时候，34比28要好；另外对于34来说，有残差连接会好很多；其次，有了残差连接以后，收敛速度会快很多，核心思想是说，在所有的超参数都一定的情况下，有残差的连接收敛会快，而且后期会好</li>
+</ul>
+<p>输入输出形状不一样的时候怎样做残差连接</p>
+<ul>
+<li>填零</li>
+<li>投影</li>
+<li>所有的连接都做投影：就算输入输出的形状是一样的，一样可以在连接的时候做个1*1的卷积，但是输入和输出通道数是一样的，做一次投影</li>
+</ul>
+<p>对比以上三种方案</p>
+<p><img src="https://i0.hdslb.com/bfs/note/8c75c28d1b2ec0943678d40962aa0c5101d4fd4f.png" alt="img"></p>
+<ul>
+<li>A表示填0</li>
+<li>B表示在不同的时候做投影</li>
+<li>C表示全部做投影</li>
+<li>B和C的表现差不多，但是还是要比A好一点</li>
+<li>B和C虽然差不多，但是计算复杂度更高，B对计算量的增加比较少，作者采用了B</li>
+</ul>
+<p>怎样构建更深的ResNet</p>
+<p>如果要做50或者50层以上的，会引入bottleneck design</p>
+<p><img src="https://i0.hdslb.com/bfs/note/9a6493ed10b6a1cb12739837870d10c86c030419.png" alt="img"></p>
+<ul>
+<li><p>左图是之前的设计，当通道数是64位的时候，通道数不会发生改变</p>
+</li>
+<li><p>如果要做到比较深的话，可以学到更多的模式，可以把通道数变得更大，右图从64变到了256</p>
+</li>
+<li><p>当通道数变得更大的时候，计算复杂度成平方关系增加，这里通过1个1*1的卷积，将256维投影回到64维，然后再做通道数不变的卷积，然后再投影回256（将输入和输出的通道数进行匹配，便于进行对比）。等价于先对特征维度降一次维，在降一次维的上面再做一个空间上的东西，然后再投影回去</p>
+</li>
+<li><p>虽然通道数是之前的4倍，但是在这种设计之下，二者的算法复杂度是差不多的</p>
+<p><strong>32:25</strong></p>
+</li>
+</ul>
+<p>ImageNet标号的错误率本来挺高的，估计有1%</p>
+<p>CIFAR-10是一个很小的数据集，跑起来相对来说比较容易，32*32，五万个样本，10类的数据集</p>
+<p>在整个残差连接，如果后面新加上的层不能让模型变得更好的时候，因为有残差连接的存在，新加的那些层应该是不会学到任何东西，应该都是靠近0的，这样就等价于就算是训练了1000层的ResNet，但是可能就前100层有用，后面的900层基本上因为没有什么东西可以学的，基本上就不会动了</p>
+<p>这篇文章没有结论</p>
+<p><strong>mAP</strong>：目标检测上最常见的一个精度，锚框的平均精度，越高越好</p>
+<p><strong>为什么ResNet训练起来比较快？</strong></p>
+<ul>
+<li>一方面是因为梯度上保持的比较好，新加一些层的话，加的层越多，梯度的乘法就越多，因为梯度比较小，一般是在0附近的高斯分布，所以就会导致在很深的时候就会比较小（梯度消失）。虽然batch normalization或者其他东西能够对这种状况进行改善，但是实际上相对来说还是比较小，但是如果加了一个ResNet的话，它的好处就是在原有的基础上加上了浅层网络的梯度，深层的网络梯度很小没有关系，浅层网络可以进行训练，变成了加法，一个小的数加上一个大的数，相对来说梯度还是会比较大的。也就是说，不管后面新加的层数有多少，前面浅层网络的梯度始终是有用的，这就是从误差反向传播的角度来解释为什么训练的比较快</li>
+</ul>
+<p><img src="https://i0.hdslb.com/bfs/note/9793eefee9774a679bd59f35543ba79ce40cd3b5.png" alt="img"></p>
+<ul>
+<li>在CIFAR上面加到了1000层以上，没有做任何特别的regularization，然后效果很好，overfitting有一点点但是不大。SGD收敛是没有意义的，SGD的收敛就是训练不动了，收敛是最好收敛在比较好的地方。做深的时候，用简单的机器训练根本就跑不动，根本就不会得到比较好的结果，所以只看收敛的话意义不大，但是在加了残差连接的情况下，因为梯度比较大，所以就没那么容易收敛，所以导致一直能够往前（SGD的精髓就是能够一直能跑的动，如果哪一天跑不动了，梯度没了就完了，就会卡在一个地方出不去了，所以它的精髓就在于需要梯度够大，要一直能够跑，因为有噪音的存在，所以慢慢的他总是会收敛的，所以只要保证梯度一直够大，其实到最后的结果就会比较好）</li>
+</ul>
+<p><img src="https://i0.hdslb.com/bfs/note/4f84d817570adb88364b9dad35af6db13710a6a4.png" alt="img"></p>
+<p>为什么ResNet在CIFAR-10那么小的数据集上他的过拟合不那么明显？</p>
+<p>open question</p>
+<p>虽然模型很深，参数很多，但是因为模型是这么构造的，所以使得他内在的模型复杂度其实不是很高，也就是说，很有可能加了残差链接之后，使得模型的复杂度降低了，一旦模型的复杂度降低了，其实过拟合就没那么严重了</p>
+<ul>
+<li>所谓的模型复杂度降低了不是说不能够表示别的东西了，而是能够找到一个不那么复杂的模型去拟合数据，就如作者所说，不加残差连接的时候，理论上也能够学出一个有一个identity的东西（不要后面的东西），但是实际上做不到，因为没有引导整个网络这么走的话，其实理论上的结果它根本过不去，所以一定是得手动的把这个结果加进去，使得它更容易训练出一个简单的模型来拟合数据的情况下，等价于把模型的复杂度降低了</li>
+</ul>
+<p>这篇文章的residual和gradient boosting是不一样的</p>
+<ul>
+<li>gradient boosting是在标号上做residual</li>
+<li>这篇文章是在feature维度上</li>
+</ul>
+</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">Haoyang Chen</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://zjuchy.github.io/2022/05/04/ResNet/">https://zjuchy.github.io/2022/05/04/ResNet/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Computer-Vision-Deep-Learning/">Computer-Vision Deep-Learning</a></div><div class="post_share"><div class="social-share" data-image="https://s2.loli.net/2022/02/02/oJiXKmjqWT5Qk9n.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/05/04/%20Operating-System/"><img class="prev-cover" src="https://s2.loli.net/2022/02/02/oJiXKmjqWT5Qk9n.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">Operating-System</div></div></a></div><div class="next-post pull-right"><a href="/2022/05/02/AlexNet/"><img class="next-cover" src="https://s2.loli.net/2022/02/02/rLZKxailymv5bCH.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">AlexNet</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2022/05/02/AlexNet/" title="AlexNet"><img class="cover" src="https://s2.loli.net/2022/02/02/rLZKxailymv5bCH.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-05-02</div><div class="title">AlexNet</div></div></a></div><div><a href="/2022/02/23/Computer-Vision/" title="Computer-Vision"><img class="cover" src="https://s2.loli.net/2022/02/02/oJiXKmjqWT5Qk9n.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-02-23</div><div class="title">Computer-Vision</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/head.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Haoyang Chen</div><div class="author-info__description">I'm a ZJUer, welcome to contact me!</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">6</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">3</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/zjuchy"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/zjuchy" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:3190102984@zju.edu.cn" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Author-Kaiming-He-%E6%81%BA%E7%A5%9E%EF%BC%81"><span class="toc-number">1.</span> <span class="toc-text">Author: Kaiming He(恺神！)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Theme"><span class="toc-number">1.0.1.</span> <span class="toc-text">Theme</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Identity-mapping"><span class="toc-number">1.0.2.</span> <span class="toc-text">Identity mapping</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deep-residual-learning-framework"><span class="toc-number">1.0.3.</span> <span class="toc-text">Deep residual learning framework</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Shortcut-Connection"><span class="toc-number">1.0.4.</span> <span class="toc-text">Shortcut Connection</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Experiment"><span class="toc-number">1.0.5.</span> <span class="toc-text">Experiment</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Convolution"><span class="toc-number">1.0.6.</span> <span class="toc-text">Convolution</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Fully-Connected-Layer"><span class="toc-number">1.0.7.</span> <span class="toc-text">Fully Connected Layer</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%86%99%E7%9A%84%E9%9D%9E%E5%B8%B8%E5%A5%BD%E7%9A%84%E7%AC%94%E8%AE%B0"><span class="toc-number">2.</span> <span class="toc-text">写的非常好的笔记</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/05/04/%20Operating-System/" title="Operating-System">Operating-System</a><time datetime="2022-05-04T03:41:02.000Z" title="Created 2022-05-04 11:41:02">2022-05-04</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/05/04/ResNet/" title="ResNet">ResNet</a><time datetime="2022-05-04T03:36:02.000Z" title="Created 2022-05-04 11:36:02">2022-05-04</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/05/02/AlexNet/" title="AlexNet">AlexNet</a><time datetime="2022-05-02T04:24:43.000Z" title="Created 2022-05-02 12:24:43">2022-05-02</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/02/23/Computer-Vision/" title="Computer-Vision">Computer-Vision</a><time datetime="2022-02-23T05:31:01.000Z" title="Created 2022-02-23 13:31:01">2022-02-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/02/17/Data-Structure/" title="Data_Structure">Data_Structure</a><time datetime="2022-02-17T03:13:35.000Z" title="Created 2022-02-17 11:13:35">2022-02-17</time></div></div></div></div></div></div></main><footer id="footer" style="background: transparent"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By Haoyang Chen</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script>var preloader = {
   endLoading: () => {
     document.body.style.overflow = 'auto';
     document.getElementById('loading-box').classList.add("loaded")
